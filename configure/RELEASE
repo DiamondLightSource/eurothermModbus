@@ -20,6 +20,8 @@
 # CONFIG_SITE file.
 
 TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
+SUPPORT=/dls_sw/prod/R3.14.12.3/support
+MODBUS = $(SUPPORT)/modbus/2-8dls1
 
 # If using the sequencer, point SNCSEQ at its top directory:
 #SNCSEQ=$(EPICS_BASE)/../modules/soft/seq

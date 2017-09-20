@@ -1,19 +1,43 @@
 /**
 \mainpage eurothermModbus EPICS Support Module
 \section intro_sec Introduction
-I'm going to describe the module here, possibly with a <a href="http://www.google.co.uk">web link to the manufacturers webpage</a>. \n
-You can also link to \ref thing.vdb "internally generated documentation" with alternate text, or by just by mentioning its name, e.g. thing.vdb
 
-\section bugs_sec Known Bugs
-- I'm going to describe any known bugs here
+Support module to interface to an Eurotherm modbus device.
 
-\section user_sec User Manual
-This section contains instructions for the end user
+The module was prepared to interface to an Eurotherm 3504 device in beamline I22 by Ronaldo Mercado
+in Sep 2017.
 
-\section build_sec Build Instructions 
-- \subpage build_instructions_example
+The intended use is to use the iocbuilder template xml file eurotherm3504.xml.
 
-IOCs build using these build instructions are available in iocs/
+The iocbuilder template file eurotherm3504.xml requires the macros below.
+
+<table>
+<tr><th>Macro name
+<th>Description
+<th>Note
+<th>example value (from ioc bl22i-cs-ioc-13)
+<tr>
+<td>port
+<td>asyn port name
+<td>
+<td>ANNEAL
+<tr>
+<td>ipaddress
+<td>ip address of controller
+<td>The template assumes that tcp port 502 will be used
+<td>172.23.122.156
+<tr>
+<td>modbus_port_prefix
+<td>prefix for iocbuilder names and modbus port names
+<td>
+<td>MB
+<tr>
+<td>device
+<td>prefix for epics PV record names
+<td>
+<td>BL22I-EA-TEMPC-05
+</table>
+
 **/
 
 /* Build instructions page will be generated from the xml file given to dls-xml-iocbuilder.py --doc */

@@ -1,0 +1,62 @@
+# template to include archiver elements
+# for the annealing stage temperature controller 
+# 
+# % macro, name, Object and gui association name
+# % macro, device, device prefix
+
+# % archiver 10 Monitor
+record(bi, "$(device):LOOP1:AUTOTUNE:RBV")
+{
+}
+# % archiver 10 Monitor
+record(ai, "$(device):LOOP1:OUTPHI:RBV")
+{
+}
+# % archiver 10 Monitor
+record(ai, "$(device):LOOP1:OUTPLO:RBV")
+{
+}
+# % archiver 10 Monitor
+record(bi, "$(device):LOOP2:AUTOTUNE:RBV")
+{
+}
+# % archiver 10 Monitor
+record(ai, "$(device):LOOP2:OUTPHI:RBV")
+{
+}
+# % archiver 10 Monitor
+record(ai, "$(device):LOOP2:OUTPLO:RBV")
+{
+}
+# % archiver 1 Monitor
+record(ai, "$(device):PV:RBV")
+{
+}
+# % archiver 1 Monitor
+record(ai, "$(device):SP:RBV")
+{
+}
+# % archiver 1 Monitor
+record(ai, "$(device):O:RBV")
+{
+}
+# % archiver 10 Monitor
+record(ao, "$(device):RR")
+{
+}
+# % archiver 10 Monitor
+record(bi, "$(device):MAN:RBV")
+{
+}
+# % archiver 10 Monitor
+record(ai, "$(device):P:RBV")
+{
+}
+# % archiver 10 Monitor
+record(ai, "$(device):I:RBV")
+{
+}
+# % archiver 10 Monitor
+record(ai, "$(device):D:RBV")
+{
+}

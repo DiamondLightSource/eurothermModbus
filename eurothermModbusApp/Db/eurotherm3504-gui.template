@@ -1,0 +1,7 @@
+# template to include a gui element
+# for the annealing stage temperature controller 
+# 
+# % macro, name, Object and gui association name
+# % macro, device, device prefix
+# % gui, $(name), edm, eurotherm3504.edl, device=$(device)
+
