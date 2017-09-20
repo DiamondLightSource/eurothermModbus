@@ -1,4 +1,11 @@
 /**
+
+\page release_notes Release Notes
+
+\section rel1_0 Release 1-0 (Sep 2017)
+
+Initial release.
+
 \mainpage eurothermModbus EPICS Support Module
 \section intro_sec Introduction
 
@@ -14,29 +21,42 @@ The iocbuilder template file eurotherm3504.xml requires the macros below.
 <table>
 <tr><th>Macro name
 <th>Description
-<th>Note
 <th>example value (from ioc bl22i-cs-ioc-13)
+<th>Note
 <tr>
 <td>port
 <td>asyn port name
-<td>
 <td>ANNEAL
+<td>
 <tr>
 <td>ipaddress
 <td>ip address of controller
-<td>The template assumes that tcp port 502 will be used
 <td>172.23.122.156
+<td>The template assumes that tcp port 502 will be used
 <tr>
 <td>modbus_port_prefix
 <td>prefix for iocbuilder names and modbus port names
-<td>
 <td>MB
+<td>
 <tr>
 <td>device
 <td>prefix for epics PV record names
-<td>
 <td>BL22I-EA-TEMPC-05
+<td>
 </table>
+
+There are two other templates:
+<ul>
+<li>eurotherm3504-archive.template to be used to include archiver tags
+<li>eurotherm3504-gui.template to be used to include the gui tags for iocbuilder to create a gui.
+</ul
+
+\section manuals Manufacturer manuals
+
+A copy of the manuals downloaded from <a href="http://www.eurotherm.co.uk">eurotherm</a> in June 2016 are copied in DLS Sharepoint <a href="http://diamvdocs13.diamond.ac.uk/TECHNICAL%20DIVISION%20(TEC)/Controls%20and%20Interlocks%20CTRL/Supplier%20Documentation/Eurotherm/3500%20User%20Manual%20issue%2017.pdf">(link)</a>
+
+\section release Release Notes
+Release notes are in a separate page:  \ref release_notes
 
 **/
 
