@@ -1,0 +1,4 @@
+
+Notes for maintainer:
+
+add release notes in etc/makeDocumentation/manual.src "release_notes" page
