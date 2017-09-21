@@ -109,7 +109,7 @@ fontAlign "center"
 fgColor index 14
 bgColor index 48
 value {
-  "$(P)"
+  "$(device)"
 }
 endObjectProperties
 
@@ -329,8 +329,8 @@ bgColor index 3
 inconsistentColor index 14
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(P):LOOP1:AUTOTUNE"
-indicatorPv "$(P):LOOP1:AUTOTUNE"
+controlPv "$(device):LOOP1:AUTOTUNE"
+indicatorPv "$(device):LOOP1:AUTOTUNE"
 font "arial-bold-r-12.0"
 endObjectProperties
 
@@ -364,7 +364,7 @@ x 90
 y 90
 w 115
 h 35
-controlPv "$(P):LOOP1:OUTPHI"
+controlPv "$(device):LOOP1:OUTPHI"
 fgColor index 25
 bgColor index 3
 fill
@@ -401,7 +401,7 @@ x 90
 y 130
 w 115
 h 35
-controlPv "$(P):LOOP1:OUTPLO"
+controlPv "$(device):LOOP1:OUTPLO"
 fgColor index 25
 bgColor index 3
 fill
@@ -438,7 +438,7 @@ x 215
 y 95
 w 115
 h 25
-controlPv "$(P):LOOP1:OUTPHI:RBV"
+controlPv "$(device):LOOP1:OUTPHI:RBV"
 font "arial-bold-r-14.0"
 fgColor index 16
 bgColor index 10
@@ -460,7 +460,7 @@ x 215
 y 135
 w 115
 h 25
-controlPv "$(P):LOOP1:OUTPLO:RBV"
+controlPv "$(device):LOOP1:OUTPLO:RBV"
 font "arial-bold-r-14.0"
 fgColor index 16
 bgColor index 10
@@ -482,7 +482,7 @@ x 215
 y 60
 w 115
 h 25
-controlPv "$(P):LOOP1:AUTOTUNE:RBV"
+controlPv "$(device):LOOP1:AUTOTUNE:RBV"
 fgColor index 16
 fgAlarm
 bgColor index 10
@@ -500,7 +500,7 @@ x 215
 y 280
 w 115
 h 25
-controlPv "$(P):LOOP2:OUTPLO:RBV"
+controlPv "$(device):LOOP2:OUTPLO:RBV"
 font "arial-bold-r-14.0"
 fgColor index 16
 bgColor index 10
@@ -522,7 +522,7 @@ x 215
 y 240
 w 115
 h 25
-controlPv "$(P):LOOP2:OUTPHI:RBV"
+controlPv "$(device):LOOP2:OUTPHI:RBV"
 font "arial-bold-r-14.0"
 fgColor index 16
 bgColor index 10
@@ -544,7 +544,7 @@ x 215
 y 205
 w 115
 h 25
-controlPv "$(P):LOOP2:AUTOTUNE:RBV"
+controlPv "$(device):LOOP2:AUTOTUNE:RBV"
 fgColor index 16
 fgAlarm
 bgColor index 10
@@ -567,8 +567,8 @@ bgColor index 3
 inconsistentColor index 14
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(P):LOOP2:AUTOTUNE"
-indicatorPv "$(P):LOOP2:AUTOTUNE"
+controlPv "$(device):LOOP2:AUTOTUNE"
+indicatorPv "$(device):LOOP2:AUTOTUNE"
 font "arial-bold-r-12.0"
 endObjectProperties
 
@@ -582,7 +582,7 @@ x 90
 y 235
 w 115
 h 35
-controlPv "$(P):LOOP2:OUTPHI"
+controlPv "$(device):LOOP2:OUTPHI"
 fgColor index 25
 bgColor index 3
 fill
@@ -599,7 +599,7 @@ x 90
 y 275
 w 115
 h 35
-controlPv "$(P):LOOP2:OUTPLO"
+controlPv "$(device):LOOP2:OUTPLO"
 fgColor index 25
 bgColor index 3
 fill
