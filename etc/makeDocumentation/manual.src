@@ -2,6 +2,10 @@
 
 \page release_notes Release Notes
 
+\section rel1_2 Release 1-2 (Nov 2017)
+
+Fix scaling for ramp rate and PID P parameter. re jira BC-564
+
 \section rel1_1 Release 1-1 (Sep 2017)
 
 Fix documentation. Fix autotune screen re jira BC-504
