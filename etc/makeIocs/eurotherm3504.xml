@@ -48,7 +48,7 @@
 	<records.ai ASLO="0.1" DESC="Temperature readback" DTYP="asynInt32" EGU="C" INP="@asyn($(modbus_port_prefix)_PV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):PV:RBV"/>
 	<records.ai ASLO="0.1" DESC="setpoint readback" DTYP="asynInt32" EGU="C" INP="@asyn($(modbus_port_prefix)_SP1,0,1000)MODBUS_DATA" SCAN="I/O Intr" record="$(device):SP:RBV"/>
 	<records.ai ASLO="0.1" DESC="output" DTYP="asynInt32" EGU="%" INP="@asyn($(modbus_port_prefix)_OUTPUT1,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):O:RBV"/>
-	<records.ai DTYP="asynInt32" EGU="C" INP="@asyn($(modbus_port_prefix)_PROP1,0,1000)MODBUS_DATA" SCAN="I/O Intr" record="$(device):P:RBV"/>
+	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="C" INP="@asyn($(modbus_port_prefix)_PROP1,0,1000)MODBUS_DATA" SCAN="I/O Intr" record="$(device):P:RBV"/>
 	<records.ai DTYP="asynInt32" EGU="sec" INP="@asyn($(modbus_port_prefix)_INTEG1,0,1000)MODBUS_DATA" SCAN="I/O Intr" record="$(device):I:RBV"/>
 	<records.ai DTYP="asynInt32" EGU="sec" INP="@asyn($(modbus_port_prefix)_DERIV1,0,1000)MODBUS_DATA" SCAN="I/O Intr" record="$(device):D:RBV"/>
 	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="C/min" INP="@asyn($(modbus_port_prefix)_RAMPRATE1,0,1000)MODBUS_DATA" SCAN="I/O Intr" record="$(device):RR:RBV"/>
