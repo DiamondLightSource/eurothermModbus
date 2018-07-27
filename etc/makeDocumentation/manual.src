@@ -2,6 +2,13 @@
 
 \page release_notes Release Notes
 
+\section rel1_4 Release 1-4 (Jul 2018)
+Add support for eurotherm programmer (jira BC-806)
+Fix record precision for PV, SP and RAMPRATE (jira BC-805)
+
+\section rel1_3 Release 1-3 (Jul 2018)
+Fix scaling for remaining parameters (jira BC-564)
+
 \section rel1_2 Release 1-2 (Nov 2017)
 
 Fix scaling for ramp rate and PID P parameter. re jira BC-564
