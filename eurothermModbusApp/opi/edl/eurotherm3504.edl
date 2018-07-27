@@ -4,7 +4,7 @@ major 4
 minor 0
 release 1
 x 1497
-y 342
+y 379
 w 349
 h 518
 font "arial-medium-r-18.0"
@@ -766,26 +766,13 @@ newPos
 objType "monitors"
 endObjectProperties
 
-# (Group)
-object activeGroupClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 100
-y 475
-w 100
-h 25
-
-beginGroup
-
 # (Related Display)
 object relatedDisplayClass
 beginObjectProperties
 major 4
 minor 4
 release 0
-x 100
+x 10
 y 475
 w 100
 h 25
@@ -802,9 +789,26 @@ displayFileName {
 }
 endObjectProperties
 
-endGroup
-
-visMin "1"
-visMax "2"
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 115
+y 475
+w 110
+h 25
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-16.0"
+buttonLabel "Programmer"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "eurotherm3504-programmer"
+}
 endObjectProperties
 
