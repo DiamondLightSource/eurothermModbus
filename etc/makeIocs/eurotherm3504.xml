@@ -34,7 +34,6 @@
 	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="5195" name="$(modbus_port_prefix).PROGSTAT" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_PROGSTAT" slaveaddr="1" tcpportname="$(port)"/>
 	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="5226" name="$(modbus_port_prefix).PROGRUN1" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_PROGRUN1" slaveaddr="1" tcpportname="$(port)"/>
 	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="5226" name="$(modbus_port_prefix).PROGRUN2" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_PROGRUN2" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="5201" name="$(modbus_port_prefix).PROGREM" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_PROGREM" slaveaddr="1" tcpportname="$(port)"/>
 	<records.bi DESC="manual/auto" DTYP="asynUInt32Digital" INP="@asynMask($(modbus_port_prefix)_MAN1,0,1,1000)MODBUS_DATA" ONAM="Manual" SCAN="I/O Intr" ZNAM="Automatic" record="$(device):MAN:RBV"/>
 	<records.bi DESC="loop1 autotune" DTYP="asynUInt32Digital" INP="@asynMask($(modbus_port_prefix)_L1AUTOTUNE1,0,1,1000)MODBUS_DATA" ONAM="On" SCAN="I/O Intr" ZNAM="Off" record="$(device):LOOP1:AUTOTUNE:RBV"/>
 	<records.bi DESC="loop2 autotune" DTYP="asynUInt32Digital" INP="@asynMask($(modbus_port_prefix)_L2AUTOTUNE1,0,1,1000)MODBUS_DATA" ONAM="On" SCAN="I/O Intr" ZNAM="Off" record="$(device):LOOP2:AUTOTUNE:RBV"/>
@@ -67,5 +66,4 @@
 	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="%" INP="@asyn($(modbus_port_prefix)_L2OUTPHI1,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP2:OUTPHI:RBV"/>
 	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="%" INP="@asyn($(modbus_port_prefix)_L2OUTPLO1,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP2:OUTPLO:RBV"/>
 	<records.ai DTYP="asynInt32" INP="@asyn($(modbus_port_prefix)_PROGNUM1,0,1000)MODBUS_DATA" PREC="0" SCAN="I/O Intr" record="$(device):PROGNUM:RBV"/>
-	<records.ai DTYP="asynInt32" INP="@asyn($(modbus_port_prefix)_PROGREM,0,1000)MODBUS_DATA" SCAN="I/O Intr" record="$(device):PROGREM"/>
 </components>
