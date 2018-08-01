@@ -34,15 +34,17 @@
 	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="5195" name="$(modbus_port_prefix).PROGSTAT" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_PROGSTAT" slaveaddr="1" tcpportname="$(port)"/>
 	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="5226" name="$(modbus_port_prefix).PROGRUN1" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_PROGRUN1" slaveaddr="1" tcpportname="$(port)"/>
 	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="5226" name="$(modbus_port_prefix).PROGRUN2" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_PROGRUN2" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="5229" name="$(modbus_port_prefix).PROGRESET" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_PROGRESET" slaveaddr="1" tcpportname="$(port)"/>
 	<records.bi DESC="manual/auto" DTYP="asynUInt32Digital" INP="@asynMask($(modbus_port_prefix)_MAN1,0,1,1000)MODBUS_DATA" ONAM="Manual" SCAN="I/O Intr" ZNAM="Automatic" record="$(device):MAN:RBV"/>
 	<records.bi DESC="loop1 autotune" DTYP="asynUInt32Digital" INP="@asynMask($(modbus_port_prefix)_L1AUTOTUNE1,0,1,1000)MODBUS_DATA" ONAM="On" SCAN="I/O Intr" ZNAM="Off" record="$(device):LOOP1:AUTOTUNE:RBV"/>
 	<records.bi DESC="loop2 autotune" DTYP="asynUInt32Digital" INP="@asynMask($(modbus_port_prefix)_L2AUTOTUNE1,0,1,1000)MODBUS_DATA" ONAM="On" SCAN="I/O Intr" ZNAM="Off" record="$(device):LOOP2:AUTOTUNE:RBV"/>
-	<records.bi DESC="Running/Not Running" DTYP="asynUInt32Digital" INP="@asynMask($(modbus_port_prefix)_PROGRUN1,0,1,1000)MODBUS_DATA" ONAM="RUNNING" SCAN="I/O Intr" ZNAM="STOPPED" record="$(device):PROGRUN:RBV"/>
+	<records.bi DESC="Running/Not Running" DTYP="asynUInt32Digital" INP="@asynMask($(modbus_port_prefix)_PROGRUN1,0,1,1000)MODBUS_DATA" ONAM="Running" SCAN="I/O Intr" ZNAM="Stopped" record="$(device):PROGRUN:RBV"/>
 	<records.mbbi DESC="Program status" DTYP="asynInt32" INP="@asynMask($(modbus_port_prefix)_PROGSTAT,0,4,1000)MODBUS_DATA" ONST="SENSOR BREAK" ONVL="1" SCAN="I/O Intr" THST="OVER RANGE" THVL="3" TWST="EMPTY PROGRAM" TWVL="2" ZRST="NO ERROR" ZRVL="0" record="$(device):PROGSTAT"/>
 	<records.bo DTYP="asynUInt32Digital" ONAM="Manual" OUT="@asynMask($(modbus_port_prefix)_MAN2,0,1,1000)MODBUS_DATA" ZNAM="Automatic" record="$(device):MAN"/>
 	<records.bo DTYP="asynUInt32Digital" ONAM="On" OUT="@asynMask($(modbus_port_prefix)_L1AUTOTUNE2,0,1,1000)MODBUS_DATA" ZNAM="Off" record="$(device):LOOP1:AUTOTUNE"/>
 	<records.bo DTYP="asynUInt32Digital" ONAM="On" OUT="@asynMask($(modbus_port_prefix)_L2AUTOTUNE2,0,1,1000)MODBUS_DATA" ZNAM="Off" record="$(device):LOOP2:AUTOTUNE"/>
 	<records.bo DTYP="asynUInt32Digital" ONAM="Run" OUT="@asynMask($(modbus_port_prefix)_PROGRUN2,0,1,1000)MODBUS_DATA" ZNAM="Stop" record="$(device):PROGRUN"/>
+	<records.bo DTYP="asynUInt32Digital" ONAM="Run Reset" OUT="@asynMask($(modbus_port_prefix)_PROGRESET,0,1,1000)MODBUS_DATA" ZNAM="Stopped" record="$(device):PROGRESET"/>
 	<records.ao ASLO="0.1" DESC="Setpoint" DRVH="1000" DRVL="-273" DTYP="asynInt32" EGU="C" OUT="@asyn($(modbus_port_prefix)_SP2,0,1000)MODBUS_DATA" PREC="1" record="$(device):SP"/>
 	<records.ao ASLO="0.1" DESC="Output" DRVH="100" DRVL="-100" DTYP="asynInt32" OUT="@asyn($(modbus_port_prefix)_OUTPUT2,0,1000)MODBUS_DATA" PREC="1" record="$(device):O"/>
 	<records.ao ASLO="0.1" DESC="proportional param" DTYP="asynInt32" OUT="@asyn($(modbus_port_prefix)_PROP2,0,1000)MODBUS_DATA" PREC="1" record="$(device):P"/>
