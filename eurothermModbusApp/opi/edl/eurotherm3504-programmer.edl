@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 1005
-y 155
+x 1408
+y 515
 w 365
-h 374
+h 244
 font "arial-medium-r-18.0"
 ctlFont "arial-medium-r-18.0"
 btnFont "arial-medium-r-18.0"
@@ -21,7 +21,6 @@ topShadowColor index 1
 botShadowColor index 11
 title "Eurotherm Programmer"
 showGrid
-snapToGrid
 gridSize 5
 disableScroll
 endScreenProperties
@@ -232,8 +231,8 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 275
-y 290
+x 289
+y 207
 w 65
 h 25
 fgColor index 46
@@ -273,7 +272,7 @@ release 0
 x 10
 y 50
 w 345
-h 220
+h 149
 lineColor index 14
 fill
 fillColor index 5
@@ -297,26 +296,6 @@ value {
 }
 autoSize
 border
-endObjectProperties
-
-# (Menu Button)
-object activeMenuButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 90
-y 60
-w 135
-h 25
-fgColor index 14
-bgColor index 3
-inconsistentColor index 14
-topShadowColor index 1
-botShadowColor index 11
-controlPv "$(device):PROGRUN"
-indicatorPv "$(device):PROGRUN"
-font "arial-bold-r-12.0"
 endObjectProperties
 
 # (Static Text)
@@ -460,67 +439,55 @@ fill
 font "arial-bold-r-14.0"
 endObjectProperties
 
-# (Static Text)
-object activeXTextClass
+# (Button)
+object activeButtonClass
 beginObjectProperties
 major 4
 minor 1
-release 1
-x 15
-y 185
-w 52
-h 26
-font "arial-bold-r-12.0"
-fgColor index 14
-bgColor index 10
-useDisplayBg
-value {
-  "Program"
-  "Timeleft"
-}
-autoSize
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 6
 release 0
-x 90
-y 185
-w 135
-h 25
-controlPv "$(device):PROGREM"
-font "arial-bold-r-14.0"
-fgColor index 16
-bgColor index 10
-limitsFromDb
-nullColor index 0
-useHexPrefix
-showUnits
-newPos
-objType "monitors"
+x 91
+y 61
+w 62
+h 21
+fgColor index 14
+onColor index 3
+offColor index 3
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(device):PROGRUN"
+onLabel "Run"
+offLabel "Run"
+labelType "literal"
+buttonType "push"
+3d
+font "arial-bold-r-12.0"
+objType "controls"
 endObjectProperties
 
-# (Static Text)
-object activeXTextClass
+# (Button)
+object activeButtonClass
 beginObjectProperties
 major 4
 minor 1
-release 1
-x 20
-y 235
-w 178
-h 26
-font "arial-medium-r-12.0"
+release 0
+x 158
+y 61
+w 67
+h 21
 fgColor index 14
-bgColor index 10
-useDisplayBg
-value {
-  "*If you need to rerun a program,"
-  " stop it first"
-}
-autoSize
+onColor index 3
+offColor index 3
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(device):PROGRESET"
+onLabel "Reset"
+offLabel "Reset"
+labelType "literal"
+buttonType "push"
+3d
+font "arial-bold-r-12.0"
+objType "controls"
 endObjectProperties
 

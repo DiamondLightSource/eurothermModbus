@@ -2,7 +2,7 @@
 
 \page release_notes Release Notes
 
-\section rel1_4 Release 1-4 (Jul 2018)
+\section rel1_4 Release 1-4 (Aug 2018)
 Add support for eurotherm programmer (jira BC-806)
 Fix record precision for PV, SP and RAMPRATE (jira BC-805)
 
