@@ -1,6 +1,9 @@
 /**
 
 \page release_notes Release Notes
+\section rel1_5 Release 1-5 (Aug 2018)
+Add support for recipes (jira BC-810)
+Add support for loop 2 (jira BC-807)
 
 \section rel1_4 Release 1-4 (Aug 2018)
 Add support for eurotherm programmer (jira BC-806)
