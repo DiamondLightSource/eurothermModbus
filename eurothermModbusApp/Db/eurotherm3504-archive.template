@@ -29,34 +29,94 @@ record(ai, "$(device):LOOP2:OUTPLO:RBV")
 {
 }
 # % archiver 1 Monitor
-record(ai, "$(device):PV:RBV")
+record(ai, "$(device):LOOP1:PV:RBV")
 {
 }
 # % archiver 1 Monitor
-record(ai, "$(device):SP:RBV")
+record(ai, "$(device):LOOP1:SP:RBV")
 {
 }
 # % archiver 1 Monitor
-record(ai, "$(device):O:RBV")
+record(ai, "$(device):LOOP1:O:RBV")
 {
 }
 # % archiver 10 Monitor
-record(ao, "$(device):RR")
+record(ao, "$(device):LOOP1:RR:RBV")
 {
 }
 # % archiver 10 Monitor
-record(bi, "$(device):MAN:RBV")
+record(bi, "$(device):LOOP1:MAN:RBV")
 {
 }
 # % archiver 10 Monitor
-record(ai, "$(device):P:RBV")
+record(ai, "$(device):LOOP1:P:RBV")
 {
 }
 # % archiver 10 Monitor
-record(ai, "$(device):I:RBV")
+record(ai, "$(device):LOOP1:I:RBV")
 {
 }
 # % archiver 10 Monitor
-record(ai, "$(device):D:RBV")
+record(ai, "$(device):LOOP1:D:RBV")
+{
+}
+# % archiver 1 Monitor
+record(ai, "$(device):LOOP2:PV:RBV")
+{
+}
+# % archiver 1 Monitor
+record(ai, "$(device):LOOP2:SP:RBV")
+{
+}
+# % archiver 1 Monitor
+record(ai, "$(device):LOOP2:O:RBV")
+{
+}
+# % archiver 10 Monitor
+record(ao, "$(device):LOOP2:RR:RBV")
+{
+}
+# % archiver 10 Monitor
+record(bi, "$(device):LOOP2:MAN:RBV")
+{
+}
+# % archiver 10 Monitor
+record(ai, "$(device):LOOP2:P:RBV")
+{
+}
+# % archiver 10 Monitor
+record(ai, "$(device):LOOP2:I:RBV")
+{
+}
+# % archiver 10 Monitor
+record(ai, "$(device):LOOP2:D:RBV")
+{
+}
+# % archiver 10 Monitor
+record(bo, "$(device):PROGRUN")
+{
+}
+# % archiver 10 Monitor
+record(bo, "$(device):PROGRESET")
+{
+}
+# % archiver 10 Monitor
+record(ai, "$(device):PROGNUM:RBV")
+{
+}
+# % archiver 10 Monitor
+record(mbbi, "$(device):PROGSTATUS:RBV")
+{
+}
+# % archiver 10 Monitor
+record(ai, "$(device):PROGSTAT:RBV")
+{
+}
+# % archiver 10 Monitor
+record(mbbi, "$(device):RECSEL:RBV")
+{
+}
+# % archiver 10 Monitor
+record(mbbi, "$(device):RECSSTAT:RBV")
 {
 }
