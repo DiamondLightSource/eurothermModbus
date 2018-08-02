@@ -4,7 +4,7 @@ major 4
 minor 0
 release 1
 x 1408
-y 515
+y 552
 w 365
 h 244
 font "arial-medium-r-18.0"
@@ -409,7 +409,7 @@ x 90
 y 140
 w 135
 h 25
-controlPv "$(device):PROGSTAT"
+controlPv "$(device):PROGSTAT:RBV"
 font "arial-bold-r-14.0"
 fgColor index 16
 bgColor index 10
