@@ -1,0 +1,110 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 1105
+y 674
+w 200
+h 70
+font "arial-medium-r-18.0"
+ctlFont "arial-medium-r-18.0"
+btnFont "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 16
+ctlFgColor2 index 0
+ctlBgColor1 index 10
+ctlBgColor2 index 14
+topShadowColor index 1
+botShadowColor index 11
+title "Eurotherm3504 Recipes"
+showGrid
+snapToGrid
+gridSize 5
+disableScroll
+endScreenProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 10
+w 46
+h 13
+font "arial-bold-r-12.0"
+fgColor index 14
+bgColor index 10
+useDisplayBg
+value {
+  "Recipe: "
+}
+autoSize
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 60
+y 5
+w 130
+h 20
+fgColor index 14
+bgColor index 10
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(device):RECSEL"
+indicatorPv "$(device):RECSEL:RBV"
+font "arial-medium-r-18.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 35
+w 43
+h 13
+font "arial-bold-r-12.0"
+fgColor index 14
+bgColor index 10
+useDisplayBg
+value {
+  "Status:"
+}
+autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 60
+y 35
+w 130
+h 15
+controlPv "$(device):RECSTAT:RBV"
+font "arial-bold-r-12.0"
+fgColor index 14
+bgColor index 3
+autoHeight
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "monitors"
+endObjectProperties
+

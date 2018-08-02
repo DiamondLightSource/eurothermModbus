@@ -50,7 +50,13 @@
 	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="5226" plctype="" pollmsec="1000" portname="MB_PROGRUN_RBV" slaveaddr="1" tcpportname="$(port)"/>
 	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="5226" plctype="" pollmsec="1000" portname="MB_PROGRUN" slaveaddr="1" tcpportname="$(port)"/>
 	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="5229" plctype="" pollmsec="1000" portname="MB_PROGRESET" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="315" plctype="" pollmsec="1000" portname="MB_RECIPESELECT_RBV" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="313" plctype="" pollmsec="1000" portname="MB_RECIPESELECT" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="UINT16" modbusfunction="3" modbuslen="1" modbusstartaddr="316" plctype="" pollmsec="1000" portname="MB_RECIPESTATUS_RBV" slaveaddr="1" tcpportname="$(port)"/>
 	<records.mbbi DTYP="asynInt32" FRST="End" FRVL="16" INP="@asynMask(MB_PROGSTAT_RBV,0,0x1f,1000)MODBUS_DATA" ONST="Running" ONVL="2" SCAN="I/O Intr" THST="Holdback" THVL="8" TWST="Hold" TWVL="4" ZRST="Not Running" ZRVL="1" record="$(device):PROGSTAT"/>
+	<records.mbbi DTYP="asynInt32" EIST="8" EIVL="8" FRST="4" FRVL="4" FVST="5" FVVL="5" INP="@asynMask(MB_RECIPESELECT_RBV,0,0x0f,1000)MODBUS_DATA" ONST="1" ONVL="1" SCAN="I/O Intr" SVST="7" SVVL="7" SXST="6" SXVL="6" THST="3" THVL="3" TWST="2" TWVL="2" ZRST="Not Set" ZRVL="0" record="$(device):RECSEL:RBV"/>
+	<records.mbbi DTYP="asynInt32" INP="@asynMask(MB_RECIPESTATUS_RBV,0,0x0f,1000)MODBUS_DATA" ONST="Loading" ONVL="1" SCAN="I/O Intr" THST="Denied" THVL="3" TWST="Failed" TWVL="2" ZRST="OK" ZRVL="0" record="$(device):RECSTAT:RBV"/>
+	<records.mbbo DTYP="asynInt32" EIST="8" EIVL="8" FRST="4" FRVL="4" FVST="5" FVVL="5" ONST="1" ONVL="1" OUT="@asyn(MB_RECIPESELECT,0,1000)MODBUS_DATA" SVST="7" SVVL="7" SXST="6" SXVL="6" THST="3" THVL="3" TWST="2" TWVL="2" ZRST="NOT SET" ZRVL="0" record="$(device):RECSEL"/>
 	<records.bi DESC="manual/auto" DTYP="asynUInt32Digital" INP="@asynMask(MB_L1_MAN_RBV,0,1,1000)MODBUS_DATA" ONAM="Manual" SCAN="I/O Intr" ZNAM="Automatic" record="$(device):LOOP1:MAN:RBV"/>
 	<records.bi DESC="manual/auto" DTYP="asynUInt32Digital" INP="@asynMask(MB_L2_MAN_RBV,0,1,1000)MODBUS_DATA" ONAM="Manual" SCAN="I/O Intr" ZNAM="Automatic" record="$(device):LOOP2:MAN:RBV"/>
 	<records.bi DESC="loop1 autotune" DTYP="asynUInt32Digital" INP="@asynMask(MB_L1_AUTOTUNE_RBV,0,1,1000)MODBUS_DATA" ONAM="On" SCAN="I/O Intr" ZNAM="Off" record="$(device):LOOP1:AUTOTUNE:RBV"/>
@@ -62,23 +68,6 @@
 	<records.bo DTYP="asynUInt32Digital" ONAM="On" OUT="@asynMask(MB_L2_AUTOTUNE,0,1,1000)MODBUS_DATA" ZNAM="Off" record="$(device):LOOP2:AUTOTUNE"/>
 	<records.bo DTYP="asynUInt32Digital" ONAM="Run" OUT="@asynMask(MB_PROGRUN,0,1,1000)MODBUS_DATA" ZNAM="Stop" record="$(device):PROGRUN"/>
 	<records.bo DTYP="asynUInt32Digital" ONAM="Run Reset" OUT="@asynMask(MB_PROGRESET,0,1,1000)MODBUS_DATA" ZNAM="Stopped" record="$(device):PROGRESET"/>
-	<records.ao ASLO="0.1" DESC="Setpoint" DRVH="1000" DRVL="-273" DTYP="asynInt32" EGU="C" OUT="@asyn(MB_L1_SP,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:SP"/>
-	<records.ao ASLO="0.1" DESC="Output" DRVH="100" DRVL="-100" DTYP="asynInt32" OUT="@asyn(MB_L1_OUTPUT,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:O"/>
-	<records.ao ASLO="0.1" DESC="proportional param" DTYP="asynInt32" OUT="@asyn(MB_L1_PROP,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:P"/>
-	<records.ao DESC="integral-param" DTYP="asynInt32" OUT="@asyn(MB_L1_INTEG,0,1000)MODBUS_DATA" PREC="0" record="$(device):LOOP1:I"/>
-	<records.ao DESC="derivative-param" DTYP="asynInt32" OUT="@asyn(MB_L1_DERIV,0,1000)MODBUS_DATA" PREC="0" record="$(device):LOOP1:D"/>
-	<records.ao ASLO="0.1" DESC="ramprate" DTYP="asynInt32" OUT="@asyn(MB_L1_RAMPRATE,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:RR"/>
-	<records.ao ASLO="0.1" DESC="Setpoint" DRVH="1000" DRVL="-273" DTYP="asynInt32" EGU="C" OUT="@asyn(MB_L2_SP,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:SP"/>
-	<records.ao ASLO="0.1" DESC="Output" DRVH="100" DRVL="-100" DTYP="asynInt32" OUT="@asyn(MB_L2_OUTPUT,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:O"/>
-	<records.ao ASLO="0.1" DESC="proportional param" DTYP="asynInt32" OUT="@asyn(MB_L2_PROP,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:P"/>
-	<records.ao DESC="integral-param" DTYP="asynInt32" OUT="@asyn(MB_L2_INTEG,0,1000)MODBUS_DATA" PREC="0" record="$(device):LOOP2:I"/>
-	<records.ao DESC="derivative-param" DTYP="asynInt32" OUT="@asyn(MB_L2_DERIV,0,1000)MODBUS_DATA" PREC="0" record="$(device):LOOP2:D"/>
-	<records.ao ASLO="0.1" DESC="ramprate" DTYP="asynInt32" OUT="@asyn(MB_L2_RAMPRATE,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:RR"/>
-	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn(MB_L1_OUTPHI,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:OUTPHI"/>
-	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn(MB_L1_OUTPLO,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:OUTPLO"/>
-	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn(MB_L2_OUTPHI,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:OUTPHI"/>
-	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn(MB_L2_OUTPLO,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:OUTPLO"/>
-	<records.ao DRVH="10" DRVL="1" DTYP="asynInt32" OUT="@asyn(MB_PROGNUM,0,1000)MODBUS_DATA" PREC="0" record="$(device):PROGNUM"/>
 	<records.ai ASLO="0.1" DESC="Temperature readback" DTYP="asynInt32" EGU="C" INP="@asyn(MB_L1_PV_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:PV:RBV"/>
 	<records.ai ASLO="0.1" DESC="setpoint readback" DTYP="asynInt32" EGU="C" INP="@asyn(MB_L1_SP_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:SP:RBV"/>
 	<records.ai ASLO="0.1" DESC="output" DTYP="asynInt32" EGU="%" INP="@asyn(MB_L1_OUTPUT_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:O:RBV"/>
@@ -98,4 +87,21 @@
 	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="%" INP="@asyn(MB_L2_OUTPHI_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP2:OUTPHI:RBV"/>
 	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="%" INP="@asyn(MB_L2_OUTPLO_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP2:OUTPLO:RBV"/>
 	<records.ai DTYP="asynInt32" INP="@asyn(MB_PROGNUM_RBV,0,1000)MODBUS_DATA" PREC="0" SCAN="I/O Intr" record="$(device):PROGNUM:RBV"/>
+	<records.ao ASLO="0.1" DESC="Setpoint" DRVH="1000" DRVL="-273" DTYP="asynInt32" EGU="C" OUT="@asyn(MB_L1_SP,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:SP"/>
+	<records.ao ASLO="0.1" DESC="Output" DRVH="100" DRVL="-100" DTYP="asynInt32" OUT="@asyn(MB_L1_OUTPUT,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:O"/>
+	<records.ao ASLO="0.1" DESC="proportional param" DTYP="asynInt32" OUT="@asyn(MB_L1_PROP,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:P"/>
+	<records.ao DESC="integral-param" DTYP="asynInt32" OUT="@asyn(MB_L1_INTEG,0,1000)MODBUS_DATA" PREC="0" record="$(device):LOOP1:I"/>
+	<records.ao DESC="derivative-param" DTYP="asynInt32" OUT="@asyn(MB_L1_DERIV,0,1000)MODBUS_DATA" PREC="0" record="$(device):LOOP1:D"/>
+	<records.ao ASLO="0.1" DESC="ramprate" DTYP="asynInt32" OUT="@asyn(MB_L1_RAMPRATE,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:RR"/>
+	<records.ao ASLO="0.1" DESC="Setpoint" DRVH="1000" DRVL="-273" DTYP="asynInt32" EGU="C" OUT="@asyn(MB_L2_SP,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:SP"/>
+	<records.ao ASLO="0.1" DESC="Output" DRVH="100" DRVL="-100" DTYP="asynInt32" OUT="@asyn(MB_L2_OUTPUT,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:O"/>
+	<records.ao ASLO="0.1" DESC="proportional param" DTYP="asynInt32" OUT="@asyn(MB_L2_PROP,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:P"/>
+	<records.ao DESC="integral-param" DTYP="asynInt32" OUT="@asyn(MB_L2_INTEG,0,1000)MODBUS_DATA" PREC="0" record="$(device):LOOP2:I"/>
+	<records.ao DESC="derivative-param" DTYP="asynInt32" OUT="@asyn(MB_L2_DERIV,0,1000)MODBUS_DATA" PREC="0" record="$(device):LOOP2:D"/>
+	<records.ao ASLO="0.1" DESC="ramprate" DTYP="asynInt32" OUT="@asyn(MB_L2_RAMPRATE,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:RR"/>
+	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn(MB_L1_OUTPHI,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:OUTPHI"/>
+	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn(MB_L1_OUTPLO,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:OUTPLO"/>
+	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn(MB_L2_OUTPHI,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:OUTPHI"/>
+	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn(MB_L2_OUTPLO,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:OUTPLO"/>
+	<records.ao DRVH="10" DRVL="1" DTYP="asynInt32" OUT="@asyn(MB_PROGNUM,0,1000)MODBUS_DATA" PREC="0" record="$(device):PROGNUM"/>
 </components>

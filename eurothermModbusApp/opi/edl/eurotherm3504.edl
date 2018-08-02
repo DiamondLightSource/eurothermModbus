@@ -3,10 +3,10 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 225
-y 478
-w 800
-h 580
+x 442
+y 251
+w 792
+h 612
 font "arial-medium-r-18.0"
 ctlFont "arial-medium-r-18.0"
 btnFont "arial-medium-r-18.0"
@@ -233,7 +233,7 @@ major 4
 minor 1
 release 0
 x 710
-y 540
+y 570
 w 65
 h 25
 fgColor index 46
@@ -251,8 +251,8 @@ beginObjectProperties
 major 4
 minor 4
 release 0
-x 15
-y 540
+x 10
+y 570
 w 100
 h 25
 fgColor index 43
@@ -274,8 +274,8 @@ beginObjectProperties
 major 4
 minor 4
 release 0
-x 120
-y 540
+x 115
+y 570
 w 110
 h 25
 fgColor index 43
@@ -369,6 +369,44 @@ displayFileName {
 }
 symbols {
   0 "loop=LOOP2,label=Loop 2"
+}
+noScroll
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 260
+y 530
+w 215
+h 65
+lineColor index 14
+fillColor index 10
+endObjectProperties
+
+# (Embedded Window)
+object activePipClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 265
+y 535
+w 205
+h 55
+fgColor index 14
+bgColor index 10
+topShadowColor index 1
+botShadowColor index 11
+displaySource "menu"
+filePv "LOC\\$(!W)tabrecipes=e:0,RECIPES"
+sizeOfs 5
+numDsps 1
+displayFileName {
+  0 "eurotherm3504-recipe.edl"
 }
 noScroll
 endObjectProperties
