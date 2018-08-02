@@ -4,8 +4,8 @@ major 4
 minor 0
 release 1
 x 225
-y 404
-w 400
+y 478
+w 800
 h 580
 font "arial-medium-r-18.0"
 ctlFont "arial-medium-r-18.0"
@@ -34,7 +34,7 @@ minor 0
 release 0
 x 30
 y 0
-w 355
+w 855
 h 30
 
 beginGroup
@@ -47,7 +47,7 @@ minor 0
 release 0
 x 30
 y 0
-w 350
+w 745
 h 30
 lineColor index 3
 fill
@@ -62,15 +62,15 @@ minor 0
 release 1
 x 30
 y 3
-w 350
+w 745
 h 24
 lineColor index 11
 fillColor index 0
 numPoints 3
 xPoints {
   0 30
-  1 380
-  2 380
+  1 775
+  2 775
 }
 yPoints {
   0 27
@@ -87,7 +87,7 @@ minor 1
 release 1
 x 30
 y 3
-w 350
+w 745
 h 24
 font "arial-bold-r-16.0"
 fontAlign "center"
@@ -106,7 +106,7 @@ minor 0
 release 1
 x 30
 y 3
-w 350
+w 745
 h 24
 lineColor index 1
 fillColor index 0
@@ -114,7 +114,7 @@ numPoints 3
 xPoints {
   0 30
   1 30
-  2 380
+  2 775
 }
 yPoints {
   0 27
@@ -232,8 +232,8 @@ beginObjectProperties
 major 4
 minor 1
 release 0
-x 320
-y 530
+x 710
+y 540
 w 65
 h 25
 fgColor index 46
@@ -252,7 +252,7 @@ major 4
 minor 4
 release 0
 x 15
-y 530
+y 540
 w 100
 h 25
 fgColor index 43
@@ -275,7 +275,7 @@ major 4
 minor 4
 release 0
 x 120
-y 530
+y 540
 w 110
 h 25
 fgColor index 43
@@ -320,7 +320,7 @@ bgColor index 10
 topShadowColor index 1
 botShadowColor index 11
 displaySource "menu"
-filePv "LOC\\$(!W)tab=e:0,LOOP"
+filePv "LOC\\$(!W)loop1tab=e:0,LOOP1"
 sizeOfs 5
 numDsps 1
 displayFileName {
@@ -328,6 +328,47 @@ displayFileName {
 }
 symbols {
   0 "loop=LOOP1,label=Loop 1"
+}
+noScroll
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 405
+y 45
+w 370
+h 480
+lineColor index 14
+fillColor index 10
+endObjectProperties
+
+# (Embedded Window)
+object activePipClass
+beginObjectProperties
+major 4
+minor 1
+release 0
+x 410
+y 50
+w 360
+h 470
+fgColor index 14
+bgColor index 10
+topShadowColor index 1
+botShadowColor index 11
+displaySource "menu"
+filePv "LOC\\$(!W)loop2tab=e:0,LOOP2"
+sizeOfs 5
+numDsps 1
+displayFileName {
+  0 "eurotherm3504-loop.edl"
+}
+symbols {
+  0 "loop=LOOP2,label=Loop 2"
 }
 noScroll
 endObjectProperties
