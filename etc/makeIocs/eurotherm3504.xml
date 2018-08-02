@@ -1,71 +1,71 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
 	<asyn.AsynIP name="$(port)" noProcessEos="True" port="$(ipaddress):502"/>
-	<modbus.modbusInterpose linktype="tcpip" name="$(modbus_port_prefix).INTERPOSE" portname="$(port)" timeoutmsec="2000" writedelaymsec="0"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="1" name="$(modbus_port_prefix).PV" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_PV" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="2" name="$(modbus_port_prefix).SP1" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_SP1" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="2" name="$(modbus_port_prefix).SP2" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_SP2" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="3" name="$(modbus_port_prefix).OUTPUT1" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_OUTPUT1" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="3" name="$(modbus_port_prefix).OUTPUT2" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_OUTPUT2" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="273" name="$(modbus_port_prefix).MAN1" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_MAN1" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="273" name="$(modbus_port_prefix).MAN2" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_MAN2" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="6" name="$(modbus_port_prefix).PROP1" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_PROP1" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="6" name="$(modbus_port_prefix).PROP2" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_PROP2" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="8" name="$(modbus_port_prefix).INTEG1" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_INTEG1" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="8" name="$(modbus_port_prefix).INTEG2" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_INTEG2" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="9" name="$(modbus_port_prefix).DERIV1" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_DERIV1" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="9" name="$(modbus_port_prefix).DERIV2" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_DERIV2" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="35" name="$(modbus_port_prefix).RAMPRATE1" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_RAMPRATE1" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="35" name="$(modbus_port_prefix).RAMPRATE2" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_RAMPRATE2" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="270" name="$(modbus_port_prefix).L1AUTOTUNE1" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_L1AUTOTUNE1" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="270" name="$(modbus_port_prefix).L1AUTOTUNE2" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_L1AUTOTUNE2" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="30" name="$(modbus_port_prefix).L1OUTPHI1" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_L1OUTPHI1" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="30" name="$(modbus_port_prefix).L1OUTPHI2" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_L1OUTPHI2" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="31" name="$(modbus_port_prefix).L1OUTPLO1" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_L1OUTPLO1" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="31" name="$(modbus_port_prefix).L1OUTPLO2" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_L1OUTPLO2" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="1294" name="$(modbus_port_prefix).L2AUTOTUNE1" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_L2AUTOTUNE1" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="1294" name="$(modbus_port_prefix).L2AUTOTUNE2" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_L2AUTOTUNE2" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="1054" name="$(modbus_port_prefix).L2OUTPHI1" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_L2OUTPHI1" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="1054" name="$(modbus_port_prefix).L2OUTPHI2" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_L2OUTPHI2" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="1055" name="$(modbus_port_prefix).L2OUTPLO1" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_L2OUTPLO1" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="1055" name="$(modbus_port_prefix).L2OUTPLO2" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_L2OUTPLO2" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="5193" name="$(modbus_port_prefix).PROGNUM1" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_PROGNUM1" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="5193" name="$(modbus_port_prefix).PROGNUM2" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_PROGNUM2" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="5195" name="$(modbus_port_prefix).PROGSTAT" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_PROGSTAT" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="5226" name="$(modbus_port_prefix).PROGRUN1" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_PROGRUN1" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="5226" name="$(modbus_port_prefix).PROGRUN2" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_PROGRUN2" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="5229" name="$(modbus_port_prefix).PROGRESET" plctype="" pollmsec="1000" portname="$(modbus_port_prefix)_PROGRESET" slaveaddr="1" tcpportname="$(port)"/>
-	<records.mbbi DTYP="asynInt32" FRST="End" FRVL="16" INP="@asynMask($(modbus_port_prefix)_PROGSTAT,0,0x1f,1000)MODBUS_DATA" ONST="Running" ONVL="2" SCAN="I/O Intr" THST="Holdback" THVL="8" TWST="Hold" TWVL="4" ZRST="Not Running" ZRVL="1" record="$(device):PROGSTAT"/>
-	<records.bi DESC="manual/auto" DTYP="asynUInt32Digital" INP="@asynMask($(modbus_port_prefix)_MAN1,0,1,1000)MODBUS_DATA" ONAM="Manual" SCAN="I/O Intr" ZNAM="Automatic" record="$(device):MAN:RBV"/>
-	<records.bi DESC="loop1 autotune" DTYP="asynUInt32Digital" INP="@asynMask($(modbus_port_prefix)_L1AUTOTUNE1,0,1,1000)MODBUS_DATA" ONAM="On" SCAN="I/O Intr" ZNAM="Off" record="$(device):LOOP1:AUTOTUNE:RBV"/>
-	<records.bi DESC="loop2 autotune" DTYP="asynUInt32Digital" INP="@asynMask($(modbus_port_prefix)_L2AUTOTUNE1,0,1,1000)MODBUS_DATA" ONAM="On" SCAN="I/O Intr" ZNAM="Off" record="$(device):LOOP2:AUTOTUNE:RBV"/>
-	<records.bi DESC="Running/Not Running" DTYP="asynUInt32Digital" INP="@asynMask($(modbus_port_prefix)_PROGRUN1,0,1,1000)MODBUS_DATA" ONAM="Running" SCAN="I/O Intr" ZNAM="Stopped" record="$(device):PROGRUN:RBV"/>
-	<records.bo DTYP="asynUInt32Digital" ONAM="Manual" OUT="@asynMask($(modbus_port_prefix)_MAN2,0,1,1000)MODBUS_DATA" ZNAM="Automatic" record="$(device):MAN"/>
-	<records.bo DTYP="asynUInt32Digital" ONAM="On" OUT="@asynMask($(modbus_port_prefix)_L1AUTOTUNE2,0,1,1000)MODBUS_DATA" ZNAM="Off" record="$(device):LOOP1:AUTOTUNE"/>
-	<records.bo DTYP="asynUInt32Digital" ONAM="On" OUT="@asynMask($(modbus_port_prefix)_L2AUTOTUNE2,0,1,1000)MODBUS_DATA" ZNAM="Off" record="$(device):LOOP2:AUTOTUNE"/>
-	<records.bo DTYP="asynUInt32Digital" ONAM="Run" OUT="@asynMask($(modbus_port_prefix)_PROGRUN2,0,1,1000)MODBUS_DATA" ZNAM="Stop" record="$(device):PROGRUN"/>
-	<records.bo DTYP="asynUInt32Digital" ONAM="Run Reset" OUT="@asynMask($(modbus_port_prefix)_PROGRESET,0,1,1000)MODBUS_DATA" ZNAM="Stopped" record="$(device):PROGRESET"/>
-	<records.ao ASLO="0.1" DESC="Setpoint" DRVH="1000" DRVL="-273" DTYP="asynInt32" EGU="C" OUT="@asyn($(modbus_port_prefix)_SP2,0,1000)MODBUS_DATA" PREC="1" record="$(device):SP"/>
-	<records.ao ASLO="0.1" DESC="Output" DRVH="100" DRVL="-100" DTYP="asynInt32" OUT="@asyn($(modbus_port_prefix)_OUTPUT2,0,1000)MODBUS_DATA" PREC="1" record="$(device):O"/>
-	<records.ao ASLO="0.1" DESC="proportional param" DTYP="asynInt32" OUT="@asyn($(modbus_port_prefix)_PROP2,0,1000)MODBUS_DATA" PREC="1" record="$(device):P"/>
-	<records.ao DESC="integral-param" DTYP="asynInt32" OUT="@asyn($(modbus_port_prefix)_INTEG2,0,1000)MODBUS_DATA" PREC="0" record="$(device):I"/>
-	<records.ao DESC="derivative-param" DTYP="asynInt32" OUT="@asyn($(modbus_port_prefix)_DERIV2,0,1000)MODBUS_DATA" PREC="0" record="$(device):D"/>
-	<records.ao ASLO="0.1" DESC="ramprate-loop1" DTYP="asynInt32" OUT="@asyn($(modbus_port_prefix)_RAMPRATE2,0,1000)MODBUS_DATA" PREC="1" record="$(device):RR"/>
-	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn($(modbus_port_prefix)_L1OUTPHI2,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:OUTPHI"/>
-	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn($(modbus_port_prefix)_L1OUTPLO2,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:OUTPLO"/>
-	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn($(modbus_port_prefix)_L2OUTPHI2,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:OUTPHI"/>
-	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn($(modbus_port_prefix)_L2OUTPLO2,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:OUTPLO"/>
-	<records.ao DRVH="10" DRVL="1" DTYP="asynInt32" OUT="@asyn($(modbus_port_prefix)_PROGNUM2,0,1000)MODBUS_DATA" PREC="0" record="$(device):PROGNUM"/>
-	<records.ai ASLO="0.1" DESC="Temperature readback" DTYP="asynInt32" EGU="C" INP="@asyn($(modbus_port_prefix)_PV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):PV:RBV"/>
-	<records.ai ASLO="0.1" DESC="setpoint readback" DTYP="asynInt32" EGU="C" INP="@asyn($(modbus_port_prefix)_SP1,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):SP:RBV"/>
-	<records.ai ASLO="0.1" DESC="output" DTYP="asynInt32" EGU="%" INP="@asyn($(modbus_port_prefix)_OUTPUT1,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):O:RBV"/>
-	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="C" INP="@asyn($(modbus_port_prefix)_PROP1,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):P:RBV"/>
-	<records.ai DTYP="asynInt32" EGU="sec" INP="@asyn($(modbus_port_prefix)_INTEG1,0,1000)MODBUS_DATA" PREC="0" SCAN="I/O Intr" record="$(device):I:RBV"/>
-	<records.ai DTYP="asynInt32" EGU="sec" INP="@asyn($(modbus_port_prefix)_DERIV1,0,1000)MODBUS_DATA" PREC="0" SCAN="I/O Intr" record="$(device):D:RBV"/>
-	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="C/min" INP="@asyn($(modbus_port_prefix)_RAMPRATE1,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):RR:RBV"/>
-	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="%" INP="@asyn($(modbus_port_prefix)_L1OUTPHI1,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:OUTPHI:RBV"/>
-	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="%" INP="@asyn($(modbus_port_prefix)_L1OUTPLO1,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:OUTPLO:RBV"/>
-	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="%" INP="@asyn($(modbus_port_prefix)_L2OUTPHI1,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP2:OUTPHI:RBV"/>
-	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="%" INP="@asyn($(modbus_port_prefix)_L2OUTPLO1,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP2:OUTPLO:RBV"/>
-	<records.ai DTYP="asynInt32" INP="@asyn($(modbus_port_prefix)_PROGNUM1,0,1000)MODBUS_DATA" PREC="0" SCAN="I/O Intr" record="$(device):PROGNUM:RBV"/>
+	<modbus.modbusInterpose linktype="tcpip" name="MB.INTERPOSE" portname="$(port)" timeoutmsec="2000" writedelaymsec="0"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="1" plctype="" pollmsec="1000" portname="MB_L1_PV_RBV" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="2" plctype="" pollmsec="1000" portname="MB_L1_SP_RBV" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="2" plctype="" pollmsec="1000" portname="MB_L1_SP" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="3" plctype="" pollmsec="1000" portname="MB_L1_OUTPUT_RBV" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="3" plctype="" pollmsec="1000" portname="MB_L1_OUTPUT" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="273" plctype="" pollmsec="1000" portname="MB_L1_MAN_RBV" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="273" plctype="" pollmsec="1000" portname="MB_L1_MAN" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="6" plctype="" pollmsec="1000" portname="MB_L1_PROP_RBV" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="6" plctype="" pollmsec="1000" portname="MB_L1_PROP" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="8" plctype="" pollmsec="1000" portname="MB_L1_INTEG_RBV" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="8" plctype="" pollmsec="1000" portname="MB_L1_INTEG" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="9" plctype="" pollmsec="1000" portname="MB_L1_DERIV_RBV" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="9" plctype="" pollmsec="1000" portname="MB_L1_DERIV" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="35" plctype="" pollmsec="1000" portname="MB_L1_RAMPRATE_RBV" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="35" plctype="" pollmsec="1000" portname="MB_L1_RAMPRATE" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="270" plctype="" pollmsec="1000" portname="MB_L1_AUTOTUNE_RBV" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="270" plctype="" pollmsec="1000" portname="MB_L1_AUTOTUNE" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="30" plctype="" pollmsec="1000" portname="MB_L1_OUTPHI_RBV" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="30" plctype="" pollmsec="1000" portname="MB_L1_OUTPHI" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="31" plctype="" pollmsec="1000" portname="MB_L1_OUTPLO_RBV" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="31" plctype="" pollmsec="1000" portname="MB_L1_OUTPLO" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="1294" plctype="" pollmsec="1000" portname="MB_L2_AUTOTUNE_RBV" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="1294" plctype="" pollmsec="1000" portname="MB_L2_AUTOTUNE" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="1054" plctype="" pollmsec="1000" portname="MB_L2_OUTPHI_RBV" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="1054" plctype="" pollmsec="1000" portname="MB_L2_OUTPHI" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="1055" plctype="" pollmsec="1000" portname="MB_L2_OUTPLO_RBV" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="1055" plctype="" pollmsec="1000" portname="MB_L2_OUTPLO" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="5193" plctype="" pollmsec="1000" portname="MB_PROGNUM_RBV" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="5193" plctype="" pollmsec="1000" portname="MB_PROGNUM" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="5195" plctype="" pollmsec="1000" portname="MB_PROGSTAT_RBV" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="5226" plctype="" pollmsec="1000" portname="MB_PROGRUN_RBV" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="5226" plctype="" pollmsec="1000" portname="MB_PROGRUN" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="5229" plctype="" pollmsec="1000" portname="MB_PROGRESET" slaveaddr="1" tcpportname="$(port)"/>
+	<records.mbbi DTYP="asynInt32" FRST="End" FRVL="16" INP="@asynMask(MB_PROGSTAT_RBV,0,0x1f,1000)MODBUS_DATA" ONST="Running" ONVL="2" SCAN="I/O Intr" THST="Holdback" THVL="8" TWST="Hold" TWVL="4" ZRST="Not Running" ZRVL="1" record="$(device):PROGSTAT"/>
+	<records.bi DESC="manual/auto" DTYP="asynUInt32Digital" INP="@asynMask(MB_L1_MAN_RBV,0,1,1000)MODBUS_DATA" ONAM="Manual" SCAN="I/O Intr" ZNAM="Automatic" record="$(device):LOOP1:MAN:RBV"/>
+	<records.bi DESC="loop1 autotune" DTYP="asynUInt32Digital" INP="@asynMask(MB_L1_AUTOTUNE_RBV,0,1,1000)MODBUS_DATA" ONAM="On" SCAN="I/O Intr" ZNAM="Off" record="$(device):LOOP1:AUTOTUNE:RBV"/>
+	<records.bi DESC="loop2 autotune" DTYP="asynUInt32Digital" INP="@asynMask(MB_L2_AUTOTUNE_RBV,0,1,1000)MODBUS_DATA" ONAM="On" SCAN="I/O Intr" ZNAM="Off" record="$(device):LOOP2:AUTOTUNE:RBV"/>
+	<records.bi DESC="Running/Not Running" DTYP="asynUInt32Digital" INP="@asynMask(MB_PROGRUN_RBV,0,1,1000)MODBUS_DATA" ONAM="Running" SCAN="I/O Intr" ZNAM="Stopped" record="$(device):PROGRUN:RBV"/>
+	<records.bo DTYP="asynUInt32Digital" ONAM="Manual" OUT="@asynMask(MB_L1_MAN,0,1,1000)MODBUS_DATA" ZNAM="Automatic" record="$(device):LOOP1:MAN"/>
+	<records.bo DTYP="asynUInt32Digital" ONAM="On" OUT="@asynMask(MB_L1_AUTOTUNE,0,1,1000)MODBUS_DATA" ZNAM="Off" record="$(device):LOOP1:AUTOTUNE"/>
+	<records.bo DTYP="asynUInt32Digital" ONAM="On" OUT="@asynMask(MB_L2_AUTOTUNE,0,1,1000)MODBUS_DATA" ZNAM="Off" record="$(device):LOOP2:AUTOTUNE"/>
+	<records.bo DTYP="asynUInt32Digital" ONAM="Run" OUT="@asynMask(MB_PROGRUN,0,1,1000)MODBUS_DATA" ZNAM="Stop" record="$(device):PROGRUN"/>
+	<records.bo DTYP="asynUInt32Digital" ONAM="Run Reset" OUT="@asynMask(MB_PROGRESET,0,1,1000)MODBUS_DATA" ZNAM="Stopped" record="$(device):PROGRESET"/>
+	<records.ao ASLO="0.1" DESC="Setpoint" DRVH="1000" DRVL="-273" DTYP="asynInt32" EGU="C" OUT="@asyn(MB_L1_SP,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:SP"/>
+	<records.ao ASLO="0.1" DESC="Output" DRVH="100" DRVL="-100" DTYP="asynInt32" OUT="@asyn(MB_L1_OUTPUT,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:O"/>
+	<records.ao ASLO="0.1" DESC="proportional param" DTYP="asynInt32" OUT="@asyn(MB_L1_PROP,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:P"/>
+	<records.ao DESC="integral-param" DTYP="asynInt32" OUT="@asyn(MB_L1_INTEG,0,1000)MODBUS_DATA" PREC="0" record="$(device):LOOP1:I"/>
+	<records.ao DESC="derivative-param" DTYP="asynInt32" OUT="@asyn(MB_L1_DERIV,0,1000)MODBUS_DATA" PREC="0" record="$(device):LOOP1:D"/>
+	<records.ao ASLO="0.1" DESC="ramprate-loop1" DTYP="asynInt32" OUT="@asyn(MB_L1_RAMPRATE,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:RR"/>
+	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn(MB_L1_OUTPHI,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:OUTPHI"/>
+	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn(MB_L1_OUTPLO,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:OUTPLO"/>
+	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn(MB_L2_OUTPHI,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:OUTPHI"/>
+	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn(MB_L2_OUTPLO,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:OUTPLO"/>
+	<records.ao DRVH="10" DRVL="1" DTYP="asynInt32" OUT="@asyn(MB_PROGNUM,0,1000)MODBUS_DATA" PREC="0" record="$(device):PROGNUM"/>
+	<records.ai ASLO="0.1" DESC="Temperature readback" DTYP="asynInt32" EGU="C" INP="@asyn(MB_L1_PV_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:PV:RBV"/>
+	<records.ai ASLO="0.1" DESC="setpoint readback" DTYP="asynInt32" EGU="C" INP="@asyn(MB_L1_SP_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:SP:RBV"/>
+	<records.ai ASLO="0.1" DESC="output" DTYP="asynInt32" EGU="%" INP="@asyn(MB_L1_OUTPUT_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:O:RBV"/>
+	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="C" INP="@asyn(MB_L1_PROP_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:P:RBV"/>
+	<records.ai DTYP="asynInt32" EGU="sec" INP="@asyn(MB_L1_INTEG_RBV,0,1000)MODBUS_DATA" PREC="0" SCAN="I/O Intr" record="$(device):LOOP1:I:RBV"/>
+	<records.ai DTYP="asynInt32" EGU="sec" INP="@asyn(MB_L1_DERIV_RBV,0,1000)MODBUS_DATA" PREC="0" SCAN="I/O Intr" record="$(device):LOOP1:D:RBV"/>
+	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="C/min" INP="@asyn(MB_L1_RAMPRATE_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:RR:RBV"/>
+	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="%" INP="@asyn(MB_L1_OUTPHI_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:OUTPHI:RBV"/>
+	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="%" INP="@asyn(MB_L1_OUTPLO_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:OUTPLO:RBV"/>
+	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="%" INP="@asyn(MB_L2_OUTPHI_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP2:OUTPHI:RBV"/>
+	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="%" INP="@asyn(MB_L2_OUTPLO_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP2:OUTPLO:RBV"/>
+	<records.ai DTYP="asynInt32" INP="@asyn(MB_PROGNUM_RBV,0,1000)MODBUS_DATA" PREC="0" SCAN="I/O Intr" record="$(device):PROGNUM:RBV"/>
 </components>
