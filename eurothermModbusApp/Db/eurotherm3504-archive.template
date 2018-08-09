@@ -37,6 +37,10 @@ record(ai, "$(device):LOOP1:SP:RBV")
 {
 }
 # % archiver 1 Monitor
+record(ai, "$(device):LOOP1:WSP:RBV")
+{
+}
+# % archiver 1 Monitor
 record(ai, "$(device):LOOP1:O:RBV")
 {
 }
@@ -66,6 +70,10 @@ record(ai, "$(device):LOOP2:PV:RBV")
 }
 # % archiver 1 Monitor
 record(ai, "$(device):LOOP2:SP:RBV")
+{
+}
+# % archiver 1 Monitor
+record(ai, "$(device):LOOP2:WSP:RBV")
 {
 }
 # % archiver 1 Monitor
