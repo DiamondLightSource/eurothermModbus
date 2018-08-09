@@ -4,7 +4,7 @@ major 4
 minor 0
 release 1
 x 739
-y 384
+y 421
 w 349
 h 458
 font "arial-medium-r-18.0"
@@ -68,7 +68,7 @@ major 4
 minor 1
 release 1
 x 175
-y 230
+y 250
 w 45
 h 25
 font "arial-bold-r-12.0"
@@ -106,7 +106,7 @@ major 4
 minor 1
 release 1
 x 15
-y 115
+y 140
 w 75
 h 35
 font "arial-bold-r-12.0"
@@ -125,7 +125,7 @@ major 10
 minor 0
 release 0
 x 90
-y 115
+y 140
 w 115
 h 35
 controlPv "$(device):$(loop):RR"
@@ -142,7 +142,7 @@ major 4
 minor 1
 release 1
 x 15
-y 160
+y 185
 w 55
 h 25
 font "arial-bold-r-12.0"
@@ -307,7 +307,7 @@ major 10
 minor 0
 release 0
 x 90
-y 155
+y 180
 w 115
 h 35
 controlPv "$(device):$(loop):O"
@@ -324,7 +324,7 @@ major 4
 minor 0
 release 0
 x 90
-y 195
+y 220
 w 115
 h 25
 fgColor index 14
@@ -344,7 +344,7 @@ major 4
 minor 1
 release 1
 x 15
-y 195
+y 220
 w 105
 h 25
 font "arial-bold-r-12.0"
@@ -364,7 +364,7 @@ major 10
 minor 0
 release 0
 x 215
-y 195
+y 220
 w 115
 h 25
 controlPv "$(device):$(loop):MAN:RBV"
@@ -405,7 +405,7 @@ major 4
 minor 6
 release 0
 x 215
-y 120
+y 145
 w 115
 h 25
 controlPv "$(device):$(loop):RR:RBV"
@@ -444,7 +444,7 @@ major 4
 minor 6
 release 0
 x 215
-y 230
+y 250
 w 115
 h 25
 controlPv "$(device):$(loop):PV:RBV"
@@ -532,7 +532,7 @@ major 4
 minor 6
 release 0
 x 215
-y 160
+y 185
 w 115
 h 25
 controlPv "$(device):$(loop):O:RBV"
@@ -565,5 +565,46 @@ value {
   "$(label)"
 }
 border
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 215
+y 110
+w 115
+h 25
+controlPv "$(device):$(loop):WSP:RBV"
+font "arial-bold-r-14.0"
+fgColor index 16
+bgColor index 10
+limitsFromDb
+nullColor index 0
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 150
+y 105
+w 75
+h 35
+font "arial-bold-r-12.0"
+fgColor index 14
+bgColor index 10
+useDisplayBg
+value {
+  "Working:"
+}
 endObjectProperties
 
