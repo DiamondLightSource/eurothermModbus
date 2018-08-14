@@ -45,7 +45,7 @@ record(ai, "$(device):LOOP1:O:RBV")
 {
 }
 # % archiver 10 Monitor
-record(ao, "$(device):LOOP1:RR:RBV")
+record(ai, "$(device):LOOP1:RR:RBV")
 {
 }
 # % archiver 10 Monitor
@@ -81,7 +81,7 @@ record(ai, "$(device):LOOP2:O:RBV")
 {
 }
 # % archiver 10 Monitor
-record(ao, "$(device):LOOP2:RR:RBV")
+record(ai, "$(device):LOOP2:RR:RBV")
 {
 }
 # % archiver 10 Monitor
@@ -113,11 +113,7 @@ record(ai, "$(device):PROGNUM:RBV")
 {
 }
 # % archiver 10 Monitor
-record(mbbi, "$(device):PROGSTATUS:RBV")
-{
-}
-# % archiver 10 Monitor
-record(ai, "$(device):PROGSTAT:RBV")
+record(mbbi, "$(device):PROGSTAT:RBV")
 {
 }
 # % archiver 10 Monitor
