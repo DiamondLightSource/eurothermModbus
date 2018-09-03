@@ -1,3 +1,6 @@
 <?xml version="1.0" ?>
-<components arch="linux-x86">
+<components arch="linux-x86_64">
+	<eurothermModbus.eurotherm3504 device="MyDevice" ipaddress="127.0.0.1" modbus_prefix="MB1" port="MYPORT"/>
+	<eurothermModbus.eurotherm3504Gui device="MyDevice" name="GUI"/>
+	<eurothermModbus.eurotherm3504Archive device="MyDevice" name="ARCH"/>
 </components>
