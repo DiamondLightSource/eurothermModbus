@@ -1,0 +1,610 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 739
+y 421
+w 349
+h 458
+font "arial-medium-r-18.0"
+ctlFont "arial-medium-r-18.0"
+btnFont "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 16
+ctlFgColor2 index 0
+ctlBgColor1 index 10
+ctlBgColor2 index 14
+topShadowColor index 1
+botShadowColor index 11
+title "Eurotherm Temperature Controller"
+showGrid
+snapToGrid
+gridSize 5
+disableScroll
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 70
+w 325
+h 210
+lineColor index 14
+fill
+fillColor index 5
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 60
+w 58
+h 13
+font "arial-medium-r-12.0"
+fgColor index 14
+bgColor index 8
+value {
+  "  General  "
+}
+autoSize
+border
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 175
+y 250
+w 45
+h 25
+font "arial-bold-r-12.0"
+fgColor index 14
+bgColor index 10
+useDisplayBg
+value {
+  "Temp:"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 15
+y 75
+w 75
+h 35
+font "arial-bold-r-12.0"
+fgColor index 14
+bgColor index 10
+useDisplayBg
+value {
+  "Setpoint:"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 15
+y 140
+w 75
+h 35
+font "arial-bold-r-12.0"
+fgColor index 14
+bgColor index 10
+useDisplayBg
+value {
+  "Ramprate:"
+}
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 90
+y 140
+w 115
+h 35
+controlPv "$(device):$(loop):RR"
+fgColor index 25
+bgColor index 3
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 15
+y 185
+w 55
+h 25
+font "arial-bold-r-12.0"
+fgColor index 14
+bgColor index 10
+useDisplayBg
+value {
+  "Output:"
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 300
+w 325
+h 135
+lineColor index 14
+fill
+fillColor index 5
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 10
+y 290
+w 42
+h 13
+font "arial-medium-r-12.0"
+fgColor index 14
+bgColor index 8
+value {
+  "  P.I.D.  "
+}
+autoSize
+border
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 90
+y 345
+w 115
+h 35
+controlPv "$(device):$(loop):I"
+fgColor index 25
+bgColor index 3
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 90
+y 305
+w 115
+h 35
+controlPv "$(device):$(loop):P"
+fgColor index 25
+bgColor index 3
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 90
+y 385
+w 115
+h 35
+controlPv "$(device):$(loop):D"
+fgColor index 25
+bgColor index 3
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 15
+y 320
+w 77
+h 13
+font "arial-bold-r-12.0"
+fgColor index 14
+bgColor index 10
+useDisplayBg
+value {
+  "Proportional:"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 15
+y 360
+w 50
+h 13
+font "arial-bold-r-12.0"
+fgColor index 14
+bgColor index 10
+useDisplayBg
+value {
+  "Integral:"
+}
+autoSize
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 15
+y 395
+w 69
+h 13
+font "arial-bold-r-12.0"
+fgColor index 14
+bgColor index 10
+useDisplayBg
+value {
+  "Differential:"
+}
+autoSize
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 90
+y 180
+w 115
+h 35
+controlPv "$(device):$(loop):O"
+fgColor index 25
+bgColor index 3
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 90
+y 220
+w 115
+h 25
+fgColor index 14
+bgColor index 3
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(device):$(loop):MAN"
+indicatorPv "$(device):$(loop):MAN"
+font "arial-bold-r-12.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 15
+y 220
+w 105
+h 25
+font "arial-bold-r-12.0"
+fgColor index 14
+bgColor index 10
+useDisplayBg
+value {
+  "Manual"
+  "mode:"
+}
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 215
+y 220
+w 115
+h 25
+controlPv "$(device):$(loop):MAN:RBV"
+displayMode "decimal"
+fgColor index 16
+fgAlarm
+bgColor index 10
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 215
+y 80
+w 115
+h 25
+controlPv "$(device):$(loop):SP:RBV"
+font "arial-bold-r-14.0"
+fgColor index 16
+bgColor index 10
+limitsFromDb
+nullColor index 0
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 215
+y 145
+w 115
+h 25
+controlPv "$(device):$(loop):RR:RBV"
+font "arial-bold-r-14.0"
+fgColor index 16
+bgColor index 10
+limitsFromDb
+nullColor index 0
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Textentry)
+object TextentryClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 90
+y 75
+w 115
+h 35
+controlPv "$(device):$(loop):SP"
+fgColor index 25
+bgColor index 3
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 215
+y 250
+w 115
+h 25
+controlPv "$(device):$(loop):PV:RBV"
+font "arial-bold-r-14.0"
+fgColor index 16
+bgColor index 10
+limitsFromDb
+nullColor index 0
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 215
+y 310
+w 115
+h 25
+controlPv "$(device):$(loop):P:RBV"
+font "arial-bold-r-14.0"
+fgColor index 16
+bgColor index 10
+limitsFromDb
+nullColor index 0
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 215
+y 350
+w 115
+h 25
+controlPv "$(device):$(loop):I:RBV"
+font "arial-bold-r-14.0"
+fgColor index 16
+bgColor index 10
+limitsFromDb
+nullColor index 0
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 215
+y 390
+w 115
+h 25
+controlPv "$(device):$(loop):D:RBV"
+font "arial-bold-r-14.0"
+fgColor index 16
+bgColor index 10
+limitsFromDb
+nullColor index 0
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 215
+y 185
+w 115
+h 25
+controlPv "$(device):$(loop):O:RBV"
+font "arial-bold-r-14.0"
+fgColor index 16
+bgColor index 10
+limitsFromDb
+nullColor index 0
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 100
+y 10
+w 145
+h 40
+font "arial-medium-r-18.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 8
+value {
+  "$(label)"
+}
+border
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 215
+y 110
+w 115
+h 25
+controlPv "$(device):$(loop):WSP:RBV"
+font "arial-bold-r-14.0"
+fgColor index 16
+bgColor index 10
+limitsFromDb
+nullColor index 0
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 150
+y 105
+w 75
+h 35
+font "arial-bold-r-12.0"
+fgColor index 14
+bgColor index 10
+useDisplayBg
+value {
+  "Working:"
+}
+endObjectProperties
+
