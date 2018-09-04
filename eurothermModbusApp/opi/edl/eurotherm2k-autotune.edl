@@ -5,8 +5,8 @@ minor 0
 release 1
 x 127
 y 187
-w 365
-h 374
+w 355
+h 220
 font "arial-medium-r-18.0"
 ctlFont "arial-medium-r-18.0"
 btnFont "arial-medium-r-18.0"
