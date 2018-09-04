@@ -35,7 +35,7 @@
 	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="C" INP="@asyn($(modbus_prefix)_L1_PROP_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:P:RBV"/>
 	<records.ai DTYP="asynInt32" EGU="sec" INP="@asyn($(modbus_prefix)_L1_INTEG_RBV,0,1000)MODBUS_DATA" PREC="0" SCAN="I/O Intr" record="$(device):LOOP1:I:RBV"/>
 	<records.ai DTYP="asynInt32" EGU="sec" INP="@asyn($(modbus_prefix)_L1_DERIV_RBV,0,1000)MODBUS_DATA" PREC="0" SCAN="I/O Intr" record="$(device):LOOP1:D:RBV"/>
-	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="C/min" INP="@asyn($(modbus_prefix)_L1_RAMPRATE_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:RR:RBV"/>
+	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="$(RREGU=C/s)" INP="@asyn($(modbus_prefix)_L1_RAMPRATE_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:RR:RBV"/>
 	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="%" INP="@asyn($(modbus_prefix)_L1_OUTPHI_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:OUTPHI:RBV"/>
 	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="%" INP="@asyn($(modbus_prefix)_L1_OUTPLO_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:OUTPLO:RBV"/>
 	<records.ao ASLO="0.1" DESC="Setpoint" DRVH="1000" DRVL="-273" DTYP="asynInt32" EGU="C" OUT="@asyn($(modbus_prefix)_L1_SP,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:SP"/>

@@ -77,7 +77,7 @@
 	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="C" INP="@asyn($(modbus_prefix)_L1_PROP_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:P:RBV"/>
 	<records.ai DTYP="asynInt32" EGU="sec" INP="@asyn($(modbus_prefix)_L1_INTEG_RBV,0,1000)MODBUS_DATA" PREC="0" SCAN="I/O Intr" record="$(device):LOOP1:I:RBV"/>
 	<records.ai DTYP="asynInt32" EGU="sec" INP="@asyn($(modbus_prefix)_L1_DERIV_RBV,0,1000)MODBUS_DATA" PREC="0" SCAN="I/O Intr" record="$(device):LOOP1:D:RBV"/>
-	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="C/min" INP="@asyn($(modbus_prefix)_L1_RAMPRATE_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:RR:RBV"/>
+	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="$(RREGU=C/s)" INP="@asyn($(modbus_prefix)_L1_RAMPRATE_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:RR:RBV"/>
 	<records.ai ASLO="0.1" DESC="Temperature readback" DTYP="asynInt32" EGU="C" INP="@asyn($(modbus_prefix)_L2_PV_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP2:PV:RBV"/>
 	<records.ai ASLO="0.1" DESC="setpoint readback" DTYP="asynInt32" EGU="C" INP="@asyn($(modbus_prefix)_L2_SP_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP2:SP:RBV"/>
 	<records.ai ASLO="0.1" DESC="working setpoint readback" DTYP="asynInt32" EGU="C" INP="@asyn($(modbus_prefix)_L2_WSP_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP2:WSP:RBV"/>
@@ -85,7 +85,7 @@
 	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="C" INP="@asyn($(modbus_prefix)_L2_PROP_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP2:P:RBV"/>
 	<records.ai DTYP="asynInt32" EGU="sec" INP="@asyn($(modbus_prefix)_L2_INTEG_RBV,0,1000)MODBUS_DATA" PREC="0" SCAN="I/O Intr" record="$(device):LOOP2:I:RBV"/>
 	<records.ai DTYP="asynInt32" EGU="sec" INP="@asyn($(modbus_prefix)_L2_DERIV_RBV,0,1000)MODBUS_DATA" PREC="0" SCAN="I/O Intr" record="$(device):LOOP2:D:RBV"/>
-	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="C/min" INP="@asyn($(modbus_prefix)_L2_RAMPRATE_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP2:RR:RBV"/>
+	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="$(RREGU=C/s)" INP="@asyn($(modbus_prefix)_L2_RAMPRATE_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP2:RR:RBV"/>
 	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="%" INP="@asyn($(modbus_prefix)_L1_OUTPHI_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:OUTPHI:RBV"/>
 	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="%" INP="@asyn($(modbus_prefix)_L1_OUTPLO_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP1:OUTPLO:RBV"/>
 	<records.ai ASLO="0.1" DTYP="asynInt32" EGU="%" INP="@asyn($(modbus_prefix)_L2_OUTPHI_RBV,0,1000)MODBUS_DATA" PREC="1" SCAN="I/O Intr" record="$(device):LOOP2:OUTPHI:RBV"/>
