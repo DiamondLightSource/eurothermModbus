@@ -1,5 +1,7 @@
 /**
 
+Support Eurotherm2k via Modbus RTU
+
 \page release_notes Release Notes
 \section rel1_6 Release 1-6 (Aug 2018)
 Add working set point to db and gui

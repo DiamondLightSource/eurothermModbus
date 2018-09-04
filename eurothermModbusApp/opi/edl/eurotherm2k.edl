@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 444
-y 277
+x 446
+y 303
 w 400
 h 580
 font "arial-medium-r-18.0"
@@ -264,7 +264,7 @@ buttonLabel "Autotune"
 numPvs 4
 numDsps 1
 displayFileName {
-  0 "eurotherm3504-autotune"
+  0 "eurotherm2k-autotune"
 }
 endObjectProperties
 
