@@ -3,9 +3,9 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 446
-y 303
-w 400
+x 450
+y 355
+w 390
 h 580
 font "arial-medium-r-18.0"
 ctlFont "arial-medium-r-18.0"
@@ -47,7 +47,7 @@ minor 0
 release 0
 x -85
 y 0
-w 466
+w 471
 h 30
 lineColor index 3
 fill
@@ -62,15 +62,15 @@ minor 0
 release 1
 x -85
 y 3
-w 466
+w 471
 h 24
 lineColor index 11
 fillColor index 0
 numPoints 3
 xPoints {
   0 -85
-  1 381
-  2 381
+  1 386
+  2 386
 }
 yPoints {
   0 27
@@ -87,7 +87,7 @@ minor 1
 release 1
 x -85
 y 3
-w 466
+w 471
 h 24
 font "arial-bold-r-16.0"
 fontAlign "center"
@@ -106,7 +106,7 @@ minor 0
 release 1
 x -85
 y 3
-w 466
+w 471
 h 24
 lineColor index 1
 fillColor index 0
@@ -114,7 +114,7 @@ numPoints 3
 xPoints {
   0 -85
   1 -85
-  2 381
+  2 386
 }
 yPoints {
   0 27
