@@ -2,6 +2,9 @@
 
 \page release_notes Release Notes
 
+\section rel2_0 Release 2-0 (Sep 2018)
+Renamed gui files so they don't conflict with those in eurotherm2k support module
+
 \section rel1_7 Release 1-7 (Sept 2018)
 Support Eurotherm2k via Modbus RTU
 
