@@ -4,4 +4,4 @@
 # % macro, name, Object and gui association name
 # % macro, device, device prefix
 # % gui, $(name), edm, eurotherm_3504.edl, device=$(device)
-
+# % gui, $(name=), boydetail, eurothermModbusApp_opi/eurotherm_3504.opi, device=$(device)

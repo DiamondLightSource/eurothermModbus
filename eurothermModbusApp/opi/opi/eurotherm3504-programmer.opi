@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display typeId="org.csstudio.opibuilder.Display" version="1.0">
+  <x>1408</x>
+  <y>552</y>
+  <width>365</width>
+  <height>244</height>
+  <font>
+    <fontdata fontName="arial" height="18" pixels="true" style="0"/>
+  </font>
+  <boy_version>4.0.0</boy_version>
+  <foreground_color>
+    <color blue="0" green="0" name="Black" red="0"/>
+  </foreground_color>
+  <background_color>
+    <color blue="200" green="200" name="Canvas" red="200"/>
+  </background_color>
+  <name>Eurotherm Programmer</name>
+  <show_grid>true</show_grid>
+  <grid_space>5</grid_space>
+  <auto_zoom_to_fit_all>true</auto_zoom_to_fit_all>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0">
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_style>0</border_style>
+    <height>31</height>
+    <lock_children>true</lock_children>
+    <name>0</name>
+    <show_scrollbar>false</show_scrollbar>
+    <transparent>true</transparent>
+    <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0">
+      <background_color>
+        <color blue="200" green="200" name="Canvas" red="200"/>
+      </background_color>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <height>31</height>
+      <line_color>
+        <color blue="200" green="200" name="Canvas" red="200"/>
+      </line_color>
+      <line_style>0</line_style>
+      <line_width>1</line_width>
+      <name>EDM Rectangle</name>
+      <transparent>false</transparent>
+      <visible>true</visible>
+      <width>322</width>
+      <x>-2</x>
+      <y>0</y>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.polyline" version="1.0">
+      <background_color>
+        <color blue="90" green="90" name="Bottom Shadow" red="90"/>
+      </background_color>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <fill_arrow>true</fill_arrow>
+      <fill_level>0.0</fill_level>
+      <height>25</height>
+      <line_style>0</line_style>
+      <line_width>1</line_width>
+      <name>EDM Line</name>
+      <points>
+        <point x="-2" y="27"/>
+        <point x="319" y="27"/>
+        <point x="319" y="3"/>
+      </points>
+      <width>322</width>
+      <x>-2</x>
+      <y>3</y>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0">
+      <auto_size>false</auto_size>
+      <background_color>
+        <color blue="240" green="210" name="CO title" red="169"/>
+      </background_color>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color blue="0" green="0" name="Black" red="0"/>
+      </border_color>
+      <border_style>0</border_style>
+      <font>
+        <fontdata fontName="arial" height="16" pixels="true" style="1"/>
+      </font>
+      <foreground_color>
+        <color blue="0" green="0" name="Black" red="0"/>
+      </foreground_color>
+      <height>24</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <name>EDM Label</name>
+      <text>$(device)</text>
+      <transparent>false</transparent>
+      <width>321</width>
+      <x>-2</x>
+      <y>3</y>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.polyline" version="1.0">
+      <background_color>
+        <color blue="236" green="236" name="Top Shadow" red="236"/>
+      </background_color>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <fill_arrow>true</fill_arrow>
+      <fill_level>0.0</fill_level>
+      <height>25</height>
+      <line_style>0</line_style>
+      <line_width>1</line_width>
+      <name>EDM Line</name>
+      <points>
+        <point x="-2" y="27"/>
+        <point x="-2" y="3"/>
+        <point x="319" y="3"/>
+      </points>
+      <width>322</width>
+      <x>-2</x>
+      <y>3</y>
+    </widget>
+    <width>326</width>
+    <x>30</x>
+    <y>0</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.groupingContainer" version="1.0">
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_style>0</border_style>
+    <height>32</height>
+    <lock_children>true</lock_children>
+    <name>1</name>
+    <show_scrollbar>false</show_scrollbar>
+    <transparent>true</transparent>
+    <widget typeId="org.csstudio.opibuilder.widgets.Ellipse" version="1.0">
+      <background_color>
+        <color blue="207" green="207" name="CG title" red="158"/>
+      </background_color>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <height>31</height>
+      <line_color>
+        <color blue="90" green="90" name="Bottom Shadow" red="90"/>
+      </line_color>
+      <line_style>0</line_style>
+      <line_width>2</line_width>
+      <name>EDM Ellipse</name>
+      <transparent>true</transparent>
+      <width>50</width>
+      <x>1</x>
+      <y>1</y>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.Ellipse" version="1.0">
+      <background_color>
+        <color blue="207" green="207" name="CG title" red="158"/>
+      </background_color>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <height>31</height>
+      <line_color>
+        <color blue="236" green="236" name="Top Shadow" red="236"/>
+      </line_color>
+      <line_style>0</line_style>
+      <line_width>2</line_width>
+      <name>EDM Ellipse</name>
+      <transparent>true</transparent>
+      <width>50</width>
+      <x>-1</x>
+      <y>-1</y>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.Ellipse" version="1.0">
+      <background_color>
+        <color blue="240" green="210" name="CO title" red="169"/>
+      </background_color>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <height>30</height>
+      <line_color>
+        <color blue="224" green="196" name="CO help" red="158"/>
+      </line_color>
+      <line_style>0</line_style>
+      <line_width>3</line_width>
+      <name>EDM Ellipse</name>
+      <transparent>false</transparent>
+      <width>50</width>
+      <x>1</x>
+      <y>1</y>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.Ellipse" version="1.0">
+      <background_color>
+        <color blue="255" green="255" name="Disconn/Invalid" red="255"/>
+      </background_color>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <height>5</height>
+      <line_color>
+        <color blue="236" green="236" name="Top Shadow" red="236"/>
+      </line_color>
+      <line_style>0</line_style>
+      <line_width>2</line_width>
+      <name>EDM Ellipse</name>
+      <transparent>false</transparent>
+      <width>6</width>
+      <x>11</x>
+      <y>5</y>
+    </widget>
+    <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0">
+      <auto_size>false</auto_size>
+      <background_color>
+        <color blue="255" green="255" name="Disconn/Invalid" red="255"/>
+      </background_color>
+      <border_alarm_sensitive>false</border_alarm_sensitive>
+      <border_color>
+        <color blue="0" green="0" name="Black" red="0"/>
+      </border_color>
+      <border_style>0</border_style>
+      <font>
+        <fontdata fontName="arial" height="14" pixels="true" style="1"/>
+      </font>
+      <foreground_color>
+        <color blue="0" green="0" name="Black" red="0"/>
+      </foreground_color>
+      <height>30</height>
+      <horizontal_alignment>1</horizontal_alignment>
+      <name>EDM Label</name>
+      <text>Setup</text>
+      <transparent>true</transparent>
+      <width>50</width>
+      <x>0</x>
+      <y>0</y>
+    </widget>
+    <width>51</width>
+    <x>0</x>
+    <y>0</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="1.0">
+    <actions hook="false" hook_all="false">
+      <action type="EXECUTE_JAVASCRIPT">
+        <embedded>true</embedded>
+        <scriptText>importPackage(Packages.org.csstudio.opibuilder.scriptUtil);ScriptUtil.closeAssociatedOPI(widget);</scriptText>
+      </action>
+    </actions>
+    <background_color>
+      <color blue="200" green="200" name="Canvas" red="200"/>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <font>
+      <fontdata fontName="arial" height="18" pixels="true" style="0"/>
+    </font>
+    <foreground_color>
+      <color blue="192" green="0" name="Exit/Quit/Kill" red="192"/>
+    </foreground_color>
+    <height>26</height>
+    <name>EDM Exit Button</name>
+    <text>EXIT</text>
+    <width>66</width>
+    <x>289</x>
+    <y>207</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0">
+    <auto_size>false</auto_size>
+    <background_color>
+      <color blue="105" green="105" name="Monitor BG" red="105"/>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color blue="0" green="0" name="Black" red="0"/>
+    </border_color>
+    <border_style>0</border_style>
+    <font>
+      <fontdata fontName="arial" height="12" pixels="true" style="1"/>
+    </font>
+    <foreground_color>
+      <color blue="0" green="0" name="Black" red="0"/>
+    </foreground_color>
+    <height>25</height>
+    <horizontal_alignment>0</horizontal_alignment>
+    <name>EDM Label</name>
+    <text>Autotune:</text>
+    <transparent>true</transparent>
+    <width>105</width>
+    <x>15</x>
+    <y>45</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Rectangle" version="1.0">
+    <background_color>
+      <color blue="174" green="174" name="Wid-alt/Anno-sec" red="174"/>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <height>150</height>
+    <line_color>
+      <color blue="0" green="0" name="Black" red="0"/>
+    </line_color>
+    <line_style>0</line_style>
+    <line_width>1</line_width>
+    <name>EDM Rectangle</name>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <width>346</width>
+    <x>10</x>
+    <y>50</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0">
+    <auto_size>true</auto_size>
+    <background_color>
+      <color blue="133" green="133" name="grey-8" red="133"/>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color blue="0" green="0" name="Black" red="0"/>
+    </border_color>
+    <border_style>1</border_style>
+    <font>
+      <fontdata fontName="arial" height="12" pixels="true" style="0"/>
+    </font>
+    <foreground_color>
+      <color blue="0" green="0" name="Black" red="0"/>
+    </foreground_color>
+    <height>13</height>
+    <horizontal_alignment>0</horizontal_alignment>
+    <name>EDM Label</name>
+    <text>Programmer 1</text>
+    <transparent>false</transparent>
+    <width>83</width>
+    <x>10</x>
+    <y>40</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0">
+    <auto_size>true</auto_size>
+    <background_color>
+      <color blue="105" green="105" name="Monitor BG" red="105"/>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color blue="0" green="0" name="Black" red="0"/>
+    </border_color>
+    <border_style>0</border_style>
+    <font>
+      <fontdata fontName="arial" height="12" pixels="true" style="1"/>
+    </font>
+    <foreground_color>
+      <color blue="0" green="0" name="Black" red="0"/>
+    </foreground_color>
+    <height>13</height>
+    <horizontal_alignment>0</horizontal_alignment>
+    <name>EDM Label</name>
+    <text>Control:</text>
+    <transparent>true</transparent>
+    <width>48</width>
+    <x>15</x>
+    <y>65</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextInput" version="1.0">
+    <background_color>
+      <color blue="200" green="200" name="Canvas" red="200"/>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color blue="255" green="0" name="Controller" red="0"/>
+    </border_color>
+    <border_style>3</border_style>
+    <border_width>0</border_width>
+    <font>
+      <fontdata fontName="arial" height="14" pixels="true" style="1"/>
+    </font>
+    <foreground_color>
+      <color blue="255" green="0" name="Controller" red="0"/>
+    </foreground_color>
+    <format_type>0</format_type>
+    <height>36</height>
+    <horizontal_alignment>0</horizontal_alignment>
+    <line_width>1</line_width>
+    <name>EDM Text Entry</name>
+    <precision>0</precision>
+    <precision_from_pv>true</precision_from_pv>
+    <pv_name>$(device):PROGNUM</pv_name>
+    <show_units>true</show_units>
+    <style>0</style>
+    <transparent>false</transparent>
+    <width>136</width>
+    <x>90</x>
+    <y>90</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0">
+    <auto_size>true</auto_size>
+    <background_color>
+      <color blue="105" green="105" name="Monitor BG" red="105"/>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color blue="0" green="0" name="Black" red="0"/>
+    </border_color>
+    <border_style>0</border_style>
+    <font>
+      <fontdata fontName="arial" height="12" pixels="true" style="1"/>
+    </font>
+    <foreground_color>
+      <color blue="0" green="0" name="Black" red="0"/>
+    </foreground_color>
+    <height>26</height>
+    <horizontal_alignment>0</horizontal_alignment>
+    <name>EDM Label</name>
+    <text>Program&#xd;Number</text>
+    <transparent>true</transparent>
+    <width>52</width>
+    <x>15</x>
+    <y>95</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.Label" version="1.0">
+    <auto_size>true</auto_size>
+    <background_color>
+      <color blue="105" green="105" name="Monitor BG" red="105"/>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color blue="0" green="0" name="Black" red="0"/>
+    </border_color>
+    <border_style>0</border_style>
+    <font>
+      <fontdata fontName="arial" height="12" pixels="true" style="1"/>
+    </font>
+    <foreground_color>
+      <color blue="0" green="0" name="Black" red="0"/>
+    </foreground_color>
+    <height>26</height>
+    <horizontal_alignment>0</horizontal_alignment>
+    <name>EDM Label</name>
+    <text>Program&#xd;Status</text>
+    <transparent>true</transparent>
+    <width>52</width>
+    <x>15</x>
+    <y>135</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0">
+    <background_color>
+      <color blue="105" green="105" name="Monitor BG" red="105"/>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_style>None</border_style>
+    <font>
+      <fontdata fontName="arial" height="14" pixels="true" style="1"/>
+    </font>
+    <foreground_color>
+      <color blue="0" green="224" name="Monitor: NORMAL" red="0"/>
+    </foreground_color>
+    <format_type>0</format_type>
+    <height>25</height>
+    <horizontal_alignment>0</horizontal_alignment>
+    <name>EDM TextInput</name>
+    <precision_from_pv>true</precision_from_pv>
+    <pv_name>$(device):PROGNUM:RBV</pv_name>
+    <show_units>true</show_units>
+    <transparent>false</transparent>
+    <width>115</width>
+    <x>230</x>
+    <y>95</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0">
+    <background_color>
+      <color blue="105" green="105" name="Monitor BG" red="105"/>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_style>None</border_style>
+    <font>
+      <fontdata fontName="arial" height="14" pixels="true" style="1"/>
+    </font>
+    <foreground_color>
+      <color blue="0" green="224" name="Monitor: NORMAL" red="0"/>
+    </foreground_color>
+    <format_type>0</format_type>
+    <height>25</height>
+    <horizontal_alignment>0</horizontal_alignment>
+    <name>EDM TextInput</name>
+    <precision_from_pv>true</precision_from_pv>
+    <pv_name>$(device):PROGSTAT:RBV</pv_name>
+    <show_units>true</show_units>
+    <transparent>false</transparent>
+    <width>135</width>
+    <x>90</x>
+    <y>140</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.TextUpdate" version="1.0">
+    <background_color>
+      <color blue="105" green="105" name="Monitor BG" red="105"/>
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color blue="0" green="224" name="Monitor: NORMAL" red="0"/>
+    </border_color>
+    <border_style>1</border_style>
+    <border_width>0</border_width>
+    <font>
+      <fontdata fontName="arial" height="14" pixels="true" style="1"/>
+    </font>
+    <forecolor_alarm_sensitive>true</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color blue="0" green="224" name="Monitor: NORMAL" red="0"/>
+    </foreground_color>
+    <format_type>0</format_type>
+    <height>26</height>
+    <horizontal_alignment>0</horizontal_alignment>
+    <line_width>1</line_width>
+    <name>EDM Text Update</name>
+    <precision>0</precision>
+    <precision_from_pv>true</precision_from_pv>
+    <pv_name>$(device):PROGRUN:RBV</pv_name>
+    <show_units>true</show_units>
+    <transparent>false</transparent>
+    <width>116</width>
+    <x>230</x>
+    <y>60</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.BoolButton" version="1.0">
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <data_type>1</data_type>
+    <font>
+      <fontdata fontName="arial" height="12" pixels="true" style="1"/>
+    </font>
+    <foreground_color>
+      <color blue="0" green="0" name="Black" red="0"/>
+    </foreground_color>
+    <height>22</height>
+    <name>EDM Button</name>
+    <off_color>
+      <color blue="200" green="200" name="Canvas" red="200"/>
+    </off_color>
+    <off_label>Run</off_label>
+    <off_state>0</off_state>
+    <on_color>
+      <color blue="200" green="200" name="Canvas" red="200"/>
+    </on_color>
+    <on_label>Run</on_label>
+    <on_state>1</on_state>
+    <pv_name>$(device):PROGRUN</pv_name>
+    <rules>
+      <rule name="OnOffBackgroundRule" out_exp="false" prop_id="background_color">
+        <exp bool_exp="pv0==0">
+          <value>
+            <color blue="200" green="200" name="Canvas" red="200"/>
+          </value>
+        </exp>
+        <exp bool_exp="true">
+          <value>
+            <color blue="200" green="200" name="Canvas" red="200"/>
+          </value>
+        </exp>
+        <pv trig="true">$(device):PROGRUN</pv>
+      </rule>
+    </rules>
+    <show_boolean_label>true</show_boolean_label>
+    <show_led>false</show_led>
+    <square_button>true</square_button>
+    <toggle_button>false</toggle_button>
+    <width>63</width>
+    <x>91</x>
+    <y>61</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.BoolButton" version="1.0">
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <data_type>1</data_type>
+    <font>
+      <fontdata fontName="arial" height="12" pixels="true" style="1"/>
+    </font>
+    <foreground_color>
+      <color blue="0" green="0" name="Black" red="0"/>
+    </foreground_color>
+    <height>22</height>
+    <name>EDM Button</name>
+    <off_color>
+      <color blue="200" green="200" name="Canvas" red="200"/>
+    </off_color>
+    <off_label>Reset</off_label>
+    <off_state>0</off_state>
+    <on_color>
+      <color blue="200" green="200" name="Canvas" red="200"/>
+    </on_color>
+    <on_label>Reset</on_label>
+    <on_state>1</on_state>
+    <pv_name>$(device):PROGRESET</pv_name>
+    <rules>
+      <rule name="OnOffBackgroundRule" out_exp="false" prop_id="background_color">
+        <exp bool_exp="pv0==0">
+          <value>
+            <color blue="200" green="200" name="Canvas" red="200"/>
+          </value>
+        </exp>
+        <exp bool_exp="true">
+          <value>
+            <color blue="200" green="200" name="Canvas" red="200"/>
+          </value>
+        </exp>
+        <pv trig="true">$(device):PROGRESET</pv>
+      </rule>
+    </rules>
+    <show_boolean_label>true</show_boolean_label>
+    <show_led>false</show_led>
+    <square_button>true</square_button>
+    <toggle_button>false</toggle_button>
+    <width>68</width>
+    <x>158</x>
+    <y>61</y>
+  </widget>
+</display>
