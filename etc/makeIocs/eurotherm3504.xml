@@ -81,4 +81,5 @@
 	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn($(modbus_prefix)_L2_OUTPHI,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:OUTPHI"/>
 	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn($(modbus_prefix)_L2_OUTPLO,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:OUTPLO"/>
 	<records.ao DRVH="10" DRVL="1" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_PROGNUM,0,1000)MODBUS_DATA" PREC="0" record="$(device):PROGNUM"/>
+	<EPICS_BASE.StartupCommand at_end="False" command="asynSetOption(&quot;$(port)&quot;,0, &quot;disconnectOnReadTimeout&quot;, &quot;Y&quot;)" name="disconnectOnReadTimeout"/>
 </components>
