@@ -2,6 +2,11 @@
 
 \page release_notes Release Notes
 
+\section rel2_1 Release 2-1 (Oct 2018)
+Add CSS autoconverted screens
+Add polling enable/disable button for 3504
+Make reconnection faster
+
 \section rel2_0 Release 2-0 (Sep 2018)
 Renamed gui files so they don't conflict with those in eurotherm2k support module
 
