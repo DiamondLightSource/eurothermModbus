@@ -4,7 +4,9 @@
 
 \section rel2_1 Release 2-1 (Oct 2018)
 Add CSS autoconverted screens
+
 Add polling enable/disable button for 3504
+
 Make reconnection faster
 
 \section rel2_0 Release 2-0 (Sep 2018)
@@ -15,16 +17,21 @@ Support Eurotherm2k via Modbus RTU
 
 \section rel1_6 Release 1-6 (Aug 2018)
 Add working set point to db and gui
+
 Archive relevant PVs
+
 Change builder objects name to follow DLS convention
+
 Update dependency Modbus to 2-10-1
 
 \section rel1_5 Release 1-5 (Aug 2018)
 Add support for recipes (jira BC-810)
+
 Add support for loop 2 (jira BC-807)
 
 \section rel1_4 Release 1-4 (Aug 2018)
 Add support for eurotherm programmer (jira BC-806)
+
 Fix record precision for PV, SP and RAMPRATE (jira BC-805)
 
 \section rel1_3 Release 1-3 (Jul 2018)
