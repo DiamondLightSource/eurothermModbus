@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
-	<asyn.AsynIP name="$(port)" noProcessEos="True" port="$(ipaddress):502"/>
+	<asyn.AsynIP name="$(port)" noProcessEos="True" port="$(ipaddress):$(tcpport=502)"/>
 	<EPICS_BASE.StartupCommand at_end="False" command="asynSetOption(&quot;$(port)&quot;, 0, &quot;disconnectOnReadTimeout&quot;, &quot;Y&quot;)" name="disconnectOnReadTimeout"/>
 	<modbus.modbusInterpose linktype="tcpip" name="MB.INTERPOSE" portname="$(port)" timeoutmsec="2000" writedelaymsec="0"/>
 	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="-1" plctype="" pollmsec="1000" portname="$(modbus_prefix)_MASTER_RX" slaveaddr="1" tcpportname="$(port)"/>
