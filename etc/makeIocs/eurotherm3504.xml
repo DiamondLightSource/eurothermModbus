@@ -44,7 +44,7 @@
 	<records.bo DTYP="asynUInt32Digital" ONAM="On" OUT="@asynMask($(modbus_prefix)_L2_AUTOTUNE,0,1,1000)MODBUS_DATA" ZNAM="Off" record="$(device):LOOP2:AUTOTUNE"/>
 	<records.bo DTYP="asynUInt32Digital" ONAM="Run" OUT="@asynMask($(modbus_prefix)_PROGRUN,0,1,1000)MODBUS_DATA" ZNAM="Stop" record="$(device):PROGRUN"/>
 	<records.bo DTYP="asynUInt32Digital" ONAM="Run Reset" OUT="@asynMask($(modbus_prefix)_PROGRESET,0,1,1000)MODBUS_DATA" ZNAM="Stopped" record="$(device):PROGRESET"/>
-	<records.ai ASLO="0.1" DESC="Temperature readback" DISV="0" DTYP="asynInt32" EGU="C" INP="@asyn($(modbus_prefix)_MASTER_RX,1,1000)MODBUS_DATA" PREC="1" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" record="$(device):LOOP1:PV:RBV"/>
+	<records.ai ASLO="0.1" DESC="Temperature readback" DISV="0" DTYP="asynInt32" EGU="C" FLNK="$(device):AUTODISABLE" INP="@asyn($(modbus_prefix)_MASTER_RX,1,1000)MODBUS_DATA" PREC="1" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" record="$(device):LOOP1:PV:RBV"/>
 	<records.ai ASLO="0.1" DESC="setpoint readback" DISV="0" DTYP="asynInt32" EGU="C" INP="@asyn($(modbus_prefix)_MASTER_RX,2,1000)MODBUS_DATA" PREC="1" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" record="$(device):LOOP1:SP:RBV"/>
 	<records.ai ASLO="0.1" DESC="working setpoint readback" DISV="0" DTYP="asynInt32" EGU="C" INP="@asyn($(modbus_prefix)_MASTER_RX,5,1000)MODBUS_DATA" PREC="1" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" record="$(device):LOOP1:WSP:RBV"/>
 	<records.ai ASLO="0.1" DESC="output" DISV="0" DTYP="asynInt32" EGU="%" INP="@asyn($(modbus_prefix)_MASTER_RX,3,1000)MODBUS_DATA" PREC="1" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" record="$(device):LOOP1:O:RBV"/>
@@ -65,7 +65,7 @@
 	<records.ai ASLO="0.1" DISV="0" DTYP="asynInt32" EGU="%" INP="@asyn($(modbus_prefix)_MASTER_RX,1054,1000)MODBUS_DATA" PREC="1" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" record="$(device):LOOP2:OUTPHI:RBV"/>
 	<records.ai ASLO="0.1" DISV="0" DTYP="asynInt32" EGU="%" INP="@asyn($(modbus_prefix)_MASTER_RX,1055,1000)MODBUS_DATA" PREC="1" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" record="$(device):LOOP2:OUTPLO:RBV"/>
 	<records.ai DISV="0" DTYP="asynInt32" INP="@asyn($(modbus_prefix)_MASTER_RX,5193,1000)MODBUS_DATA" PREC="0" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" record="$(device):PROGNUM:RBV"/>
-	<!--<records.calcout CALC="A=0" DESC="Disable polling in case of read error" INPA="$(device):LOOP1:PV:RBV.SEVR" OUT="$(device):ENABLE" SCAN="5 second" record="$(device):AUTODISABLE"/>-->
+	<records.calcout CALC="A=0" DESC="Disable polling in case of read error" DOPT="Use CALC" FLNK="$(device):ENABLE" INPA="$(device):LOOP1:PV:RBV.SEVR" OOPT="When Zero" OUT="$(device):ENABLE" SCAN="Passive" record="$(device):AUTODISABLE"/>
 	<records.ao ASLO="0.1" DESC="Setpoint" DRVH="1000" DRVL="-273" DTYP="asynInt32" EGU="C" OUT="@asyn($(modbus_prefix)_L1_SP,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:SP"/>
 	<records.ao ASLO="0.1" DESC="Output" DRVH="100" DRVL="-100" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_L1_OUTPUT,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:O"/>
 	<records.ao ASLO="0.1" DESC="proportional param" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_L1_PROP,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:P"/>
