@@ -2,6 +2,13 @@
 
 \page release_notes Release Notes
 
+\section rel2_2 Release 2-2 (Nov 2018)
+Auto-disable polling loop on read error
+
+Allow configuring scan period in builder
+
+Allow specifying tcp port (useful for testing)
+
 \section rel2_1 Release 2-1 (Oct 2018)
 Add CSS autoconverted screens
 
