@@ -1,49 +1,26 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
-	<asyn.AsynIP name="$(port)" noProcessEos="True" port="$(ipaddress):$(tcpport=502)"/>
+	<asyn.AsynIP name="$(port)" noAutoConnect="False" noProcessEos="True" port="$(ipaddress):$(tcpport=502)"/>
 	<EPICS_BASE.StartupCommand at_end="False" command="asynSetOption(&quot;$(port)&quot;, 0, &quot;disconnectOnReadTimeout&quot;, &quot;Y&quot;)" name="disconnectOnReadTimeout"/>
 	<modbus.modbusInterpose linktype="tcpip" name="MB.INTERPOSE" portname="$(port)" timeoutmsec="2000" writedelaymsec="0"/>
 	<modbus.modbusPort datatype="INT16" modbusfunction="3" modbuslen="1" modbusstartaddr="-1" plctype="" pollmsec="1000" portname="$(modbus_prefix)_MASTER_RX" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="2" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L1_SP" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="3" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L1_OUTPUT" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="273" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L1_MAN" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="6" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L1_PROP" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="8" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L1_INTEG" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="9" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L1_DERIV" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="35" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L1_RAMPRATE" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="1026" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L2_SP" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="1027" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L2_OUTPUT" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="1297" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L2_MAN" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="1030" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L2_PROP" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="1032" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L2_INTEG" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="1033" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L2_DERIV" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="1059" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L2_RAMPRATE" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="270" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L1_AUTOTUNE" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="30" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L1_OUTPHI" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="31" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L1_OUTPLO" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="1294" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L2_AUTOTUNE" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="1054" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L2_OUTPHI" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="1055" plctype="" pollmsec="1000" portname="$(modbus_prefix)_L2_OUTPLO" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="5193" plctype="" pollmsec="1000" portname="$(modbus_prefix)_PROGNUM" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="5226" plctype="" pollmsec="1000" portname="$(modbus_prefix)_PROGRUN" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="5229" plctype="" pollmsec="1000" portname="$(modbus_prefix)_PROGRESET" slaveaddr="1" tcpportname="$(port)"/>
-	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="313" plctype="" pollmsec="1000" portname="$(modbus_prefix)_RECIPESELECT" slaveaddr="1" tcpportname="$(port)"/>
+	<modbus.modbusPort datatype="INT16" modbusfunction="6" modbuslen="1" modbusstartaddr="-1" plctype="" pollmsec="0" portname="$(modbus_prefix)_MASTER_TX" slaveaddr="1" tcpportname="$(port)"/>
 	<records.mbbi DISV="0" DTYP="asynInt32" FRST="End" FRVL="16" INP="@asynMask($(modbus_prefix)_MASTER_RX,5195,0x1f,1000)MODBUS_DATA" ONST="Running" ONVL="2" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" THST="Holdback" THVL="8" TWST="Hold" TWVL="4" ZRST="Not Running" ZRVL="1" record="$(device):PROGSTAT:RBV"/>
 	<records.mbbi DISV="0" DTYP="asynInt32" EIST="8" EIVL="8" FRST="4" FRVL="4" FVST="5" FVVL="5" INP="@asynMask($(modbus_prefix)_MASTER_RX,315,0x0f,1000)MODBUS_DATA" ONST="1" ONVL="1" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" SVST="7" SVVL="7" SXST="6" SXVL="6" THST="3" THVL="3" TWST="2" TWVL="2" ZRST="Not Set" ZRVL="0" record="$(device):RECSEL:RBV"/>
 	<records.mbbi DISV="0" DTYP="asynInt32" INP="@asynMask($(modbus_prefix)_MASTER_RX,316,0x0f,1000)MODBUS_DATA" ONST="Loading" ONVL="1" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" THST="Denied" THVL="3" TWST="Failed" TWVL="2" ZRST="OK" ZRVL="0" record="$(device):RECSTAT:RBV"/>
-	<records.mbbo DTYP="asynInt32" EIST="8" EIVL="8" FRST="4" FRVL="4" FVST="5" FVVL="5" ONST="1" ONVL="1" OUT="@asyn($(modbus_prefix)_RECIPESELECT,0,1000)MODBUS_DATA" SVST="7" SVVL="7" SXST="6" SXVL="6" THST="3" THVL="3" TWST="2" TWVL="2" ZRST="NOT SET" ZRVL="0" record="$(device):RECSEL"/>
+	<records.mbbo DTYP="asynInt32" EIST="8" EIVL="8" FRST="4" FRVL="4" FVST="5" FVVL="5" ONST="1" ONVL="1" OUT="@asyn($(modbus_prefix)_MASTER_TX,313,1000)MODBUS_DATA" SVST="7" SVVL="7" SXST="6" SXVL="6" THST="3" THVL="3" TWST="2" TWVL="2" ZRST="NOT SET" ZRVL="0" record="$(device):RECSEL"/>
 	<records.bi DESC="manual/auto" DISV="0" DTYP="asynUInt32Digital" INP="@asynMask($(modbus_prefix)_MASTER_RX,273,1,1000)MODBUS_DATA" ONAM="Manual" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" ZNAM="Automatic" record="$(device):LOOP1:MAN:RBV"/>
 	<records.bi DESC="manual/auto" DISV="0" DTYP="asynUInt32Digital" INP="@asynMask($(modbus_prefix)_MASTER_RX,1297,1,1000)MODBUS_DATA" ONAM="Manual" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" ZNAM="Automatic" record="$(device):LOOP2:MAN:RBV"/>
 	<records.bi DESC="loop1 autotune" DISV="0" DTYP="asynUInt32Digital" INP="@asynMask($(modbus_prefix)_MASTER_RX,270,1,1000)MODBUS_DATA" ONAM="On" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" ZNAM="Off" record="$(device):LOOP1:AUTOTUNE:RBV"/>
 	<records.bi DESC="loop2 autotune" DISV="0" DTYP="asynUInt32Digital" INP="@asynMask($(modbus_prefix)_MASTER_RX,1294,1,1000)MODBUS_DATA" ONAM="On" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" ZNAM="Off" record="$(device):LOOP2:AUTOTUNE:RBV"/>
 	<records.bi DESC="Running/Not Running" DISV="0" DTYP="asynUInt32Digital" INP="@asynMask($(modbus_prefix)_MASTER_RX,5226,1,1000)MODBUS_DATA" ONAM="Running" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" ZNAM="Stopped" record="$(device):PROGRUN:RBV"/>
 	<records.bi DESC="Enable/Disable polling" ONAM="ON" SCAN="Passive" VAL="1" ZNAM="OFF" record="$(device):ENABLE"/>
-	<records.bo DTYP="asynUInt32Digital" ONAM="Manual" OUT="@asynMask($(modbus_prefix)_L1_MAN,0,1,1000)MODBUS_DATA" ZNAM="Automatic" record="$(device):LOOP1:MAN"/>
-	<records.bo DTYP="asynUInt32Digital" ONAM="Manual" OUT="@asynMask($(modbus_prefix)_L2_MAN,0,1,1000)MODBUS_DATA" ZNAM="Automatic" record="$(device):LOOP2:MAN"/>
-	<records.bo DTYP="asynUInt32Digital" ONAM="On" OUT="@asynMask($(modbus_prefix)_L1_AUTOTUNE,0,1,1000)MODBUS_DATA" ZNAM="Off" record="$(device):LOOP1:AUTOTUNE"/>
-	<records.bo DTYP="asynUInt32Digital" ONAM="On" OUT="@asynMask($(modbus_prefix)_L2_AUTOTUNE,0,1,1000)MODBUS_DATA" ZNAM="Off" record="$(device):LOOP2:AUTOTUNE"/>
-	<records.bo DTYP="asynUInt32Digital" ONAM="Run" OUT="@asynMask($(modbus_prefix)_PROGRUN,0,1,1000)MODBUS_DATA" ZNAM="Stop" record="$(device):PROGRUN"/>
-	<records.bo DTYP="asynUInt32Digital" ONAM="Run Reset" OUT="@asynMask($(modbus_prefix)_PROGRESET,0,1,1000)MODBUS_DATA" ZNAM="Stopped" record="$(device):PROGRESET"/>
+	<records.bo DTYP="asynUInt32Digital" ONAM="Manual" OUT="@asynMask($(modbus_prefix)_MASTER_TX,273,1,1000)MODBUS_DATA" ZNAM="Automatic" record="$(device):LOOP1:MAN"/>
+	<records.bo DTYP="asynUInt32Digital" ONAM="Manual" OUT="@asynMask($(modbus_prefix)_MASTER_TX,1297,1,1000)MODBUS_DATA" ZNAM="Automatic" record="$(device):LOOP2:MAN"/>
+	<records.bo DTYP="asynUInt32Digital" ONAM="On" OUT="@asynMask($(modbus_prefix)_MASTER_TX,270,1,1000)MODBUS_DATA" ZNAM="Off" record="$(device):LOOP1:AUTOTUNE"/>
+	<records.bo DTYP="asynUInt32Digital" ONAM="On" OUT="@asynMask($(modbus_prefix)_MASTER_TX,1294,1,1000)MODBUS_DATA" ZNAM="Off" record="$(device):LOOP2:AUTOTUNE"/>
+	<records.bo DTYP="asynUInt32Digital" ONAM="Run" OUT="@asynMask($(modbus_prefix)_MASTER_TX,5226,1,1000)MODBUS_DATA" ZNAM="Stop" record="$(device):PROGRUN"/>
+	<records.bo DTYP="asynUInt32Digital" ONAM="Run Reset" OUT="@asynMask($(modbus_prefix)_MASTER_TX,5229,1,1000)MODBUS_DATA" ZNAM="Stopped" record="$(device):PROGRESET"/>
 	<records.ai ASLO="0.1" DESC="Temperature readback" DISV="0" DTYP="asynInt32" EGU="C" FLNK="$(device):AUTODISABLE" INP="@asyn($(modbus_prefix)_MASTER_RX,1,1000)MODBUS_DATA" PREC="1" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" record="$(device):LOOP1:PV:RBV"/>
 	<records.ai ASLO="0.1" DESC="setpoint readback" DISV="0" DTYP="asynInt32" EGU="C" INP="@asyn($(modbus_prefix)_MASTER_RX,2,1000)MODBUS_DATA" PREC="1" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" record="$(device):LOOP1:SP:RBV"/>
 	<records.ai ASLO="0.1" DESC="working setpoint readback" DISV="0" DTYP="asynInt32" EGU="C" INP="@asyn($(modbus_prefix)_MASTER_RX,5,1000)MODBUS_DATA" PREC="1" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" record="$(device):LOOP1:WSP:RBV"/>
@@ -66,21 +43,21 @@
 	<records.ai ASLO="0.1" DISV="0" DTYP="asynInt32" EGU="%" INP="@asyn($(modbus_prefix)_MASTER_RX,1055,1000)MODBUS_DATA" PREC="1" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" record="$(device):LOOP2:OUTPLO:RBV"/>
 	<records.ai DISV="0" DTYP="asynInt32" INP="@asyn($(modbus_prefix)_MASTER_RX,5193,1000)MODBUS_DATA" PREC="0" SCAN="$(scan=1 second)" SDIS="$(device):ENABLE" record="$(device):PROGNUM:RBV"/>
 	<records.calcout CALC="A=0" DESC="Disable polling in case of read error" DOPT="Use CALC" FLNK="$(device):ENABLE" INPA="$(device):LOOP1:PV:RBV.SEVR" OOPT="When Zero" OUT="$(device):ENABLE" SCAN="Passive" record="$(device):AUTODISABLE"/>
-	<records.ao ASLO="0.1" DESC="Setpoint" DRVH="1000" DRVL="-273" DTYP="asynInt32" EGU="C" OUT="@asyn($(modbus_prefix)_L1_SP,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:SP"/>
-	<records.ao ASLO="0.1" DESC="Output" DRVH="100" DRVL="-100" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_L1_OUTPUT,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:O"/>
-	<records.ao ASLO="0.1" DESC="proportional param" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_L1_PROP,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:P"/>
-	<records.ao DESC="integral-param" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_L1_INTEG,0,1000)MODBUS_DATA" PREC="0" record="$(device):LOOP1:I"/>
-	<records.ao DESC="derivative-param" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_L1_DERIV,0,1000)MODBUS_DATA" PREC="0" record="$(device):LOOP1:D"/>
-	<records.ao ASLO="0.1" DESC="ramprate" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_L1_RAMPRATE,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:RR"/>
-	<records.ao ASLO="0.1" DESC="Setpoint" DRVH="1000" DRVL="-273" DTYP="asynInt32" EGU="C" OUT="@asyn($(modbus_prefix)_L2_SP,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:SP"/>
-	<records.ao ASLO="0.1" DESC="Output" DRVH="100" DRVL="-100" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_L2_OUTPUT,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:O"/>
-	<records.ao ASLO="0.1" DESC="proportional param" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_L2_PROP,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:P"/>
-	<records.ao DESC="integral-param" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_L2_INTEG,0,1000)MODBUS_DATA" PREC="0" record="$(device):LOOP2:I"/>
-	<records.ao DESC="derivative-param" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_L2_DERIV,0,1000)MODBUS_DATA" PREC="0" record="$(device):LOOP2:D"/>
-	<records.ao ASLO="0.1" DESC="ramprate" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_L2_RAMPRATE,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:RR"/>
-	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn($(modbus_prefix)_L1_OUTPHI,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:OUTPHI"/>
-	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn($(modbus_prefix)_L1_OUTPLO,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:OUTPLO"/>
-	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn($(modbus_prefix)_L2_OUTPHI,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:OUTPHI"/>
-	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn($(modbus_prefix)_L2_OUTPLO,0,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:OUTPLO"/>
-	<records.ao DRVH="10" DRVL="1" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_PROGNUM,0,1000)MODBUS_DATA" PREC="0" record="$(device):PROGNUM"/>
+	<records.ao ASLO="0.1" DESC="Setpoint" DRVH="1000" DRVL="-273" DTYP="asynInt32" EGU="C" OUT="@asyn($(modbus_prefix)_MASTER_TX,2,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:SP"/>
+	<records.ao ASLO="0.1" DESC="Output" DRVH="100" DRVL="-100" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_MASTER_TX,3,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:O"/>
+	<records.ao ASLO="0.1" DESC="proportional param" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_MASTER_TX,6,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:P"/>
+	<records.ao DESC="integral-param" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_MASTER_TX,8,1000)MODBUS_DATA" PREC="0" record="$(device):LOOP1:I"/>
+	<records.ao DESC="derivative-param" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_MASTER_TX,9,1000)MODBUS_DATA" PREC="0" record="$(device):LOOP1:D"/>
+	<records.ao ASLO="0.1" DESC="ramprate" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_MASTER_TX,35,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:RR"/>
+	<records.ao ASLO="0.1" DESC="Setpoint" DRVH="1000" DRVL="-273" DTYP="asynInt32" EGU="C" OUT="@asyn($(modbus_prefix)_MASTER_TX,1026,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:SP"/>
+	<records.ao ASLO="0.1" DESC="Output" DRVH="100" DRVL="-100" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_MASTER_TX,1027,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:O"/>
+	<records.ao ASLO="0.1" DESC="proportional param" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_MASTER_TX,1030,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:P"/>
+	<records.ao DESC="integral-param" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_MASTER_TX,1032,1000)MODBUS_DATA" PREC="0" record="$(device):LOOP2:I"/>
+	<records.ao DESC="derivative-param" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_MASTER_TX,1033,1000)MODBUS_DATA" PREC="0" record="$(device):LOOP2:D"/>
+	<records.ao ASLO="0.1" DESC="ramprate" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_MASTER_TX,1059,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:RR"/>
+	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn($(modbus_prefix)_MASTER_TX,30,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:OUTPHI"/>
+	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn($(modbus_prefix)_MASTER_TX,31,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP1:OUTPLO"/>
+	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn($(modbus_prefix)_MASTER_TX,1054,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:OUTPHI"/>
+	<records.ao ASLO="0.1" DRVH="100" DRVL="-100" DTYP="asynInt32" EGU="%" OUT="@asyn($(modbus_prefix)_MASTER_TX,1055,1000)MODBUS_DATA" PREC="1" record="$(device):LOOP2:OUTPLO"/>
+	<records.ao DRVH="10" DRVL="1" DTYP="asynInt32" OUT="@asyn($(modbus_prefix)_MASTER_TX,5193,1000)MODBUS_DATA" PREC="0" record="$(device):PROGNUM"/>
 </components>
