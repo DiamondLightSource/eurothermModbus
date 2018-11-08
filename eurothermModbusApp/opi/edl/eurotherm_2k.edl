@@ -4,7 +4,7 @@ major 4
 minor 0
 release 1
 x 450
-y 355
+y 392
 w 390
 h 580
 font "arial-medium-r-18.0"
@@ -233,7 +233,7 @@ major 4
 minor 1
 release 0
 x 315
-y 540
+y 550
 w 65
 h 25
 fgColor index 46
@@ -252,7 +252,7 @@ major 4
 minor 4
 release 0
 x 10
-y 540
+y 550
 w 100
 h 25
 fgColor index 43
@@ -275,7 +275,7 @@ major 4
 minor 0
 release 0
 x 10
-y 45
+y 60
 w 370
 h 480
 lineColor index 14
@@ -289,7 +289,7 @@ major 4
 minor 1
 release 0
 x 15
-y 50
+y 65
 w 360
 h 470
 fgColor index 14
@@ -307,5 +307,25 @@ symbols {
   0 "loop=LOOP1,label=Loop 1"
 }
 noScroll
+endObjectProperties
+
+# (Menu Button)
+object activeMenuButtonClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 300
+y 35
+w 80
+h 20
+fgColor index 14
+bgColor index 10
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(device):ENABLE"
+indicatorPv "$(device):ENABLE"
+font "arial-bold-r-14.0"
 endObjectProperties
 
