@@ -3,7 +3,7 @@
 \page release_notes Release Notes
 
 \section rel2_4 Release 2-4 (Nov 2018)
-Disable comms logic in 2k was wrong way round. Changed to follow the convention used in other devices
+Disable comms logic was wrong way round. Changed to follow the convention used in other devices
 
 \section rel2_3 Release 2-3 (Nov 2018)
 Added disable comms logic for 2k

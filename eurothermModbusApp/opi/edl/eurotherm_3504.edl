@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 52
-y 76
+x 1110
+y 296
 w 390
 h 622
 font "arial-medium-r-18.0"
@@ -394,23 +394,25 @@ font "arial-bold-r-12.0"
 orientation "horizontal"
 endObjectProperties
 
-# (Menu Button)
-object activeMenuButtonClass
+# (Button)
+object activeButtonClass
 beginObjectProperties
 major 4
-minor 0
+minor 1
 release 0
-x 315
+x 180
 y 40
-w 65
+w 125
 h 20
-fgColor index 14
-bgColor index 10
-inconsistentColor index 14
+fgColor index 25
+onColor index 20
+offColor index 3
+inconsistentColor index 3
 topShadowColor index 1
 botShadowColor index 11
-controlPv "$(device):ENABLE"
-indicatorPv "$(device):ENABLE"
+controlPv "$(device):DISABLE"
+3d
 font "arial-bold-r-14.0"
+objType "controls"
 endObjectProperties
 
