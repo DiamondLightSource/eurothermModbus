@@ -2,6 +2,10 @@
 
 \page release_notes Release Notes
 
+\section rel3_0 Release 3-0 (Nov 2018)
+Add loop disable aliases for integration with gda
+Cleaner builder objects and templates
+
 \section rel2_4 Release 2-4 (Nov 2018)
 Disable comms logic was wrong way round. Changed to follow the convention used in other devices
 
