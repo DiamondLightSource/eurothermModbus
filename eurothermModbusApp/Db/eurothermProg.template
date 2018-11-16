@@ -1,0 +1,67 @@
+
+record(ao, "$(device):PROGNUM")
+{
+    field(DRVH, "10")
+    field(DRVL, "1")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(modbus_prefix)_MASTER_TX,5193,1000)MODBUS_DATA")
+    field(PREC, "0")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(ai, "$(device):PROGNUM:RBV")
+{
+    field(DTYP, "asynInt32")
+    field(INP,  "@asyn($(modbus_prefix)_MASTER_RX,5193,1000)MODBUS_DATA")
+    field(PREC, "0")
+    field(SCAN, "1 second")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(bo, "$(device):PROGRESET")
+{
+    field(DTYP, "asynUInt32Digital")
+    field(ONAM, "Run Reset")
+    field(OUT,  "@asynMask($(modbus_prefix)_MASTER_TX,5229,1,1000)MODBUS_DATA")
+    field(SDIS, "$(device):DISABLE")
+    field(ZNAM, "Stopped")
+}
+
+record(bo, "$(device):PROGRUN")
+{
+    field(DTYP, "asynUInt32Digital")
+    field(ONAM, "Run")
+    field(OUT,  "@asynMask($(modbus_prefix)_MASTER_TX,5226,1,1000)MODBUS_DATA")
+    field(SDIS, "$(device):DISABLE")
+    field(ZNAM, "Stop")
+}
+
+record(bi, "$(device):PROGRUN:RBV")
+{
+    field(DESC, "Running/Not Running")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(modbus_prefix)_MASTER_RX,5226,1,1000)MODBUS_DATA")
+    field(ONAM, "Running")
+    field(SCAN, "1 second")
+    field(SDIS, "$(device):DISABLE")
+    field(ZNAM, "Stopped")
+}
+
+record(mbbi, "$(device):PROGSTAT:RBV")
+{
+    field(DTYP, "asynInt32")
+    field(FRST, "End")
+    field(FRVL, "16")
+    field(INP,  "@asynMask($(modbus_prefix)_MASTER_RX,5195,0x1f,1000)MODBUS_DATA")
+    field(ONST, "Running")
+    field(ONVL, "2")
+    field(SCAN, "1 second")
+    field(SDIS, "$(device):DISABLE")
+    field(THST, "Holdback")
+    field(THVL, "8")
+    field(TWST, "Hold")
+    field(TWVL, "4")
+    field(ZRST, "Not Running")
+    field(ZRVL, "1")
+}
+

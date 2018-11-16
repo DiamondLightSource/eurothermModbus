@@ -1,0 +1,241 @@
+record(bo, "$(device):LOOP1:AUTOTUNE")
+{
+    field(DTYP, "asynUInt32Digital")
+    field(ONAM, "On")
+    field(OUT,  "@asynMask($(modbus_prefix)_MASTER_TX,270,1,1000)MODBUS_DATA")
+    field(SDIS, "$(device):DISABLE")
+    field(ZNAM, "Off")
+}
+
+record(bi, "$(device):LOOP1:AUTOTUNE:RBV")
+{
+    field(DESC, "loop1 autotune")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(modbus_prefix)_MASTER_RX,270,1,1000)MODBUS_DATA")
+    field(ONAM, "On")
+    field(SCAN, "1 second")
+    field(SDIS, "$(device):DISABLE")
+    field(ZNAM, "Off")
+}
+
+
+record(ao, "$(device):LOOP1:D")
+{
+    field(DESC, "derivative-param")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(modbus_prefix)_MASTER_TX,9,1000)MODBUS_DATA")
+    field(PREC, "0")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(ai, "$(device):LOOP1:D:RBV")
+{
+    field(DTYP, "asynInt32")
+    field(EGU,  "sec")
+    field(INP,  "@asyn($(modbus_prefix)_MASTER_RX,9,1000)MODBUS_DATA")
+    field(PREC, "0")
+    field(SCAN, "1 second")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(ao, "$(device):LOOP1:I")
+{
+    field(DESC, "integral-param")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(modbus_prefix)_MASTER_TX,8,1000)MODBUS_DATA")
+    field(PREC, "0")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(ai, "$(device):LOOP1:I:RBV")
+{
+    field(DTYP, "asynInt32")
+    field(EGU,  "sec")
+    field(INP,  "@asyn($(modbus_prefix)_MASTER_RX,8,1000)MODBUS_DATA")
+    field(PREC, "0")
+    field(SCAN, "1 second")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(bo, "$(device):LOOP1:MAN")
+{
+    field(DTYP, "asynUInt32Digital")
+    field(ONAM, "Manual")
+    field(OUT,  "@asynMask($(modbus_prefix)_MASTER_TX,273,1,1000)MODBUS_DATA")
+    field(SDIS, "$(device):DISABLE")
+    field(ZNAM, "Automatic")
+}
+
+record(bi, "$(device):LOOP1:MAN:RBV")
+{
+    field(DESC, "manual/auto")
+    field(DTYP, "asynUInt32Digital")
+    field(INP,  "@asynMask($(modbus_prefix)_MASTER_RX,273,1,1000)MODBUS_DATA")
+    field(ONAM, "Manual")
+    field(SCAN, "1 second")
+    field(SDIS, "$(device):DISABLE")
+    field(ZNAM, "Automatic")
+}
+
+record(ao, "$(device):LOOP1:O")
+{
+    field(ASLO, "0.1")
+    field(DESC, "Output")
+    field(DRVH, "100")
+    field(DRVL, "-100")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(modbus_prefix)_MASTER_TX,3,1000)MODBUS_DATA")
+    field(PREC, "1")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(ai, "$(device):LOOP1:O:RBV")
+{
+    field(ASLO, "0.1")
+    field(DESC, "output")
+    field(DTYP, "asynInt32")
+    field(EGU,  "%")
+    field(INP,  "@asyn($(modbus_prefix)_MASTER_RX,3,1000)MODBUS_DATA")
+    field(PREC, "1")
+    field(SCAN, "1 second")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(ao, "$(device):LOOP1:OUTPHI")
+{
+    field(ASLO, "0.1")
+    field(DRVH, "100")
+    field(DRVL, "-100")
+    field(DTYP, "asynInt32")
+    field(EGU,  "%")
+    field(OUT,  "@asyn($(modbus_prefix)_MASTER_TX,30,1000)MODBUS_DATA")
+    field(PREC, "1")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(ai, "$(device):LOOP1:OUTPHI:RBV")
+{
+    field(ASLO, "0.1")
+    field(DTYP, "asynInt32")
+    field(EGU,  "%")
+    field(INP,  "@asyn($(modbus_prefix)_MASTER_RX,30,1000)MODBUS_DATA")
+    field(PREC, "1")
+    field(SCAN, "1 second")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(ao, "$(device):LOOP1:OUTPLO")
+{
+    field(ASLO, "0.1")
+    field(DRVH, "100")
+    field(DRVL, "-100")
+    field(DTYP, "asynInt32")
+    field(EGU,  "%")
+    field(OUT,  "@asyn($(modbus_prefix)_MASTER_TX,31,1000)MODBUS_DATA")
+    field(PREC, "1")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(ai, "$(device):LOOP1:OUTPLO:RBV")
+{
+    field(ASLO, "0.1")
+    field(DTYP, "asynInt32")
+    field(EGU,  "%")
+    field(INP,  "@asyn($(modbus_prefix)_MASTER_RX,31,1000)MODBUS_DATA")
+    field(PREC, "1")
+    field(SCAN, "1 second")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(ao, "$(device):LOOP1:P")
+{
+    field(ASLO, "0.1")
+    field(DESC, "proportional param")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(modbus_prefix)_MASTER_TX,6,1000)MODBUS_DATA")
+    field(PREC, "1")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(ai, "$(device):LOOP1:P:RBV")
+{
+    field(ASLO, "0.1")
+    field(DTYP, "asynInt32")
+    field(EGU,  "C")
+    field(INP,  "@asyn($(modbus_prefix)_MASTER_RX,6,1000)MODBUS_DATA")
+    field(PREC, "1")
+    field(SCAN, "1 second")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(ai, "$(device):LOOP1:PV:RBV")
+{
+    field(ASLO, "0.1")
+    field(DESC, "Temperature readback")
+    field(DTYP, "asynInt32")
+    field(EGU,  "C")
+    field(FLNK, "$(device):AUTODISABLE")
+    field(INP,  "@asyn($(modbus_prefix)_MASTER_RX,1,1000)MODBUS_DATA")
+    field(PREC, "1")
+    field(SCAN, "1 second")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(ao, "$(device):LOOP1:RR")
+{
+    field(ASLO, "0.1")
+    field(DESC, "ramprate")
+    field(DTYP, "asynInt32")
+    field(OUT,  "@asyn($(modbus_prefix)_MASTER_TX,35,1000)MODBUS_DATA")
+    field(PREC, "1")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(ai, "$(device):LOOP1:RR:RBV")
+{
+    field(ASLO, "0.1")
+    field(DTYP, "asynInt32")
+    field(EGU,  "$(rregu)")
+    field(INP,  "@asyn($(modbus_prefix)_MASTER_RX,35,1000)MODBUS_DATA")
+    field(PREC, "1")
+    field(SCAN, "1 second")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(ao, "$(device):LOOP1:SP")
+{
+    field(ASLO, "0.1")
+    field(DESC, "Setpoint")
+    field(DRVH, "1000")
+    field(DRVL, "-273")
+    field(DTYP, "asynInt32")
+    field(EGU,  "C")
+    field(OUT,  "@asyn($(modbus_prefix)_MASTER_TX,2,1000)MODBUS_DATA")
+    field(PREC, "1")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(ai, "$(device):LOOP1:SP:RBV")
+{
+    field(ASLO, "0.1")
+    field(DESC, "setpoint readback")
+    field(DTYP, "asynInt32")
+    field(EGU,  "C")
+    field(INP,  "@asyn($(modbus_prefix)_MASTER_RX,2,1000)MODBUS_DATA")
+    field(PREC, "1")
+    field(SCAN, "1 second")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(ai, "$(device):LOOP1:WSP:RBV")
+{
+    field(ASLO, "0.1")
+    field(DESC, "working setpoint readback")
+    field(DTYP, "asynInt32")
+    field(EGU,  "C")
+    field(INP,  "@asyn($(modbus_prefix)_MASTER_RX,5,1000)MODBUS_DATA")
+    field(PREC, "1")
+    field(SCAN, "1 second")
+    field(SDIS, "$(device):DISABLE")
+}
+

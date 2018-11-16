@@ -1,0 +1,25 @@
+
+record(calcout, "$(device):AUTODISABLE")
+{
+    field(CALC, "A=0")
+    field(DESC, "Disable polling in case of read error")
+    field(DOPT, "Use OCAL")
+    field(FLNK, "$(device):DISABLE")
+    field(INPA, "$(device):LOOP1:PV:RBV.SEVR")
+    field(OCAL, "1")
+    field(OOPT, "When Zero")
+    field(OUT,  "$(device):DISABLE")
+    field(SCAN, "Passive")
+}
+
+record(bi, "$(device):DISABLE")
+{
+    field(DESC, "Enable/Disable polling")
+    field(ONAM, "Disabled")
+    field(SCAN, "Passive")
+    field(VAL,  "1")
+    field(ZNAM, "Enabled")
+}
+alias($(device):DISABLE,$(device):LOOP1:DISABLE)
+alias($(device):DISABLE,$(device):LOOP2:DISABLE)
+
