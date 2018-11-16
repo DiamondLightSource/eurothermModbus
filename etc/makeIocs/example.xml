@@ -1,4 +1,3 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
-	<eurothermModbus.Eurotherm3K device="eurotherm" ipaddress="127.0.0.1" name="test" port="europort" tcpport="1515"/>
 </components>
