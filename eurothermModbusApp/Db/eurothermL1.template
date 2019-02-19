@@ -195,11 +195,16 @@ record(ai, "$(device):LOOP1:RR:RBV")
 {
     field(ASLO, "0.1")
     field(DTYP, "asynInt32")
-    field(EGU,  "$(rregu)")
     field(INP,  "@asyn($(modbus_prefix)_MASTER_RX,35,1000)MODBUS_DATA")
     field(PREC, "1")
     field(SCAN, "1 second")
     field(SDIS, "$(device):DISABLE")
+}
+
+record(bi, "$(device):LOOP1:RR:UNIT")
+{
+    field(ZNAM, "C/s")
+    field(ONAM, "C/min")
 }
 
 record(ao, "$(device):LOOP1:SP")

@@ -47,7 +47,7 @@ class _Eurotherm3kArchive(AutoSubstitution):
 class _Eurotherm(Device):
     linktype = "tcpip"
 
-    def __init__(self, name, port, device, ipaddress, tcpport=502, rregu="C/s", noAutoConnect=False):
+    def __init__(self, name, port, device, ipaddress, tcpport=502, noAutoConnect=False):
         self.__dict__.update(locals())
         global MODBUS_PREFIX_INDEX
         self.modbus_prefix = "EURTHM_MB_{}".format(MODBUS_PREFIX_INDEX)
@@ -76,8 +76,7 @@ class _Eurotherm(Device):
                                  plctype="")
 
         self.disable = _EurothermDisable(device=device)
-        self.l1 = _EurothermL1(device=device, modbus_prefix=self.modbus_prefix,
-                               rregu=rregu)
+        self.l1 = _EurothermL1(device=device, modbus_prefix=self.modbus_prefix)
         self.__super.__init__()
 
     ArgInfo = makeArgInfo(__init__,
@@ -86,7 +85,6 @@ class _Eurotherm(Device):
                           device=Simple("Device prefix used in PVs", str),
                           ipaddress=Simple("Eurotherm ip address", str),
                           tcpport=Simple("Tcp port", int),
-                          rregu=Simple("Ramp Rate units", str),
                           noAutoConnect=Simple("Don't autoconnect", bool))
 
     def Initialise(self):
@@ -109,8 +107,7 @@ class Eurotherm3K(_Eurotherm):
     def __init__(self, **kwargs):
         self.__super.__init__(**kwargs)
         self.l2 = _EurothermL2(device=self.device,
-                               modbus_prefix=self.modbus_prefix,
-                               rregu=self.rregu)
+                               modbus_prefix=self.modbus_prefix)
         self.prog = _EurothermProg(device=self.device,
                                    modbus_prefix=self.modbus_prefix)
         self.rec = _EurothermRec(device=self.device,

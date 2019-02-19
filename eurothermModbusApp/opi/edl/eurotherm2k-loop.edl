@@ -3,7 +3,7 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 739
+x 2661
 y 421
 w 349
 h 458
@@ -406,7 +406,7 @@ minor 6
 release 0
 x 215
 y 145
-w 115
+w 65
 h 25
 controlPv "$(device):$(loop):RR:RBV"
 font "arial-bold-r-14.0"
@@ -606,5 +606,27 @@ useDisplayBg
 value {
   "Working:"
 }
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 285
+y 145
+w 45
+h 25
+controlPv "$(device):$(loop):RR:UNIT"
+font "arial-bold-r-14.0"
+fgColor index 16
+bgColor index 10
+limitsFromDb
+nullColor index 0
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
 endObjectProperties
 
