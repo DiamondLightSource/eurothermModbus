@@ -1,3 +1,4 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
+	<eurothermModbus.Eurotherm3K device="EXAMPLE:EUROTHERM" ipaddress="127.0.0.1" name="EUTHM" noAutoConnect="True" port="EUROTHERM" tcpport="502"/>
 </components>
