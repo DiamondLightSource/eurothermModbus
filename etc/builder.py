@@ -1,10 +1,11 @@
 from iocbuilder import AutoSubstitution
 from iocbuilder import Device
-from iocbuilder import Xml
 from iocbuilder.modules.modbus import modbusPort
 from iocbuilder.modules.modbus import modbusInterpose
 from iocbuilder.modules.asyn import AsynIP
 from iocbuilder.arginfo import *
+
+MODBUS_PREFIX_INDEX = 1
 
 
 class _EurothermDisable(AutoSubstitution):
@@ -46,13 +47,14 @@ class _Eurotherm3kArchive(AutoSubstitution):
 class _Eurotherm(Device):
     linktype = "tcpip"
 
-    def __init__(self, name, port, device, ipaddress, tcpport, rregu="C/s",
-                 modbus_prefix="MB1", noAutoConnect=False):
-
+    def __init__(self, name, port, device, ipaddress, tcpport=502, rregu="C/s", noAutoConnect=False):
         self.__dict__.update(locals())
+        global MODBUS_PREFIX_INDEX
+        self.modbus_prefix = "EURTHM_MB_{}".format(MODBUS_PREFIX_INDEX)
+        MODBUS_PREFIX_INDEX += 1
         dest_address = "{}:{}".format(ipaddress, tcpport)
-        rx_portname = "{}_MASTER_RX".format(modbus_prefix)
-        tx_portname = "{}_MASTER_TX".format(modbus_prefix)
+        rx_portname = "{}_MASTER_RX".format(self.modbus_prefix)
+        tx_portname = "{}_MASTER_TX".format(self.modbus_prefix)
 
         self.ip = AsynIP(name=port, port=dest_address,
                          noProcessEos=True, noAutoConnect=noAutoConnect)
@@ -74,8 +76,8 @@ class _Eurotherm(Device):
                                  plctype="")
 
         self.disable = _EurothermDisable(device=device)
-        self.l1 = _EurothermL1(device=device, modbus_prefix=modbus_prefix,
-                               rregu="C/s")
+        self.l1 = _EurothermL1(device=device, modbus_prefix=self.modbus_prefix,
+                               rregu=rregu)
         self.__super.__init__()
 
     ArgInfo = makeArgInfo(__init__,
@@ -85,7 +87,6 @@ class _Eurotherm(Device):
                           ipaddress=Simple("Eurotherm ip address", str),
                           tcpport=Simple("Tcp port", int),
                           rregu=Simple("Ramp Rate units", str),
-                          modbus_prefix=Simple("Modbus prefix", str),
                           noAutoConnect=Simple("Don't autoconnect", bool))
 
     def Initialise(self):
@@ -109,7 +110,7 @@ class Eurotherm3K(_Eurotherm):
         self.__super.__init__(**kwargs)
         self.l2 = _EurothermL2(device=self.device,
                                modbus_prefix=self.modbus_prefix,
-                               rregu="C/s")
+                               rregu=self.rregu)
         self.prog = _EurothermProg(device=self.device,
                                    modbus_prefix=self.modbus_prefix)
         self.rec = _EurothermRec(device=self.device,
