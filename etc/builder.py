@@ -47,7 +47,8 @@ class _Eurotherm3kArchive(AutoSubstitution):
 class _Eurotherm(Device):
     linktype = "tcpip"
 
-    def __init__(self, name, port, device, ipaddress, tcpport=502, noAutoConnect=False):
+    def __init__(self, name, port, device, ipaddress, tcpport=502, rregu="C/s",
+                 noAutoConnect=False):
         self.__dict__.update(locals())
         global MODBUS_PREFIX_INDEX
         self.modbus_prefix = "EURTHM_MB_{}".format(MODBUS_PREFIX_INDEX)
@@ -76,16 +77,19 @@ class _Eurotherm(Device):
                                  plctype="")
 
         self.disable = _EurothermDisable(device=device)
-        self.l1 = _EurothermL1(device=device, modbus_prefix=self.modbus_prefix)
+        self.l1 = _EurothermL1(device=device, modbus_prefix=self.modbus_prefix,
+                               rregu=self.rregu_options.index(self.rregu))
         self.__super.__init__()
 
+    rregu_options = ["C/s", "C/min"]
     ArgInfo = makeArgInfo(__init__,
                           name=Simple("Eurotherm name", str),
                           port=Simple("Port name", str),
                           device=Simple("Device prefix used in PVs", str),
                           ipaddress=Simple("Eurotherm ip address", str),
                           tcpport=Simple("Tcp port", int),
-                          noAutoConnect=Simple("Don't autoconnect", bool))
+                          noAutoConnect=Simple("Don't autoconnect", bool),
+                          rregu=Choice("Ramprate EGU", rregu_options))
 
     def Initialise(self):
         print('asynSetOption("{port}", 0, "disconnectOnReadTimeout", "Y")'.\
@@ -107,7 +111,8 @@ class Eurotherm3K(_Eurotherm):
     def __init__(self, **kwargs):
         self.__super.__init__(**kwargs)
         self.l2 = _EurothermL2(device=self.device,
-                               modbus_prefix=self.modbus_prefix)
+                               modbus_prefix=self.modbus_prefix,
+                               rregu=self.rregu_options.index(self.rregu))
         self.prog = _EurothermProg(device=self.device,
                                    modbus_prefix=self.modbus_prefix)
         self.rec = _EurothermRec(device=self.device,

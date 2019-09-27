@@ -205,6 +205,7 @@ record(bi, "$(device):LOOP1:RR:UNIT")
 {
     field(ZNAM, "C/s")
     field(ONAM, "C/min")
+    field(VAL, "$(rregu)")
 }
 
 record(ao, "$(device):LOOP1:SP")
