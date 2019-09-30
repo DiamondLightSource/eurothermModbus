@@ -75,7 +75,7 @@ class _Eurotherm(Device):
 
         self.disable = _EurothermDisable(device=device)
         self.l1 = _EurothermL1(device=device, modbus_prefix=modbus_prefix,
-                               rregu="C/s")
+                               rregu=rregu)
         self.__super.__init__()
 
     ArgInfo = makeArgInfo(__init__,
@@ -109,7 +109,7 @@ class Eurotherm3K(_Eurotherm):
         self.__super.__init__(**kwargs)
         self.l2 = _EurothermL2(device=self.device,
                                modbus_prefix=self.modbus_prefix,
-                               rregu="C/s")
+                               rregu=rregu)
         self.prog = _EurothermProg(device=self.device,
                                    modbus_prefix=self.modbus_prefix)
         self.rec = _EurothermRec(device=self.device,
