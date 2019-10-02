@@ -4,9 +4,9 @@ major 4
 minor 0
 release 1
 x 2663
-y 532
-w 360
-h 445
+y 421
+w 349
+h 458
 font "arial-medium-r-18.0"
 ctlFont "arial-medium-r-18.0"
 btnFont "arial-medium-r-18.0"
@@ -34,7 +34,7 @@ minor 0
 release 0
 x 10
 y 70
-w 340
+w 325
 h 210
 lineColor index 14
 fill
@@ -162,7 +162,7 @@ minor 0
 release 0
 x 10
 y 300
-w 340
+w 325
 h 135
 lineColor index 14
 fill
@@ -365,7 +365,7 @@ minor 0
 release 0
 x 215
 y 220
-w 125
+w 115
 h 25
 controlPv "$(device):$(loop):MAN:RBV"
 displayMode "decimal"
@@ -384,7 +384,7 @@ minor 6
 release 0
 x 215
 y 80
-w 125
+w 115
 h 25
 controlPv "$(device):$(loop):SP:RBV"
 font "arial-bold-r-14.0"
@@ -406,7 +406,7 @@ minor 6
 release 0
 x 215
 y 145
-w 60
+w 65
 h 25
 controlPv "$(device):$(loop):RR:RBV"
 font "arial-bold-r-14.0"
@@ -445,7 +445,7 @@ minor 6
 release 0
 x 215
 y 250
-w 125
+w 115
 h 25
 controlPv "$(device):$(loop):PV:RBV"
 font "arial-bold-r-14.0"
@@ -467,7 +467,7 @@ minor 6
 release 0
 x 215
 y 310
-w 125
+w 115
 h 25
 controlPv "$(device):$(loop):P:RBV"
 font "arial-bold-r-14.0"
@@ -489,7 +489,7 @@ minor 6
 release 0
 x 215
 y 350
-w 125
+w 115
 h 25
 controlPv "$(device):$(loop):I:RBV"
 font "arial-bold-r-14.0"
@@ -511,7 +511,7 @@ minor 6
 release 0
 x 215
 y 390
-w 125
+w 115
 h 25
 controlPv "$(device):$(loop):D:RBV"
 font "arial-bold-r-14.0"
@@ -533,7 +533,7 @@ minor 6
 release 0
 x 215
 y 185
-w 125
+w 115
 h 25
 controlPv "$(device):$(loop):O:RBV"
 font "arial-bold-r-14.0"
@@ -575,7 +575,7 @@ minor 6
 release 0
 x 215
 y 110
-w 125
+w 115
 h 25
 controlPv "$(device):$(loop):WSP:RBV"
 font "arial-bold-r-14.0"
@@ -608,23 +608,25 @@ value {
 }
 endObjectProperties
 
-# (Menu Button)
-object activeMenuButtonClass
+# (Text Monitor)
+object activeXTextDspClass:noedit
 beginObjectProperties
 major 4
-minor 0
+minor 6
 release 0
-x 280
+x 285
 y 145
-w 60
+w 45
 h 25
-fgColor index 14
-bgColor index 3
-inconsistentColor index 14
-topShadowColor index 1
-botShadowColor index 11
 controlPv "$(device):$(loop):RR:UNIT"
-indicatorPv "$(device):$(loop):RR:UNIT"
-font "arial-bold-r-10.0"
+font "arial-bold-r-14.0"
+fgColor index 16
+bgColor index 10
+limitsFromDb
+nullColor index 0
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
 endObjectProperties
 
