@@ -6,6 +6,7 @@ db
 data
 lib
 .svn*
-iocs/
+iocs/*
+!iocs/Makefile
 .idea
 documentation/doxygen/
