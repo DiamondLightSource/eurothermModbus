@@ -6,6 +6,6 @@ db
 data
 lib
 .svn*
-iocs/*IOC*
+iocs/
 .idea
-iocs
+documentation/doxygen/
