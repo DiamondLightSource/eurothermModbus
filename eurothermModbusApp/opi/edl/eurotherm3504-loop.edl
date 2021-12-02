@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 2663
-y 421
+x 2151
+y 689
 w 349
 h 458
 font "arial-medium-r-18.0"
@@ -26,132 +26,62 @@ gridSize 5
 disableScroll
 endScreenProperties
 
-# (Rectangle)
-object activeRectangleClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 10
-y 70
-w 325
-h 210
-lineColor index 14
-fill
-fillColor index 5
-endObjectProperties
-
 # (Static Text)
 object activeXTextClass
 beginObjectProperties
 major 4
 minor 1
 release 1
-x 10
-y 60
-w 58
-h 13
-font "arial-medium-r-12.0"
+x 100
+y 10
+w 145
+h 40
+font "arial-medium-r-18.0"
+fontAlign "center"
 fgColor index 14
 bgColor index 8
 value {
-  "  General  "
+  "$(label)"
 }
-autoSize
 border
 endObjectProperties
 
-# (Static Text)
-object activeXTextClass
+# (Group)
+object activeGroupClass
 beginObjectProperties
 major 4
-minor 1
-release 1
-x 175
-y 250
-w 45
-h 25
-font "arial-bold-r-12.0"
-fgColor index 14
-bgColor index 10
-useDisplayBg
-value {
-  "Temp:"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 15
-y 75
-w 75
-h 35
-font "arial-bold-r-12.0"
-fgColor index 14
-bgColor index 10
-useDisplayBg
-value {
-  "Setpoint:"
-}
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 15
-y 140
-w 75
-h 35
-font "arial-bold-r-12.0"
-fgColor index 14
-bgColor index 10
-useDisplayBg
-value {
-  "Ramprate:"
-}
-endObjectProperties
-
-# (Textentry)
-object TextentryClass
-beginObjectProperties
-major 10
 minor 0
 release 0
-x 90
-y 140
-w 115
-h 35
-controlPv "$(device):$(loop):RR"
-fgColor index 25
-bgColor index 3
-fill
-font "arial-bold-r-14.0"
-endObjectProperties
+x 10
+y 155
+w 325
+h 145
 
-# (Static Text)
-object activeXTextClass
+beginGroup
+
+# (Embedded Window)
+object activePipClass
 beginObjectProperties
 major 4
 minor 1
-release 1
-x 15
-y 185
-w 55
-h 25
-font "arial-bold-r-12.0"
+release 0
+x 10
+y 155
+w 325
+h 145
 fgColor index 14
 bgColor index 10
-useDisplayBg
-value {
-  "Output:"
+topShadowColor index 1
+botShadowColor index 11
+displaySource "menu"
+filePv "$(device):$(loop):MAN:RBV"
+sizeOfs 5
+numDsps 2
+displayFileName {
+  0 "eurotherm3504-loop-auto-mode.edl"
+  1 "eurotherm3504-loop-manual-mode.edl"
 }
+noScroll
 endObjectProperties
 
 # (Rectangle)
@@ -161,9 +91,27 @@ major 4
 minor 0
 release 0
 x 10
-y 300
+y 155
 w 325
-h 135
+h 145
+lineColor index 14
+fillColor index 10
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 320
+w 325
+h 125
 lineColor index 14
 fill
 fillColor index 5
@@ -176,7 +124,7 @@ major 4
 minor 1
 release 1
 x 10
-y 290
+y 310
 w 42
 h 13
 font "arial-medium-r-12.0"
@@ -196,7 +144,7 @@ major 10
 minor 0
 release 0
 x 90
-y 345
+y 365
 w 115
 h 35
 controlPv "$(device):$(loop):I"
@@ -213,7 +161,7 @@ major 10
 minor 0
 release 0
 x 90
-y 305
+y 325
 w 115
 h 35
 controlPv "$(device):$(loop):P"
@@ -230,7 +178,7 @@ major 10
 minor 0
 release 0
 x 90
-y 385
+y 405
 w 115
 h 35
 controlPv "$(device):$(loop):D"
@@ -247,7 +195,7 @@ major 4
 minor 1
 release 1
 x 15
-y 320
+y 340
 w 77
 h 13
 font "arial-bold-r-12.0"
@@ -267,7 +215,7 @@ major 4
 minor 1
 release 1
 x 15
-y 360
+y 380
 w 50
 h 13
 font "arial-bold-r-12.0"
@@ -287,7 +235,7 @@ major 4
 minor 1
 release 1
 x 15
-y 395
+y 415
 w 69
 h 13
 font "arial-bold-r-12.0"
@@ -300,82 +248,6 @@ value {
 autoSize
 endObjectProperties
 
-# (Textentry)
-object TextentryClass
-beginObjectProperties
-major 10
-minor 0
-release 0
-x 90
-y 180
-w 115
-h 35
-controlPv "$(device):$(loop):O"
-fgColor index 25
-bgColor index 3
-fill
-font "arial-bold-r-14.0"
-endObjectProperties
-
-# (Menu Button)
-object activeMenuButtonClass
-beginObjectProperties
-major 4
-minor 0
-release 0
-x 90
-y 220
-w 115
-h 25
-fgColor index 14
-bgColor index 3
-inconsistentColor index 14
-topShadowColor index 1
-botShadowColor index 11
-controlPv "$(device):$(loop):MAN"
-indicatorPv "$(device):$(loop):MAN"
-font "arial-bold-r-12.0"
-endObjectProperties
-
-# (Static Text)
-object activeXTextClass
-beginObjectProperties
-major 4
-minor 1
-release 1
-x 15
-y 220
-w 105
-h 25
-font "arial-bold-r-12.0"
-fgColor index 14
-bgColor index 10
-useDisplayBg
-value {
-  "Manual"
-  "mode:"
-}
-endObjectProperties
-
-# (Textupdate)
-object TextupdateClass
-beginObjectProperties
-major 10
-minor 0
-release 0
-x 215
-y 220
-w 115
-h 25
-controlPv "$(device):$(loop):MAN:RBV"
-displayMode "decimal"
-fgColor index 16
-fgAlarm
-bgColor index 10
-fill
-font "arial-bold-r-14.0"
-endObjectProperties
-
 # (Text Monitor)
 object activeXTextDspClass:noedit
 beginObjectProperties
@@ -383,90 +255,7 @@ major 4
 minor 6
 release 0
 x 215
-y 80
-w 115
-h 25
-controlPv "$(device):$(loop):SP:RBV"
-font "arial-bold-r-14.0"
-fgColor index 16
-bgColor index 10
-limitsFromDb
-nullColor index 0
-useHexPrefix
-showUnits
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 6
-release 0
-x 215
-y 145
-w 65
-h 25
-controlPv "$(device):$(loop):RR:RBV"
-font "arial-bold-r-14.0"
-fgColor index 16
-bgColor index 10
-limitsFromDb
-nullColor index 0
-useHexPrefix
-showUnits
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Textentry)
-object TextentryClass
-beginObjectProperties
-major 10
-minor 0
-release 0
-x 90
-y 75
-w 115
-h 35
-controlPv "$(device):$(loop):SP"
-fgColor index 25
-bgColor index 3
-fill
-font "arial-bold-r-14.0"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 6
-release 0
-x 215
-y 250
-w 115
-h 25
-controlPv "$(device):$(loop):PV:RBV"
-font "arial-bold-r-14.0"
-fgColor index 16
-bgColor index 10
-limitsFromDb
-nullColor index 0
-useHexPrefix
-showUnits
-newPos
-objType "monitors"
-endObjectProperties
-
-# (Text Monitor)
-object activeXTextDspClass:noedit
-beginObjectProperties
-major 4
-minor 6
-release 0
-x 215
-y 310
+y 330
 w 115
 h 25
 controlPv "$(device):$(loop):P:RBV"
@@ -488,7 +277,7 @@ major 4
 minor 6
 release 0
 x 215
-y 350
+y 370
 w 115
 h 25
 controlPv "$(device):$(loop):I:RBV"
@@ -510,7 +299,7 @@ major 4
 minor 6
 release 0
 x 215
-y 390
+y 410
 w 115
 h 25
 controlPv "$(device):$(loop):D:RBV"
@@ -525,68 +314,59 @@ newPos
 objType "monitors"
 endObjectProperties
 
-# (Text Monitor)
-object activeXTextDspClass:noedit
+# (Rectangle)
+object activeRectangleClass
 beginObjectProperties
 major 4
-minor 6
+minor 0
 release 0
-x 215
-y 185
-w 115
-h 25
-controlPv "$(device):$(loop):O:RBV"
-font "arial-bold-r-14.0"
-fgColor index 16
-bgColor index 10
-limitsFromDb
-nullColor index 0
-useHexPrefix
-showUnits
-newPos
-objType "monitors"
+x 10
+y 60
+w 325
+h 80
+lineColor index 14
+fill
+fillColor index 5
 endObjectProperties
 
-# (Static Text)
-object activeXTextClass
+# (Choice Button)
+object activeChoiceButtonClass
 beginObjectProperties
 major 4
-minor 1
-release 1
-x 100
-y 10
-w 145
+minor 0
+release 0
+x 90
+y 95
+w 115
 h 40
-font "arial-medium-r-18.0"
-fontAlign "center"
 fgColor index 14
-bgColor index 8
-value {
-  "$(label)"
-}
-border
+bgColor index 3
+selectColor index 4
+inconsistentColor index 14
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(device):$(loop):MAN"
+indicatorPv "$(device):$(loop):MAN"
+font "arial-bold-r-12.0"
 endObjectProperties
 
-# (Text Monitor)
-object activeXTextDspClass:noedit
+# (Textupdate)
+object TextupdateClass
 beginObjectProperties
-major 4
-minor 6
+major 10
+minor 0
 release 0
 x 215
-y 110
+y 105
 w 115
 h 25
-controlPv "$(device):$(loop):WSP:RBV"
-font "arial-bold-r-14.0"
+controlPv "$(device):$(loop):MAN:RBV"
+displayMode "decimal"
 fgColor index 16
+fgAlarm
 bgColor index 10
-limitsFromDb
-nullColor index 0
-useHexPrefix
-showUnits
-newPos
-objType "monitors"
+fill
+font "arial-bold-r-14.0"
 endObjectProperties
 
 # (Static Text)
@@ -595,16 +375,35 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 150
+x 15
 y 105
-w 75
-h 35
+w 40
+h 25
 font "arial-bold-r-12.0"
 fgColor index 14
 bgColor index 10
 useDisplayBg
 value {
-  "Working:"
+  "Mode:"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 130
+y 65
+w 80
+h 25
+font "arial-bold-r-12.0"
+fgColor index 14
+bgColor index 10
+useDisplayBg
+value {
+  "Temperature:"
 }
 endObjectProperties
 
@@ -614,11 +413,11 @@ beginObjectProperties
 major 4
 minor 6
 release 0
-x 285
-y 145
-w 45
+x 215
+y 65
+w 115
 h 25
-controlPv "$(device):$(loop):RR:UNIT"
+controlPv "$(device):$(loop):PV:RBV"
 font "arial-bold-r-14.0"
 fgColor index 16
 bgColor index 10
