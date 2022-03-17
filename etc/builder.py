@@ -12,13 +12,8 @@ class _EurothermDisable(AutoSubstitution):
     TemplateFile = "eurothermDis.template"
 
 
-class _EurothermL1(AutoSubstitution):
-    TemplateFile = "eurothermL1.template"
-
-
-class _EurothermL2(AutoSubstitution):
-    TemplateFile = "eurothermL2.template"
-
+class _EurothermLoop(AutoSubstitution):
+    TemplateFile = "eurothermLoop.template"
 
 class _EurothermProg(AutoSubstitution):
     TemplateFile = "eurothermProg.template"
@@ -77,8 +72,22 @@ class _Eurotherm(Device):
                                  plctype="")
 
         self.disable = _EurothermDisable(device=device)
-        self.l1 = _EurothermL1(device=device, modbus_prefix=self.modbus_prefix,
-                               rregu=self.rregu_options.index(self.rregu))
+        self.loop1 = _EurothermLoop(device=device,
+                               modbus_prefix=self.modbus_prefix,
+                               loop_name='LOOP1',
+                               rregu=self.rregu_options.index(self.rregu),
+                               autotune_addr=270,
+                               derivative_addr=9,
+                               integral_addr=8,
+                               mode_addr=273,
+                               output_addr=3,
+                               outputhi_addr=30,
+                               outputlo_addr=31,
+                               proportional_addr=6,
+                               temperature_addr=1,
+                               ramprate_addr=35,
+                               setpoint_addr=2,
+                               working_setpoint_addr=5)
         self.__super.__init__()
 
     rregu_options = ["C/s", "C/min"]
@@ -110,9 +119,22 @@ class Eurotherm3K(_Eurotherm):
 
     def __init__(self, **kwargs):
         self.__super.__init__(**kwargs)
-        self.l2 = _EurothermL2(device=self.device,
+        self.loop2 = _EurothermLoop(device=self.device,
                                modbus_prefix=self.modbus_prefix,
-                               rregu=self.rregu_options.index(self.rregu))
+                               loop_name='LOOP2',
+                               rregu=self.rregu_options.index(self.rregu),
+                               autotune_addr=1294,
+                               derivative_addr=1033,
+                               integral_addr=1032,
+                               mode_addr=1297,
+                               output_addr=1027,
+                               outputhi_addr=1054,
+                               outputlo_addr=1055,
+                               proportional_addr=1030,
+                               temperature_addr=1025,
+                               ramprate_addr=1059,
+                               setpoint_addr=1026,
+                               working_setpoint_addr=1029)
         self.prog = _EurothermProg(device=self.device,
                                    modbus_prefix=self.modbus_prefix)
         self.rec = _EurothermRec(device=self.device,
