@@ -40,7 +40,6 @@ class _Eurotherm3kArchive(AutoSubstitution):
 
 
 class _Eurotherm(Device):
-    linktype = "tcpip"
 
     def __init__(self, name, port, device, ipaddress, tcpport=502, rregu="C/s",
                  noAutoConnect=False):
@@ -115,7 +114,35 @@ class Eurotherm2K(_Eurotherm):
 
 
 class Eurotherm3K(_Eurotherm):
-    linktype = "tcpip" #FYI
+    linktype = "tcpip"
+
+    def __init__(self, **kwargs):
+        self.__super.__init__(**kwargs)
+        self.loop2 = _EurothermLoop(device=self.device,
+                               modbus_prefix=self.modbus_prefix,
+                               loop_name='LOOP2',
+                               rregu=self.rregu_options.index(self.rregu),
+                               autotune_addr=1294,
+                               derivative_addr=1033,
+                               integral_addr=1032,
+                               mode_addr=1297,
+                               output_addr=1027,
+                               outputhi_addr=1054,
+                               outputlo_addr=1055,
+                               proportional_addr=1030,
+                               temperature_addr=1025,
+                               ramprate_addr=1059,
+                               setpoint_addr=1026,
+                               working_setpoint_addr=1029)
+        self.prog = _EurothermProg(device=self.device,
+                                   modbus_prefix=self.modbus_prefix)
+        self.rec = _EurothermRec(device=self.device,
+                                 modbus_prefix=self.modbus_prefix)
+        self.gui = _Eurotherm3kGui(name=self.name, device=self.device)
+        self.arch = _Eurotherm3kArchive(device=self.device)
+
+class Eurotherm3Krtu(_Eurotherm):
+    linktype = "rtu"
 
     def __init__(self, **kwargs):
         self.__super.__init__(**kwargs)
