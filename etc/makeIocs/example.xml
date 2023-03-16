@@ -1,4 +1,11 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
-	<eurothermModbus.Eurotherm3K device="EUROTHERM:SIM" ipaddress="127.0.0.1" name="EUTHM" noAutoConnect="True" port="EUROTHERM" rregu="C/min" tcpport="502"/>
+	<!--<eurothermModbus.Eurotherm3K device="EUROTHERM:SIM" ipaddress="127.0.0.1" name="EUTHM" noAutoConnect="True" port="EUROTHERM" rregu="C/min" tcpport="502"/>-->
+	<!--<eurothermModbus.Eurotherm3Krtu device="EUROTHERM:SIM" ipaddress="10.77.4.23" name="EUTHM" noAutoConnect="True" port="EUROTHERM" rregu="C/min" tcpport="7003"/>-->
+	<!--<eurothermModbus.Eurotherm2K device="EUROTHERM:SIM" ipaddress="10.77.4.23" port="EUROTHERM" tcpport="7002"/>-->
+	<eurothermModbus.Eurotherm3KrtuPIDselect device="EUROTHERM:SIM" ipaddress="10.77.4.23" name="EUTHM" port="EUROTHERM" tcpport="7003"/>
+	<eurothermModbus.EurothermLoopPIDselect EGU_LIM="A" device="EUROTHERM:SIM" loop_name="LOOP1" maxEGU_LIM="20" maxPercent="50"/>
+	<eurothermModbus.EurothermLoopPIDselect device="EUROTHERM:SIM" loop_name="LOOP2"/>
+	<EPICS_BASE.StartupCommand command="asynSetTraceMask(&quot;EUROTHERM&quot;,-1,0x9)"/>
+	<EPICS_BASE.StartupCommand command="asynSetTraceIOMask(&quot;EUROTHERM&quot;,-1,0x2)"/>
 </components>

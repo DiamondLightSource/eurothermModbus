@@ -39,6 +39,14 @@ class _Eurotherm3kArchive(AutoSubstitution):
     TemplateFile = "eurotherm3k-archive.template"
 
 
+class _Eurotherm3kPIDselectGui(AutoSubstitution):
+    TemplateFile = "eurotherm3kPIDselect-gui.template"
+
+class EurothermLoopPIDselect(AutoSubstitution):
+    '''Provides PID parameter set selection database.
+    Use with a Eurotherm3KrtuPIDselect table'''
+    TemplateFile = "eurothermLoopPIDselect.template"
+
 class _Eurotherm(Device):
 
     def __init__(self, name, port, device, ipaddress, tcpport=502, rregu="C/s",
@@ -114,6 +122,7 @@ class Eurotherm2K(_Eurotherm):
 
 
 class Eurotherm3K(_Eurotherm):
+    '''Support modbus tcpip protocol over ethernet includes db for two PID loops'''
     linktype = "tcpip"
 
     def __init__(self, **kwargs):
@@ -142,6 +151,7 @@ class Eurotherm3K(_Eurotherm):
         self.arch = _Eurotherm3kArchive(device=self.device)
 
 class Eurotherm3Krtu(_Eurotherm):
+    '''Support modbus rtu protocol over serial includes db for two PID loops'''
     linktype = "rtu"
 
     def __init__(self, **kwargs):
@@ -168,3 +178,38 @@ class Eurotherm3Krtu(_Eurotherm):
                                  modbus_prefix=self.modbus_prefix)
         self.gui = _Eurotherm3kGui(name=self.name, device=self.device)
         self.arch = _Eurotherm3kArchive(device=self.device)
+
+class Eurotherm3KrtuPIDselect(_Eurotherm):
+    '''Support modbus rtu protocol over serial includes db for two PID loops and GUI for PID parameter set selection
+    Dont forget to add EurothermLoopPIDselect table instantiations for LOOP1 and LOOP2'''
+    linktype = "rtu"
+
+    def __init__(self, **kwargs):
+        self.__super.__init__(**kwargs)
+        self.loop2 = _EurothermLoop(device=self.device,
+                               modbus_prefix=self.modbus_prefix,
+                               loop_name='LOOP2',
+                               rregu=self.rregu_options.index(self.rregu),
+                               autotune_addr=1294,
+                               derivative_addr=1033,
+                               integral_addr=1032,
+                               mode_addr=1297,
+                               output_addr=1027,
+                               outputhi_addr=1054,
+                               outputlo_addr=1055,
+                               proportional_addr=1030,
+                               temperature_addr=1025,
+                               ramprate_addr=1059,
+                               setpoint_addr=1026,
+                               working_setpoint_addr=1029)
+        #self.loop1PID = _EurothermLoopPIDselect(device=self.device,
+        #                       loop_name='LOOP1')
+        ##self.loop2PID = _EurothermLoopPIDselect(device=self.device,
+        #                       loop_name='LOOP2')
+        self.prog = _EurothermProg(device=self.device,
+                                   modbus_prefix=self.modbus_prefix)
+        self.rec = _EurothermRec(device=self.device,
+                                 modbus_prefix=self.modbus_prefix)
+        self.gui = _Eurotherm3kPIDselectGui(name=self.name, device=self.device)
+        self.arch = _Eurotherm3kArchive(device=self.device)
+

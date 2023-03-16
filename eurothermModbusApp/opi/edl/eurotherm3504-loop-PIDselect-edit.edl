@@ -1,0 +1,1536 @@
+4 0 1
+beginScreenProperties
+major 4
+minor 0
+release 1
+x 1036
+y 655
+w 610
+h 420
+font "arial-medium-r-18.0"
+ctlFont "arial-medium-r-18.0"
+btnFont "arial-medium-r-18.0"
+fgColor index 14
+bgColor index 3
+textColor index 14
+ctlFgColor1 index 14
+ctlFgColor2 index 0
+ctlBgColor1 index 0
+ctlBgColor2 index 14
+topShadowColor index 0
+botShadowColor index 14
+title "Eurotherm - $(device)"
+showGrid
+snapToGrid
+gridSize 5
+orthoLineDraw
+disableScroll
+endScreenProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 10
+y 50
+w 590
+h 325
+lineColor index 14
+fill
+fillColor index 5
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 355
+y 340
+w 240
+h 30
+lineColor index 14
+fillColor index 0
+lineStyle "dash"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 15
+y 40
+w 165
+h 15
+font "arial-medium-r-12.0"
+fgColor index 14
+bgColor index 5
+value {
+  " PID Selection Configuration "
+}
+border
+endObjectProperties
+
+# (Group)
+object activeGroupClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x -45
+y 0
+w 50
+h 30
+
+beginGroup
+
+# (Shell Command)
+object shellCmdClass
+beginObjectProperties
+major 4
+minor 3
+release 0
+x -46
+y 4
+w 42
+h 24
+fgColor index 14
+bgColor index 3
+topShadowColor index 0
+botShadowColor index 0
+font "arial-medium-r-14.0"
+invisible
+buttonLabel "Shell Command"
+numCmds 1
+command {
+  0 "firefox $(autogen)/documentation/BL05I-EA-MANIP-01-help.html"
+}
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x -50
+y 0
+w 48
+h 29
+lineColor index 1
+fillColor index 0
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x -48
+y 2
+w 48
+h 29
+lineColor index 11
+fillColor index 0
+lineWidth 2
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x -48
+y 2
+w 47
+h 27
+lineColor index 49
+fill
+fillColor index 48
+lineWidth 3
+endObjectProperties
+
+# (Circle)
+object activeCircleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x -38
+y 6
+w 4
+h 3
+lineColor index 1
+fill
+fillColor index 0
+lineWidth 2
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x -50
+y 0
+w 50
+h 30
+controlPv "BL05I-EA-MANIP-01:NAME"
+font "arial-bold-r-14.0"
+fontAlign "center"
+fgColor index 14
+bgColor index 3
+useDisplayBg
+precision 3
+nullColor index 0
+smartRefresh
+fastUpdate
+newPos
+endObjectProperties
+
+endGroup
+
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 25
+y 80
+w 185
+h 20
+controlPv "$(device):$(loop):PID:SELECT.ZRST"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 25
+y 105
+w 185
+h 20
+controlPv "$(device):$(loop):PID:SELECT.ONST"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 220
+y 80
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL1.A"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 220
+y 105
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL1.B"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 315
+y 105
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL2.B"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 315
+y 80
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL2.A"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 410
+y 105
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL3.B"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 410
+y 80
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL3.A"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 505
+y 105
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL4.B"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 505
+y 80
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL4.A"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 235
+y 60
+w 20
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "P"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 330
+y 60
+w 20
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "I"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 420
+y 60
+w 20
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "D"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 505
+y 60
+w 95
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Limit"
+}
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 30
+y 60
+w 55
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Name"
+}
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 505
+y 130
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL4.C"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 410
+y 130
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL3.C"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 315
+y 130
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL2.C"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 220
+y 130
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL1.C"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 25
+y 130
+w 185
+h 20
+controlPv "$(device):$(loop):PID:SELECT.TWST"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 505
+y 155
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL4.D"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 410
+y 155
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL3.D"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 315
+y 155
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL2.D"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 220
+y 155
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL1.D"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 25
+y 155
+w 185
+h 20
+controlPv "$(device):$(loop):PID:SELECT.THST"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 505
+y 180
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL4.E"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 410
+y 180
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL3.E"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 315
+y 180
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL2.E"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 220
+y 180
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL1.E"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 25
+y 180
+w 185
+h 20
+controlPv "$(device):$(loop):PID:SELECT.FRST"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 505
+y 205
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL4.F"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 410
+y 205
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL3.F"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 315
+y 205
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL2.F"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 220
+y 205
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL1.F"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 25
+y 205
+w 185
+h 20
+controlPv "$(device):$(loop):PID:SELECT.FVST"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 505
+y 230
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL4.G"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 410
+y 230
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL3.G"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 315
+y 230
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL2.G"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 220
+y 230
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL1.G"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 25
+y 230
+w 185
+h 20
+controlPv "$(device):$(loop):PID:SELECT.SXST"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 505
+y 255
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL4.H"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 410
+y 255
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL3.H"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 315
+y 255
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL2.H"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 220
+y 255
+w 85
+h 20
+controlPv "$(device):$(loop):PID:SEL1.H"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 25
+y 255
+w 185
+h 20
+controlPv "$(device):$(loop):PID:SELECT.SVST"
+font "arial-bold-r-14.0"
+fgColor index 25
+bgColor index 6
+editable
+autoHeight
+motifWidget
+limitsFromDb
+nullColor index 0
+useHexPrefix
+newPos
+objType "controls"
+noExecuteClipMask
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 270
+y 385
+w 70
+h 25
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-14.0"
+buttonLabel "Return"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "eurotherm3504-PIDselect.edl"
+}
+closeAction {
+  0 1
+}
+propagateMacros {
+  0 0
+}
+closeDisplay {
+  0 1
+}
+endObjectProperties
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 0
+w 610
+h 30
+lineColor index 48
+fill
+fillColor index 48
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 235
+y 10
+w 74
+h 18
+font "arial-bold-r-16.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "$(device)"
+}
+autoSize
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 505
+y 345
+w 85
+h 20
+controlPv "$(device):$(loop):OUTPHI:RBV"
+precision 3
+fgColor index 16
+fgAlarm
+bgColor index 10
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 410
+y 315
+w 85
+h 20
+controlPv "$(device):$(loop):D:RBV"
+precision 3
+fgColor index 16
+fgAlarm
+bgColor index 10
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 315
+y 315
+w 85
+h 20
+controlPv "$(device):$(loop):I:RBV"
+precision 3
+fgColor index 16
+fgAlarm
+bgColor index 10
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 220
+y 315
+w 85
+h 20
+controlPv "$(device):$(loop):P:RBV"
+precision 3
+fgColor index 16
+fgAlarm
+bgColor index 10
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 90
+y 315
+w 120
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Current Settings"
+}
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 505
+y 315
+w 85
+h 20
+controlPv "$(device):$(loop):PID:EGU:LIM:RBV"
+precision 3
+fgColor index 16
+fgAlarm
+bgColor index 10
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 360
+y 345
+w 135
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "High limit (OUTPHI)"
+}
+endObjectProperties
+
+# (Textupdate)
+object TextupdateClass
+beginObjectProperties
+major 10
+minor 0
+release 0
+x 505
+y 280
+w 85
+h 20
+controlPv "$(device):$(loop):PID:EGU:MAX"
+precision 3
+fgColor index 16
+fgAlarm
+bgColor index 10
+fill
+font "arial-bold-r-14.0"
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 350
+y 280
+w 150
+h 20
+font "arial-bold-r-14.0"
+fgColor index 14
+bgColor index 0
+useDisplayBg
+value {
+  "Limit cannot exceed"
+}
+endObjectProperties
+
