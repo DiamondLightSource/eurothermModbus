@@ -4,7 +4,7 @@ major 4
 minor 0
 release 1
 x 1036
-y 655
+y 692
 w 610
 h 420
 font "arial-medium-r-18.0"
@@ -1319,9 +1319,6 @@ displayFileName {
 }
 closeAction {
   0 1
-}
-propagateMacros {
-  0 0
 }
 closeDisplay {
   0 1
