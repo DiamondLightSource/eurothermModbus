@@ -1,7 +1,6 @@
 # template to include archiver elements
 # for the annealing stage temperature controller 
 # 
-# % macro, name, Object and gui association name
 # % macro, device, device prefix
 
 # % archiver 10 Monitor

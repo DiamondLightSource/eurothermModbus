@@ -1,3 +1,5 @@
+# % macro, device, device prefix
+# % macro, modbus_prefix, modbus prefix
 
 record(mbbo, "$(device):RECSEL")
 {

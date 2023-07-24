@@ -1,3 +1,4 @@
+# % macro, device, device prefix
 
 record(calc, "$(device):READ_ERR_CNT")
 {
