@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 2442
-y 528
+x 1548
+y 573
 w 371
 h 145
 font "arial-medium-r-18.0"
@@ -47,7 +47,7 @@ major 4
 minor 1
 release 1
 x 5
-y 50
+y 25
 w 75
 h 25
 font "arial-bold-r-12.0"
@@ -66,7 +66,7 @@ major 4
 minor 1
 release 1
 x 5
-y 110
+y 80
 w 75
 h 25
 font "arial-bold-r-12.0"
@@ -85,7 +85,7 @@ major 10
 minor 0
 release 0
 x 80
-y 110
+y 80
 w 115
 h 25
 controlPv "$(device):$(loop):RR"
@@ -102,7 +102,7 @@ major 4
 minor 6
 release 0
 x 205
-y 50
+y 25
 w 115
 h 25
 controlPv "$(device):$(loop):SP:RBV"
@@ -124,7 +124,7 @@ major 4
 minor 6
 release 0
 x 205
-y 110
+y 80
 w 65
 h 25
 controlPv "$(device):$(loop):RR:RBV"
@@ -146,7 +146,7 @@ major 10
 minor 0
 release 0
 x 80
-y 50
+y 25
 w 115
 h 25
 controlPv "$(device):$(loop):SP"
@@ -163,7 +163,7 @@ major 4
 minor 6
 release 0
 x 205
-y 80
+y 110
 w 115
 h 25
 controlPv "$(device):$(loop):WSP:RBV"
@@ -185,7 +185,7 @@ major 4
 minor 1
 release 1
 x 140
-y 80
+y 110
 w 75
 h 25
 font "arial-bold-r-12.0"
@@ -204,7 +204,7 @@ major 4
 minor 6
 release 0
 x 275
-y 110
+y 80
 w 45
 h 25
 controlPv "$(device):$(loop):RR:UNIT"
@@ -226,39 +226,54 @@ major 4
 minor 1
 release 1
 x 5
-y 10
-w 184
-h 32
+y 5
+w 297
+h 16
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 10
 useDisplayBg
 value {
-  "Automatic Mode Controls"
-  "     (PID Control)"
+  "Automatic Mode Controls     (PID Control)"
 }
 autoSize
 endObjectProperties
 
-# (Text Monitor)
-object activeXTextDspClass:noedit
+# (Menu Button)
+object activeMenuButtonClass
 beginObjectProperties
 major 4
-minor 6
+minor 0
 release 0
 x 205
-y 20
+y 50
 w 115
-h 25
-controlPv "$(device):$(loop):O:RBV"
+h 20
+fgColor index 14
+bgColor index 3
+inconsistentColor index 0
+topShadowColor index 1
+botShadowColor index 11
+controlPv "$(device):$(loop):SP:TRACKOL"
 font "arial-bold-r-14.0"
-fgColor index 16
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 1
+release 1
+x 25
+y 50
+w 180
+h 20
+font "arial-bold-r-12.0"
+fgColor index 14
 bgColor index 10
-limitsFromDb
-nullColor index 0
-useHexPrefix
-showUnits
-newPos
-objType "monitors"
+useDisplayBg
+value {
+  "Track open_loop temperature:"
+}
 endObjectProperties
 

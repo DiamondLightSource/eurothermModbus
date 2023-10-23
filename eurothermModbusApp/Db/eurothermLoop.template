@@ -186,16 +186,18 @@ record(ai, "$(device):$(loop_name):P:RBV")
     field(SDIS, "$(device):DISABLE")
 }
 
+#% archiver 1 Monitor
 record(ai, "$(device):$(loop_name):PV:RBV")
 {
     field(ASLO, "0.1")
     field(DESC, "Temperature readback")
     field(DTYP, "asynInt32")
     field(EGU,  "C")
-    field(FLNK, "$(device):READ_ERR_CNT")
+    field(FLNK, "$(device):$(loop_name):SP:TRACKCLC")
     field(INP,  "@asyn($(modbus_prefix)_MASTER_RX,$(temperature_addr),1000)INT16")
     field(PREC, "1")
     field(SCAN, "1 second")
+    field(ADEL, "0.1")
     field(SDIS, "$(device):DISABLE")
 }
 
@@ -263,3 +265,25 @@ record(ai, "$(device):$(loop_name):WSP:RBV")
     field(SDIS, "$(device):DISABLE")
 }
 
+#% autosave 0 VAL
+record(mbbo, "$(device):$(loop_name):SP:TRACKOL") {
+  field(DESC, "Enable CL setpoint to track OL temp.")
+  field(ZRST, "Disabled")
+  field(ZRVL, "0")
+  field(ONST, "Enabled")
+  field(ONVL, "1")
+  field(PINI, "YES")
+}
+
+record(calcout, "$(device):$(loop_name):SP:TRACKCLC") {
+  field(DESC, "If tracking enabled & open_loop")
+  field(CALC, "(A=1&&B=1)?1:0")
+  field(OOPT, "When Non-zero")
+  field(DOPT, "Use OCAL")
+  field(OCAL, "C")
+  field(INPA, "$(device):$(loop_name):SP:TRACKOL")
+  field(INPB, "$(device):$(loop_name):MAN:RBV")
+  field(INPC, "$(device):$(loop_name):PV:RBV")
+  field(OUT, "$(device):$(loop_name):SP PP")
+  field(FLNK, "$(device):READ_ERR_CNT")
+}
