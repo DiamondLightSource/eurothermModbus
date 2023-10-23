@@ -4,7 +4,7 @@ major 4
 minor 0
 release 1
 x 2816
-y 453
+y 490
 w 386
 h 145
 font "arial-medium-r-18.0"
@@ -66,9 +66,9 @@ major 10
 minor 0
 release 0
 x 80
-y 55
+y 60
 w 115
-h 35
+h 25
 controlPv "$(device):$(loop):O"
 fgColor index 25
 bgColor index 3

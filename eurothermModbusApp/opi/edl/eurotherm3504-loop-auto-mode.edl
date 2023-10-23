@@ -4,7 +4,7 @@ major 4
 minor 0
 release 1
 x 2442
-y 454
+y 528
 w 371
 h 145
 font "arial-medium-r-18.0"
@@ -47,9 +47,9 @@ major 4
 minor 1
 release 1
 x 5
-y 40
+y 50
 w 75
-h 35
+h 25
 font "arial-bold-r-12.0"
 fgColor index 14
 bgColor index 10
@@ -66,9 +66,9 @@ major 4
 minor 1
 release 1
 x 5
-y 105
+y 110
 w 75
-h 35
+h 25
 font "arial-bold-r-12.0"
 fgColor index 14
 bgColor index 10
@@ -85,9 +85,9 @@ major 10
 minor 0
 release 0
 x 80
-y 105
+y 110
 w 115
-h 35
+h 25
 controlPv "$(device):$(loop):RR"
 fgColor index 25
 bgColor index 3
@@ -102,7 +102,7 @@ major 4
 minor 6
 release 0
 x 205
-y 45
+y 50
 w 115
 h 25
 controlPv "$(device):$(loop):SP:RBV"
@@ -146,9 +146,9 @@ major 10
 minor 0
 release 0
 x 80
-y 40
+y 50
 w 115
-h 35
+h 25
 controlPv "$(device):$(loop):SP"
 fgColor index 25
 bgColor index 3
@@ -163,7 +163,7 @@ major 4
 minor 6
 release 0
 x 205
-y 75
+y 80
 w 115
 h 25
 controlPv "$(device):$(loop):WSP:RBV"
@@ -185,9 +185,9 @@ major 4
 minor 1
 release 1
 x 140
-y 70
+y 80
 w 75
-h 35
+h 25
 font "arial-bold-r-12.0"
 fgColor index 14
 bgColor index 10
@@ -227,15 +227,38 @@ minor 1
 release 1
 x 5
 y 10
-w 297
-h 16
+w 184
+h 32
 font "arial-bold-r-14.0"
 fgColor index 14
 bgColor index 10
 useDisplayBg
 value {
-  "Automatic Mode Controls     (PID Control)"
+  "Automatic Mode Controls"
+  "     (PID Control)"
 }
 autoSize
+endObjectProperties
+
+# (Text Monitor)
+object activeXTextDspClass:noedit
+beginObjectProperties
+major 4
+minor 6
+release 0
+x 205
+y 20
+w 115
+h 25
+controlPv "$(device):$(loop):O:RBV"
+font "arial-bold-r-14.0"
+fgColor index 16
+bgColor index 10
+limitsFromDb
+nullColor index 0
+useHexPrefix
+showUnits
+newPos
+objType "monitors"
 endObjectProperties
 
