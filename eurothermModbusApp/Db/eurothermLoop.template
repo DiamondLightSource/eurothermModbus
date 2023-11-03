@@ -37,6 +37,7 @@ record(bi, "$(device):$(loop_name):AUTOTUNE:RBV")
 }
 
 
+# % autosave 2 VAL
 record(ao, "$(device):$(loop_name):D")
 {
     field(DESC, "derivative-param")
@@ -46,6 +47,7 @@ record(ao, "$(device):$(loop_name):D")
     field(SDIS, "$(device):DISABLE")
 }
 
+# % archiver 10 Monitor
 record(ai, "$(device):$(loop_name):D:RBV")
 {
     field(DTYP, "asynInt32")
@@ -56,6 +58,7 @@ record(ai, "$(device):$(loop_name):D:RBV")
     field(SDIS, "$(device):DISABLE")
 }
 
+# % autosave 2 VAL
 record(ao, "$(device):$(loop_name):I")
 {
     field(DESC, "integral-param")
@@ -65,6 +68,7 @@ record(ao, "$(device):$(loop_name):I")
     field(SDIS, "$(device):DISABLE")
 }
 
+# % archiver 10 Monitor
 record(ai, "$(device):$(loop_name):I:RBV")
 {
     field(DTYP, "asynInt32")
@@ -75,6 +79,7 @@ record(ai, "$(device):$(loop_name):I:RBV")
     field(SDIS, "$(device):DISABLE")
 }
 
+# % autosave 2 VAL
 record(bo, "$(device):$(loop_name):MAN")
 {
     field(DTYP, "asynUInt32Digital")
@@ -84,6 +89,7 @@ record(bo, "$(device):$(loop_name):MAN")
     field(ZNAM, "Automatic")
 }
 
+# % archiver 10 Monitor
 record(bi, "$(device):$(loop_name):MAN:RBV")
 {
     field(DESC, "manual/auto")
@@ -95,6 +101,7 @@ record(bi, "$(device):$(loop_name):MAN:RBV")
     field(ZNAM, "Automatic")
 }
 
+# % autosave 2 VAL
 record(ao, "$(device):$(loop_name):O")
 {
     field(ASLO, "0.1")
@@ -107,6 +114,7 @@ record(ao, "$(device):$(loop_name):O")
     field(SDIS, "$(device):DISABLE")
 }
 
+# % archiver 1 Monitor
 record(ai, "$(device):$(loop_name):O:RBV")
 {
     field(ASLO, "0.1")
@@ -119,6 +127,7 @@ record(ai, "$(device):$(loop_name):O:RBV")
     field(SDIS, "$(device):DISABLE")
 }
 
+# % autosave 2 VAL
 record(ao, "$(device):$(loop_name):OUTPHI")
 {
     field(ASLO, "0.1")
@@ -131,6 +140,7 @@ record(ao, "$(device):$(loop_name):OUTPHI")
     field(SDIS, "$(device):DISABLE")
 }
 
+# % archiver 10 Monitor
 record(ai, "$(device):$(loop_name):OUTPHI:RBV")
 {
     field(ASLO, "0.1")
@@ -142,6 +152,7 @@ record(ai, "$(device):$(loop_name):OUTPHI:RBV")
     field(SDIS, "$(device):DISABLE")
 }
 
+# % autosave 2 VAL
 record(ao, "$(device):$(loop_name):OUTPLO")
 {
     field(ASLO, "0.1")
@@ -154,6 +165,7 @@ record(ao, "$(device):$(loop_name):OUTPLO")
     field(SDIS, "$(device):DISABLE")
 }
 
+# % archiver 10 Monitor
 record(ai, "$(device):$(loop_name):OUTPLO:RBV")
 {
     field(ASLO, "0.1")
@@ -165,6 +177,7 @@ record(ai, "$(device):$(loop_name):OUTPLO:RBV")
     field(SDIS, "$(device):DISABLE")
 }
 
+# % autosave 2 VAL
 record(ao, "$(device):$(loop_name):P")
 {
     field(ASLO, "0.1")
@@ -175,6 +188,7 @@ record(ao, "$(device):$(loop_name):P")
     field(SDIS, "$(device):DISABLE")
 }
 
+# % archiver 10 Monitor
 record(ai, "$(device):$(loop_name):P:RBV")
 {
     field(ASLO, "0.1")
@@ -201,6 +215,7 @@ record(ai, "$(device):$(loop_name):PV:RBV")
     field(SDIS, "$(device):DISABLE")
 }
 
+# % autosave 2 VAL
 record(ao, "$(device):$(loop_name):RR")
 {
     field(ASLO, "0.1")
@@ -211,6 +226,7 @@ record(ao, "$(device):$(loop_name):RR")
     field(SDIS, "$(device):DISABLE")
 }
 
+# % archiver 10 Monitor
 record(ai, "$(device):$(loop_name):RR:RBV")
 {
     field(ASLO, "0.1")
@@ -228,6 +244,7 @@ record(bi, "$(device):$(loop_name):RR:UNIT")
     field(VAL, "$(rregu)")
 }
 
+# % autosave 2 VAL
 record(ao, "$(device):$(loop_name):SP")
 {
     field(ASLO, "0.1")
@@ -241,6 +258,7 @@ record(ao, "$(device):$(loop_name):SP")
     field(SDIS, "$(device):DISABLE")
 }
 
+#% archiver 10 Monitor
 record(ai, "$(device):$(loop_name):SP:RBV")
 {
     field(ASLO, "0.1")
