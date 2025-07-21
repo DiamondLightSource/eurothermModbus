@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 125
-y 161
+x 1768
+y 525
 w 365
 h 374
 font "arial-medium-r-18.0"
@@ -33,7 +33,7 @@ major 4
 minor 0
 release 0
 x 10
-y 195
+y 220
 w 325
 h 120
 lineColor index 14
@@ -497,7 +497,7 @@ major 4
 minor 6
 release 0
 x 215
-y 280
+y 305
 w 115
 h 25
 controlPv "$(device):LOOP2:OUTPLO:RBV"
@@ -519,7 +519,7 @@ major 4
 minor 6
 release 0
 x 215
-y 240
+y 265
 w 115
 h 25
 controlPv "$(device):LOOP2:OUTPHI:RBV"
@@ -541,7 +541,7 @@ major 10
 minor 0
 release 0
 x 215
-y 205
+y 230
 w 115
 h 25
 controlPv "$(device):LOOP2:AUTOTUNE:RBV"
@@ -559,7 +559,7 @@ major 4
 minor 0
 release 0
 x 90
-y 205
+y 230
 w 115
 h 25
 fgColor index 14
@@ -579,7 +579,7 @@ major 10
 minor 0
 release 0
 x 90
-y 235
+y 260
 w 115
 h 35
 controlPv "$(device):LOOP2:OUTPHI"
@@ -596,7 +596,7 @@ major 10
 minor 0
 release 0
 x 90
-y 275
+y 300
 w 115
 h 35
 controlPv "$(device):LOOP2:OUTPLO"
@@ -613,7 +613,7 @@ major 4
 minor 1
 release 1
 x 15
-y 290
+y 315
 w 60
 h 13
 font "arial-bold-r-12.0"
@@ -633,7 +633,7 @@ major 4
 minor 1
 release 1
 x 15
-y 250
+y 275
 w 64
 h 13
 font "arial-bold-r-12.0"
@@ -653,7 +653,7 @@ major 4
 minor 1
 release 1
 x 15
-y 210
+y 235
 w 48
 h 13
 font "arial-bold-r-12.0"
@@ -673,7 +673,7 @@ major 4
 minor 1
 release 1
 x 10
-y 185
+y 210
 w 99
 h 13
 font "arial-medium-r-12.0"
@@ -684,5 +684,57 @@ value {
 }
 autoSize
 border
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 10
+y 175
+w 195
+h 25
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-16.0"
+buttonLabel "Loop 1 Temp Graph"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "eurotherm-temp-graph"
+}
+symbols {
+  0 "loop=LOOP1"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 10
+y 345
+w 195
+h 25
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-16.0"
+buttonLabel "Loop 2 Temp Graph"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "eurotherm-temp-graph"
+}
+symbols {
+  0 "loop=LOOP2"
+}
 endObjectProperties
 

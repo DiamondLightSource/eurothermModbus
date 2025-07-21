@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 2151
-y 726
+x 2153
+y 817
 w 349
 h 458
 font "arial-medium-r-18.0"
@@ -33,7 +33,7 @@ major 4
 minor 1
 release 1
 x 100
-y 10
+y 0
 w 145
 h 30
 font "arial-medium-r-18.0"
@@ -53,7 +53,7 @@ major 4
 minor 0
 release 0
 x 10
-y 155
+y 130
 w 325
 h 145
 
@@ -66,7 +66,7 @@ major 4
 minor 1
 release 0
 x 10
-y 155
+y 130
 w 325
 h 145
 fgColor index 14
@@ -91,7 +91,7 @@ major 4
 minor 0
 release 0
 x 10
-y 155
+y 130
 w 325
 h 145
 lineColor index 14
@@ -109,7 +109,7 @@ major 4
 minor 0
 release 0
 x 10
-y 320
+y 290
 w 325
 h 125
 lineColor index 14
@@ -124,7 +124,7 @@ major 4
 minor 1
 release 1
 x 10
-y 310
+y 280
 w 42
 h 13
 font "arial-medium-r-12.0"
@@ -144,7 +144,7 @@ major 10
 minor 0
 release 0
 x 90
-y 365
+y 335
 w 115
 h 35
 controlPv "$(device):$(loop):I"
@@ -161,7 +161,7 @@ major 10
 minor 0
 release 0
 x 90
-y 325
+y 295
 w 115
 h 35
 controlPv "$(device):$(loop):P"
@@ -178,7 +178,7 @@ major 10
 minor 0
 release 0
 x 90
-y 405
+y 375
 w 115
 h 35
 controlPv "$(device):$(loop):D"
@@ -195,7 +195,7 @@ major 4
 minor 1
 release 1
 x 15
-y 340
+y 310
 w 77
 h 13
 font "arial-bold-r-12.0"
@@ -215,7 +215,7 @@ major 4
 minor 1
 release 1
 x 15
-y 380
+y 350
 w 50
 h 13
 font "arial-bold-r-12.0"
@@ -235,7 +235,7 @@ major 4
 minor 1
 release 1
 x 15
-y 415
+y 385
 w 69
 h 13
 font "arial-bold-r-12.0"
@@ -255,7 +255,7 @@ major 4
 minor 6
 release 0
 x 215
-y 330
+y 300
 w 115
 h 25
 controlPv "$(device):$(loop):P:RBV"
@@ -277,7 +277,7 @@ major 4
 minor 6
 release 0
 x 215
-y 370
+y 340
 w 115
 h 25
 controlPv "$(device):$(loop):I:RBV"
@@ -299,7 +299,7 @@ major 4
 minor 6
 release 0
 x 215
-y 410
+y 380
 w 115
 h 25
 controlPv "$(device):$(loop):D:RBV"
@@ -321,7 +321,7 @@ major 4
 minor 0
 release 0
 x 10
-y 45
+y 35
 w 325
 h 95
 lineColor index 14
@@ -336,7 +336,7 @@ major 4
 minor 0
 release 0
 x 55
-y 110
+y 100
 w 150
 h 25
 fgColor index 14
@@ -358,7 +358,7 @@ major 10
 minor 0
 release 0
 x 215
-y 110
+y 100
 w 115
 h 25
 controlPv "$(device):$(loop):MAN:RBV"
@@ -377,7 +377,7 @@ major 4
 minor 1
 release 1
 x 15
-y 110
+y 100
 w 40
 h 25
 font "arial-bold-r-12.0"
@@ -396,7 +396,7 @@ major 4
 minor 1
 release 1
 x 130
-y 50
+y 40
 w 80
 h 25
 font "arial-bold-r-12.0"
@@ -415,7 +415,7 @@ major 4
 minor 6
 release 0
 x 215
-y 50
+y 40
 w 115
 h 25
 controlPv "$(device):$(loop):PV:RBV"
@@ -437,7 +437,7 @@ major 4
 minor 6
 release 0
 x 215
-y 80
+y 70
 w 115
 h 25
 controlPv "$(device):$(loop):O:RBV"
@@ -459,7 +459,7 @@ major 4
 minor 1
 release 1
 x 130
-y 80
+y 70
 w 80
 h 25
 font "arial-bold-r-12.0"
@@ -468,6 +468,29 @@ bgColor index 10
 useDisplayBg
 value {
   "Output:"
+}
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 225
+y 425
+w 110
+h 25
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-16.0"
+buttonLabel "Temp Graph"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "eurotherm-temp-graph"
 }
 endObjectProperties
 

@@ -3,8 +3,8 @@ beginScreenProperties
 major 4
 minor 0
 release 1
-x 2661
-y 421
+x 2504
+y 489
 w 349
 h 458
 font "arial-medium-r-18.0"
@@ -32,8 +32,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 10
-y 70
+x 5
+y 50
 w 325
 h 210
 lineColor index 14
@@ -47,8 +47,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 10
-y 60
+x 5
+y 40
 w 58
 h 13
 font "arial-medium-r-12.0"
@@ -67,8 +67,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 175
-y 250
+x 170
+y 230
 w 45
 h 25
 font "arial-bold-r-12.0"
@@ -86,8 +86,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 15
-y 75
+x 10
+y 55
 w 75
 h 35
 font "arial-bold-r-12.0"
@@ -105,8 +105,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 15
-y 140
+x 10
+y 120
 w 75
 h 35
 font "arial-bold-r-12.0"
@@ -124,8 +124,8 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 90
-y 140
+x 85
+y 120
 w 115
 h 35
 controlPv "$(device):$(loop):RR"
@@ -141,8 +141,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 15
-y 185
+x 10
+y 165
 w 55
 h 25
 font "arial-bold-r-12.0"
@@ -160,8 +160,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 10
-y 300
+x 5
+y 280
 w 325
 h 135
 lineColor index 14
@@ -175,8 +175,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 10
-y 290
+x 5
+y 270
 w 42
 h 13
 font "arial-medium-r-12.0"
@@ -195,8 +195,8 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 90
-y 345
+x 85
+y 325
 w 115
 h 35
 controlPv "$(device):$(loop):I"
@@ -212,8 +212,8 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 90
-y 305
+x 85
+y 285
 w 115
 h 35
 controlPv "$(device):$(loop):P"
@@ -229,8 +229,8 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 90
-y 385
+x 85
+y 365
 w 115
 h 35
 controlPv "$(device):$(loop):D"
@@ -246,8 +246,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 15
-y 320
+x 10
+y 300
 w 77
 h 13
 font "arial-bold-r-12.0"
@@ -266,8 +266,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 15
-y 360
+x 10
+y 340
 w 50
 h 13
 font "arial-bold-r-12.0"
@@ -286,8 +286,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 15
-y 395
+x 10
+y 375
 w 69
 h 13
 font "arial-bold-r-12.0"
@@ -306,8 +306,8 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 90
-y 180
+x 85
+y 160
 w 115
 h 35
 controlPv "$(device):$(loop):O"
@@ -323,8 +323,8 @@ beginObjectProperties
 major 4
 minor 0
 release 0
-x 90
-y 220
+x 85
+y 200
 w 115
 h 25
 fgColor index 14
@@ -343,8 +343,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 15
-y 220
+x 10
+y 200
 w 105
 h 25
 font "arial-bold-r-12.0"
@@ -363,8 +363,8 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 215
-y 220
+x 210
+y 200
 w 115
 h 25
 controlPv "$(device):$(loop):MAN:RBV"
@@ -382,8 +382,8 @@ beginObjectProperties
 major 4
 minor 6
 release 0
-x 215
-y 80
+x 210
+y 60
 w 115
 h 25
 controlPv "$(device):$(loop):SP:RBV"
@@ -404,8 +404,8 @@ beginObjectProperties
 major 4
 minor 6
 release 0
-x 215
-y 145
+x 210
+y 125
 w 65
 h 25
 controlPv "$(device):$(loop):RR:RBV"
@@ -426,8 +426,8 @@ beginObjectProperties
 major 10
 minor 0
 release 0
-x 90
-y 75
+x 85
+y 55
 w 115
 h 35
 controlPv "$(device):$(loop):SP"
@@ -443,8 +443,8 @@ beginObjectProperties
 major 4
 minor 6
 release 0
-x 215
-y 250
+x 210
+y 230
 w 115
 h 25
 controlPv "$(device):$(loop):PV:RBV"
@@ -465,8 +465,8 @@ beginObjectProperties
 major 4
 minor 6
 release 0
-x 215
-y 310
+x 210
+y 290
 w 115
 h 25
 controlPv "$(device):$(loop):P:RBV"
@@ -487,8 +487,8 @@ beginObjectProperties
 major 4
 minor 6
 release 0
-x 215
-y 350
+x 210
+y 330
 w 115
 h 25
 controlPv "$(device):$(loop):I:RBV"
@@ -509,8 +509,8 @@ beginObjectProperties
 major 4
 minor 6
 release 0
-x 215
-y 390
+x 210
+y 370
 w 115
 h 25
 controlPv "$(device):$(loop):D:RBV"
@@ -531,8 +531,8 @@ beginObjectProperties
 major 4
 minor 6
 release 0
-x 215
-y 185
+x 210
+y 165
 w 115
 h 25
 controlPv "$(device):$(loop):O:RBV"
@@ -554,9 +554,9 @@ major 4
 minor 1
 release 1
 x 100
-y 10
+y 5
 w 145
-h 40
+h 30
 font "arial-medium-r-18.0"
 fontAlign "center"
 fgColor index 14
@@ -573,8 +573,8 @@ beginObjectProperties
 major 4
 minor 6
 release 0
-x 215
-y 110
+x 210
+y 90
 w 115
 h 25
 controlPv "$(device):$(loop):WSP:RBV"
@@ -595,8 +595,8 @@ beginObjectProperties
 major 4
 minor 1
 release 1
-x 150
-y 105
+x 145
+y 85
 w 75
 h 35
 font "arial-bold-r-12.0"
@@ -614,8 +614,8 @@ beginObjectProperties
 major 4
 minor 6
 release 0
-x 285
-y 145
+x 280
+y 125
 w 45
 h 25
 controlPv "$(device):$(loop):RR:UNIT"
@@ -628,5 +628,28 @@ useHexPrefix
 showUnits
 newPos
 objType "monitors"
+endObjectProperties
+
+# (Related Display)
+object relatedDisplayClass
+beginObjectProperties
+major 4
+minor 4
+release 0
+x 220
+y 420
+w 110
+h 25
+fgColor index 43
+bgColor index 3
+topShadowColor index 1
+botShadowColor index 11
+font "arial-bold-r-16.0"
+buttonLabel "Temp Graph"
+numPvs 4
+numDsps 1
+displayFileName {
+  0 "eurotherm-temp-graph"
+}
 endObjectProperties
 
