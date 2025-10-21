@@ -2,7 +2,7 @@
 # % macro, modbus_prefix, modbus prefix
 # % macro, loop_name, loop name to be used in PVs. i.e. LOOP1, LOOP2 
 # % macro, rregu, Ramprate EGU
-# Addresses
+# Addresses: (Loop2 usually is Loop1 + 1024)
 # % macro, autotune_addr,       LOOP1: 270,    LOOP2: 1294
 # % macro, derivative_addr,     LOOP1: 9,      LOOP2: 1033
 # % macro, integral_addr,       LOOP1: 8,      LOOP2: 1032
@@ -15,6 +15,14 @@
 # % macro, ramprate_addr,       LOOP1: 35,     LOOP2: 1059
 # % macro, setpoint_addr,       LOOP1: 2,      LOOP2: 1026
 # % macro, working_setpoint_addr, LOOP1: 5,    LOOP2: 1029
+
+# % macro, setpoint_limitHI_addr, LOOP1: 111,    LOOP2: 113
+# % macro, setpoint_limitLO_addr, LOOP1: 112,    LOOP2: 114
+
+# macro, ramprate_units_addr, LOOP1: 531,    LOOP2: 1555
+
+
+
 
 record(bo, "$(device):$(loop_name):AUTOTUNE")
 {
@@ -102,7 +110,7 @@ record(bi, "$(device):$(loop_name):MAN:RBV")
 record(ao, "$(device):$(loop_name):O")
 {
     field(ASLO, "0.1")
-    field(DESC, "Output")
+    field(DESC, "Output Power setting")
     field(DRVH, "100")
     field(DRVL, "-100")
     field(DTYP, "asynInt32")
@@ -114,7 +122,7 @@ record(ao, "$(device):$(loop_name):O")
 record(ai, "$(device):$(loop_name):O:RBV")
 {
     field(ASLO, "0.1")
-    field(DESC, "output")
+    field(DESC, "Output Power")
     field(DTYP, "asynInt32")
     field(EGU,  "%")
     field(INP,  "@asyn($(modbus_prefix)_MASTER_RX,$(output_addr),1000)MODBUS_DATA")
@@ -139,6 +147,7 @@ record(ao, "$(device):$(loop_name):OUTPHI")
 record(ai, "$(device):$(loop_name):OUTPHI:RBV")
 {
     field(ASLO, "0.1")
+    field(DESC, "Autotune high limit")
     field(DTYP, "asynInt32")
     field(EGU,  "%")
     field(INP,  "@asyn($(modbus_prefix)_MASTER_RX,$(outputhi_addr),1000)MODBUS_DATA")
@@ -163,6 +172,7 @@ record(ao, "$(device):$(loop_name):OUTPLO")
 record(ai, "$(device):$(loop_name):OUTPLO:RBV")
 {
     field(ASLO, "0.1")
+    field(DESC, "Autotune low limit")
     field(DTYP, "asynInt32")
     field(EGU,  "%")
     field(INP,  "@asyn($(modbus_prefix)_MASTER_RX,$(outputlo_addr),1000)MODBUS_DATA")
@@ -175,7 +185,7 @@ record(ai, "$(device):$(loop_name):OUTPLO:RBV")
 record(ao, "$(device):$(loop_name):P")
 {
     field(ASLO, "0.1")
-    field(DESC, "proportional param")
+    field(DESC, "proportional-param")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(modbus_prefix)_MASTER_TX,$(proportional_addr),1000)MODBUS_DATA")
     field(PREC, "1")
@@ -211,7 +221,7 @@ record(ai, "$(device):$(loop_name):PV:RBV")
 record(ao, "$(device):$(loop_name):RR")
 {
     field(ASLO, "0.1")
-    field(DESC, "ramprate")
+    field(DESC, "ramp rate")
     field(DTYP, "asynInt32")
     field(OUT,  "@asyn($(modbus_prefix)_MASTER_TX,$(ramprate_addr),1000)MODBUS_DATA")
     field(PREC, "1")
@@ -272,6 +282,69 @@ record(ai, "$(device):$(loop_name):WSP:RBV")
     field(SCAN, "1 second")
     field(SDIS, "$(device):DISABLE")
 }
+
+
+# % autosave 2 VAL
+record(ao, "$(device):$(loop_name):SP:HIGH")
+{
+    field(ASLO, "0.1")
+    field(DESC, "Setpoint HI limit")
+    field(DTYP, "asynInt32")
+    field(EGU,  "C")
+    field(OUT,  "@asyn($(modbus_prefix)_MASTER_TX,$(setpoint_limitHI_addr),1000)INT16")
+    field(PREC, "1")
+    field(FLNK, "$(device):$(loop_name):SP:UPDATELIMS")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(ai, "$(device):$(loop_name):SP:HIGH:RBV")
+{
+    field(ASLO, "0.1")
+    field(DESC, "setpoint HI limit readback")
+    field(DTYP, "asynInt32")
+    field(EGU,  "C")
+    field(INP,  "@asyn($(modbus_prefix)_MASTER_RX,$(setpoint_limitHI_addr),1000)INT16")
+    field(PREC, "1")
+    field(SCAN, "1 second")
+    field(SDIS, "$(device):DISABLE")
+}
+
+# % autosave 2 VAL
+record(ao, "$(device):$(loop_name):SP:LOW")
+{
+    field(ASLO, "0.1")
+    field(DESC, "Setpoint LO limit")
+    field(DTYP, "asynInt32")
+    field(EGU,  "C")
+    field(OUT,  "@asyn($(modbus_prefix)_MASTER_TX,$(setpoint_limitLO_addr),1000)INT16")
+    field(PREC, "1")
+    field(FLNK, "$(device):$(loop_name):SP:UPDATELIMS")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(ai, "$(device):$(loop_name):SP:LOW:RBV")
+{
+    field(ASLO, "0.1")
+    field(DESC, "setpoint LO limit readback")
+    field(DTYP, "asynInt32")
+    field(EGU,  "C")
+    field(INP,  "@asyn($(modbus_prefix)_MASTER_RX,$(setpoint_limitLO_addr),1000)INT16")
+    field(PREC, "1")
+    field(SCAN, "1 second")
+    field(SDIS, "$(device):DISABLE")
+}
+
+record(seq, "$(device):$(loop_name):SP:UPDATELIMS")
+{
+    field(DESC, "Update Temp Params")
+    field(SCAN, "Passive")
+    field(PINI, "YES")
+    field(DOL1, "$(device):$(loop_name):SP:HIGH.VAL")
+    field(DOL2, "$(device):$(loop_name):SP:LOW.VAL")
+    field(LNK1, "$(device):$(loop_name):SP.DRVH")
+    field(LNK2, "$(device):$(loop_name):SP.DRVL")
+}
+
 
 #% autosave 0 VAL
 record(mbbo, "$(device):$(loop_name):SP:TRACKOL") {

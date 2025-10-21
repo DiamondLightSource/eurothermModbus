@@ -94,7 +94,10 @@ class _Eurotherm(Device):
                                temperature_addr=1,
                                ramprate_addr=35,
                                setpoint_addr=2,
-                               working_setpoint_addr=5)
+                               working_setpoint_addr=5,
+                               setpoint_limitHI_addr=111,
+                               setpoint_limitLO_addr=112
+                               )
         self.__super.__init__()
 
     rregu_options = ["C/s", "C/min"]
@@ -142,7 +145,10 @@ class Eurotherm3K(_Eurotherm):
                                temperature_addr=1025,
                                ramprate_addr=1059,
                                setpoint_addr=1026,
-                               working_setpoint_addr=1029)
+                               working_setpoint_addr=1029,
+                               setpoint_limitHI_addr=113,
+                               setpoint_limitLO_addr=114
+                               )
         self.prog = _EurothermProg(device=self.device,
                                    modbus_prefix=self.modbus_prefix)
         self.rec = _EurothermRec(device=self.device,
@@ -173,7 +179,10 @@ class Eurotherm3KPIDselect(_Eurotherm):
                                temperature_addr=1025,
                                ramprate_addr=1059,
                                setpoint_addr=1026,
-                               working_setpoint_addr=1029)
+                               working_setpoint_addr=1029,
+                               setpoint_limitHI_addr=113,
+                               setpoint_limitLO_addr=114
+                               )
         self.prog = _EurothermProg(device=self.device,
                                    modbus_prefix=self.modbus_prefix)
         self.rec = _EurothermRec(device=self.device,
@@ -203,7 +212,10 @@ class Eurotherm3Krtu(_Eurotherm):
                                temperature_addr=1025,
                                ramprate_addr=1059,
                                setpoint_addr=1026,
-                               working_setpoint_addr=1029)
+                               working_setpoint_addr=1029,
+                               setpoint_limitHI_addr=113,
+                               setpoint_limitLO_addr=114
+                               )
         self.prog = _EurothermProg(device=self.device,
                                    modbus_prefix=self.modbus_prefix)
         self.rec = _EurothermRec(device=self.device,
@@ -234,7 +246,10 @@ class Eurotherm3KrtuPIDselect(_Eurotherm):
                                temperature_addr=1025,
                                ramprate_addr=1059,
                                setpoint_addr=1026,
-                               working_setpoint_addr=1029)
+                               working_setpoint_addr=1029,
+                               setpoint_limitHI_addr=113,
+                               setpoint_limitLO_addr=114
+                               )
         #self.loop1PID = _EurothermLoopPIDselect(device=self.device,
         #                       loop_name='LOOP1')
         ##self.loop2PID = _EurothermLoopPIDselect(device=self.device,
